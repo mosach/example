@@ -29,6 +29,7 @@ public class SecurityConfig {
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http.csrf().disable()
+                    .antMatcher("/user/**")
                     .authorizeRequests()
                     .antMatchers("/webjars/**","/user/login","/admin/login").permitAll()
                     .antMatchers("/user/**").hasRole("USER")
@@ -68,19 +69,7 @@ public class SecurityConfig {
 
         @Override
         protected void configure(HttpSecurity http) throws Exception {
-//            http.csrf().disable().authorizeRequests()
-//                    .antMatchers("/webjars/**","/user/login","/admin/login").permitAll()
-//                    .antMatchers("/admin/**").hasRole("ADMIN")
-//                    .anyRequest().authenticated()
-//                    .and()
-//                    .formLogin()
-//                    .loginPage("/admin/login")
-//                    .defaultSuccessUrl("/admin/home")
-//                    .and()
-//                    .logout()
-//                    .logoutRequestMatcher(new AntPathRequestMatcher("/admin/logout"))
-//                    .logoutSuccessUrl("/admin/login");
-            http
+            http.csrf().disable()
                     .antMatcher("/admin/**")
                     .authorizeRequests()
                     .antMatchers("/webjars/**").permitAll()
@@ -94,7 +83,7 @@ public class SecurityConfig {
                     .and()
                     .logout()
                     .logoutRequestMatcher(new AntPathRequestMatcher("/admin/logout"))
-                    .logoutSuccessUrl("/admin/logout")
+                    .logoutSuccessUrl("/admin/login")
                     .permitAll();
         }
 
