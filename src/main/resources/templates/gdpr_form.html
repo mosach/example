@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fill your GDPR</title>
+    <link href="/webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://surveyjs.azureedge.net/1.0.29/survey.jquery.min.js"></script>
+    <script th:inline="javascript">
+        window.onload = function () {
+
+            Survey.Survey.cssType = "bootstrap";
+            Survey.Survey.showCompletedPage = false;
+            var surveyString = /*[[${survey}]]*/ 'default';
+            var surveyJSON = JSON.parse(surveyString);
+
+            function sendDataToServer(survey) {
+//send Ajax request to your web server.
+
+                var formNumber = /*[[${form_number}]]*/ 'default';
+                alert("The results are:" + JSON.stringify(survey.data));
+                $.post({
+                    url: "/user/form/" + formNumber,
+                    data: JSON.stringify(survey.data),
+                    contentType: 'application/json'
+                }).done(function(data){
+                    window.location.href = "/user/home";
+                });
+            }
+
+            var survey = new Survey.Model(surveyJSON);
+            $("#surveyContainer").Survey({
+                model: survey,
+                onComplete: sendDataToServer
+            });
+
+
+        }
+
+    </script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/user/home" th:text="${name}"></a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/user/home">Home</a></li>
+            <li><a href="/user/profile">Profile</a></li>
+            <li><a href="/user/logout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div id="surveyContainer"></div>
+</div>
+
+</body>
+</html>

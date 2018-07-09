@@ -1,0 +1,160 @@
+{
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "text",
+          "name": "question1",
+          "title": "We need to ask you about how the different \"products, services, or processes\" within your organization use personal information from Europe.\nYou will need to provide this information to your users/customers.\n\n\n\n\n\"Processes\" include marketing analysis, product improvement, human resources decisionmaking, etc.\n\nHow many \"products, services, or processes\" within your organization involve personal information from Europe?\nPersonal information is any information that alone or with other information can identify a living person. Personal information includes: name, home address, business address, email, cell phone number, work number, employee ID number, usernames and passwords, etc. \n\nPersonal information can come from employees, customers, users, partners, etc. \n\nWhen you count the number of \"products, services or processes,\" only include the process generally, not the number of times the process is implemented (example: human resources decision making is one process, not every time a human resources decision is made).",
+          "isRequired": true,
+          "inputType": "number"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "question2",
+          "title": "Please add the information for each of them",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "question3",
+              "title": "What is product, service ?"
+            },
+            {
+              "type": "checkbox",
+              "name": "question5",
+              "title": "What types of personal information does \"product, service, or process\" involve?",
+              "choices": [
+                {
+                  "value": "item1",
+                  "text": "Identifying information."
+                },
+                {
+                  "value": "item2",
+                  "text": "Opinions; beliefs; personal preferences."
+                },
+                {
+                  "value": "item3",
+                  "text": "Physical characteristics."
+                },
+                {
+                  "value": "item4",
+                  "text": "Personal history data."
+                },
+                {
+                  "value": "item5",
+                  "text": "Social and contact information."
+                },
+                {
+                  "value": "item6",
+                  "text": "Financial data."
+                },
+                {
+                  "value": "item7",
+                  "text": "Tracking data."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "s4q6i1",
+              "title": "Whose personal information is handled by \"product, service, or process\"?\nSample answer: \"The organization's mobile app handles information from the app's users.\" \n\nOther types of people include: patients, customers, employees, students, system users, device users, etc."
+            },
+            {
+              "type": "text",
+              "name": "question6",
+              "title": "Why is your organization using the personal information in \"product, service, or process\"?\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc."
+            },
+            {
+              "type": "checkbox",
+              "name": "question4",
+              "title": "Which of the following applies to the personal information involved in \"product, service, or process\" ?\n\"Legitimate business interest\" is the catch-all provision. If no other options apply, choose that.",
+              "choices": [
+                {
+                  "value": "item1",
+                  "text": "The organization received consent to handle the personal information."
+                },
+                {
+                  "value": "item2",
+                  "text": "The organization is under contract to handle the personal information."
+                },
+                {
+                  "value": "item3",
+                  "text": "The organization has a legal obligation to handle the personal information."
+                },
+                {
+                  "value": "item4",
+                  "text": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information."
+                },
+                {
+                  "value": "item5",
+                  "text": "The organization is protecting a public interest by handling the personal information."
+                },
+                {
+                  "value": "item6",
+                  "text": "The organization has a legitimate business interest in handling the information."
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "question7",
+              "title": "Does \"product, service, or process\" use automated systems to handle personal information?\n\"Automated systems\" means any system that does not require human input or oversight, including artificial intelligence, machine learning, automated data analysis, etc. \n\n",
+              "choices": [
+                "yes",
+                "no"
+              ]
+            },
+            {
+              "type": "text",
+              "name": "s4q10i1",
+              "visibleIf": "{question2} = \"yes\"",
+              "title": "Describe how the automated system works.\nSample answer: \"The automated system takes user data from the mobile app and compares it to the user database (which contains data from thousands of users) to determine whether the user should receive advertisements for additional products. If the user's data matches the attributes of those who have purchased additional products in the past, the organization will advertise additional products to that user.\" \n\nThe description should include the inputs the system analyzes, the logic it uses, and how it affects people in Europe."
+            },
+            {
+              "type": "text",
+              "name": "s4q11i1",
+              "visibleIf": "{question2} = \"yes\"",
+              "title": "What decisions are made based on the automated processing?\nSample answer: \"If the user's data matches the attributes of those who have purchased additional products in the past, the organization will advertise additional products to that user.\" \n\nOther examples include: decisions on extending credit, insurance coverage, ability to vote, etc."
+            },
+            {
+              "type": "radiogroup",
+              "name": "question8",
+              "title": "Does your organization share the personal information from \"product, service, or process\" with third parties?\nThird parties include: subsidiaries, affiliates, cloud service providers, payroll processors, payment card processors, outsourced IT vendors, etc.",
+              "choices": [
+                "yes",
+                "no"
+              ]
+            },
+            {
+              "type": "text",
+              "name": "s4q13i1",
+              "visibleIf": "{question2} = \"yes\"",
+              "title": "Name and describe those third parties.\nSample answer: \"Amazon Web Services: Amazon Web Services provides servers to the organization. The organization uses those servers to store user data.\" \n\nThird parties include: subsidiaries, affiliates, cloud service providers, payroll processors, payment card processors, outsourced IT vendors, etc."
+            },
+            {
+              "type": "radiogroup",
+              "name": "question9",
+              "title": "Does your organization transfer this information outside Europe?\n",
+              "choices": [
+                "yes",
+                "no"
+              ]
+            },
+            {
+              "type": "text",
+              "name": "s4q15i1",
+              "visibleIf": "{question2} = \"yes\"",
+              "title": "List the countries outside of Europe where your organization transfers the personal information.\nSample answer: \"USA and Canada\""
+            },
+            {
+              "type": "text",
+              "name": "question10",
+              "title": "After your organization is finished with the personal information from \"product, service, or process\", how long do you expect to retain it?\nSample answer: \"2 years\""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

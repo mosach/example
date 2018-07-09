@@ -1,0 +1,468 @@
+{
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "text",
+          "name": "question1",
+          "title": "How many locations within your organization handle personal information from Europe?\nA location is defined as any place where an employee principally works. \n\nPersonal information is any information that alone or with other information can identify a living person. Personal information includes: name, home address, business address, email, cell phone number, work number, employee ID number, usernames and passwords, etc.\n\nPersonal information can come from employees, customers, users, partners, etc.",
+          "isRequired": true,
+          "inputType": "number"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "question2",
+          "title": "Please answer questions for each of them",
+          "templateElements": [
+            {
+              "type": "multipletext",
+              "name": "s5q2",
+              "title": "What is the address of location ?",
+              "items": [
+                {
+                  "name": "i1",
+                  "isRequired": true,
+                  "title": "Address1"
+                },
+                {
+                  "name": "i2",
+                  "title": "Address2"
+                },
+                {
+                  "name": "i3",
+                  "isRequired": true,
+                  "title": "City"
+                },
+                {
+                  "name": "i4",
+                  "title": "State/Province"
+                },
+                {
+                  "name": "i5",
+                  "isRequired": true,
+                  "title": "Country"
+                },
+                {
+                  "name": "i6",
+                  "isRequired": true,
+                  "title": "Zip/Mailing code"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "question3",
+              "title": "What categories of personal information does location handle?",
+              "choices": [
+                {
+                  "value": "item1",
+                  "text": "Identifying information"
+                },
+                {
+                  "value": "item2",
+                  "text": "Opinions, beliefs, or personal preference data"
+                },
+                {
+                  "value": "item3",
+                  "text": "Physical characteristics data"
+                },
+                {
+                  "value": "item4",
+                  "text": "Personal history data"
+                },
+                {
+                  "value": "item5",
+                  "text": "Social and contact information"
+                },
+                {
+                  "value": "item6",
+                  "text": "Financial data"
+                },
+                {
+                  "value": "item7",
+                  "text": "Tracking data"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "s5q6i1",
+              "title": "What is included in the \"Identifying information\" at location ?\nSample answer: \"Phone numbers, emails, addresses, and dates of birth\""
+            },
+            {
+              "type": "text",
+              "name": "s5q7i1",
+              "title": "\nWho is the \"Identifying information\" at location collected from? \nSample answer: \"The personal information is collected from users of our mobile app.\" \n\nOther types of people include: patients, customers, employees, students, system users, device users, etc."
+            },
+            {
+              "type": "checkbox",
+              "name": "question4",
+              "title": "Click all that apply to the \"Identifying information\" handled at location ?",
+              "choices": [
+                {
+                  "value": "item1",
+                  "text": "The organization received consent to handle the personal information."
+                },
+                {
+                  "value": "item2",
+                  "text": "The organization is under contract to handle the personal information."
+                },
+                {
+                  "value": "item3",
+                  "text": "The organization has a legal obligation to handle the personal information."
+                },
+                {
+                  "value": "item4",
+                  "text": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information."
+                },
+                {
+                  "value": "item5",
+                  "text": "The organization is protecting a public interest by handling the personal information."
+                },
+                {
+                  "value": "item6",
+                  "text": "The organization has a legitimate business interest in handling the information."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "s5q9i1",
+              "title": "What is your organization doing with the \"Identifying information\" at location ?\nSample answer: \"The organization uses the identifying information to track how users interact with our products. The organization provides that information to third parties who help determine how to better market the products. When the organization is finished with the information, it stores the data on external, third-party servers.\" \n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc"
+            },
+            {
+              "type": "text",
+              "name": "s5q10i1",
+              "title": "What does your organization plan to do with the \"Identifying information\" at location in the future?\nThis question may seem repetitive, but it's important to note your future plans. \n\nSample answer: \"The organization plans to use the identifying information to track how users interact with our products. The organization also plans to provide the information to third parties to help determine how to better market those products.\" \n\nOther plans include: selling the information, improving user experiences, providing services, authenticating accounts, etc."
+            },
+            {
+              "type": "text",
+              "name": "s5q11i1",
+              "title": "What departments within your organization handle the \"Identifying information\" at location ?\nSample answer: \"The organization's marketing and sales departments handle the personal information.\"\n\nOther departments include: human resources, security, IT, accounting, etc."
+            },
+            {
+              "type": "radiogroup",
+              "name": "question5",
+              "title": "Does your organization share the \"Identifying information\" at location with third parties?\nThird parties include: subsidiaries, affiliates, vendors, software developers, cloud service providers, etc. ",
+              "choices": [
+                "yes",
+                "no"
+              ]
+            },
+            {
+              "type": "text",
+              "name": "s5q13i1",
+              "visibleIf": "{question2} = \"yes\"",
+              "title": "Name those organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"\n\nYou will need to remember these organizations when you complete the next document: Record of Processing (External). You may want to write them down."
+            },
+            {
+              "type": "text",
+              "name": "s5q14i1",
+              "visibleIf": "{question2} = \"yes\"",
+              "title": "In what countries are those organizations located?\nSample answer: \"USA, Canada and Mexico\""
+            },
+            {
+              "type": "text",
+              "name": "s5q15i1",
+              "title": "What safeguards are in place to protect the \"Identifying information\" at location when it is transferred to another organization?\nSample answer: \"The organization transfers the personal information to the third party via an encrypted FTP site. The organization also audits how the third party vendors uses the information every quarter.\" \n\nOther safeguards include: secure transfer, encryption, periodic audits, firewalls, etc."
+            },
+            {
+              "type": "radiogroup",
+              "name": "question6",
+              "title": "Does your organization plan to share the \"Identifying information\" at location with third parties in the future?",
+              "choices": [
+                "yes",
+                "no"
+              ]
+            },
+            {
+              "type": "text",
+              "name": "s5q17i1",
+              "title": "Name the organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\""
+            },
+            {
+              "type": "text",
+              "name": "s5q18i1",
+              "title": "After your organization is finished with the \"Identifying information\" at location , how long does your organization expect to retain it?\nSample answer: \"2 years\""
+            },
+            {
+              "type": "dropdown",
+              "name": "question7",
+              "title": "Rate the risk to the confidentiality of the \"Identifying information\" at location #1.\n\"Risk to confidentiality\" means unauthorized disclosure or access to the information.",
+              "choices": [
+                "High",
+                "Medium",
+                "Low"
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "question8",
+              "title": "Rate the risk to the integrity of the \"Identifying information\" at location.\n\"Risk to integrity\" means unintended alteration or destruction of the information. \n\n",
+              "choices": [
+                "High",
+                "Medium",
+                "Low"
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "question9",
+              "title": "Rate the risk to the accessibility of the \"Identifying information\" at location.\n\"Risk to accessibility\" means loss of the information. \n\n\n",
+              "choices": [
+                "High",
+                "Medium",
+                "Low"
+              ]
+            },
+            {
+              "type": "text",
+              "name": "s5q22i1",
+              "title": "What organizational measures are in place to secure the \"Identifying information\" at location?\nSample answer:\"The organization has policies and procedures in place for handling personal information. Employees receive training in accordance with those policies and procedures. The organization also audits how it handles personal information every quarter.\" \n\nOther organizational measures include: reporting procedures, etc."
+            },
+            {
+              "type": "text",
+              "name": "s5q23i1",
+              "title": "What physical measures are in place at your organization to secure the \"Identifying information\" at location?\nSample answer: \"The organization requires ID badges to enter the facilities. There are also security personnel on site 24 hours per day. There are security cameras in every hall and at the entrances.\"\n\nOther physical measures include: locks, physical barriers, etc."
+            },
+            {
+              "type": "text",
+              "name": "s5q24i1",
+              "title": "What technical measures are in place at your organization to secure the \"Identifying information\" at location ?\nSample answer: \"The organization has two-factor authentication on its login process. It also employs anti-malware software.\" \n\nTechnical measures include: firewalls, segmented data, account authentication, etc."
+            },
+            {
+              "type": "text",
+              "name": "s5q27i1",
+              "title": "What is included in the \"Opinions, beliefs, or personal preference data\" at location?\nSample answer: \"Phone numbers, emails, addresses, and dates of birth\""
+            },
+            {
+              "type": "text",
+              "name": "s5q28i1",
+              "title": "Who is the \"Opinions, beliefs, or personal preference data\" at location collected from?\nSample answer: \"The personal information is collected from users of our mobile app.\" \n\nOther types of people include: patients, customers, employees, students, system users, device users, etc."
+            },
+            {
+              "type": "checkbox",
+              "name": "question10",
+              "title": "Click all that apply to the \"Opinions, beliefs, or personal preference data\" handled at location?",
+              "choices": [
+                {
+                  "value": "item1",
+                  "text": "The organization received consent to handle the personal information."
+                },
+                {
+                  "value": "item2",
+                  "text": "The organization is under contract to handle the personal information."
+                },
+                {
+                  "value": "item3",
+                  "text": "The organization has a legal obligation to handle the personal information."
+                },
+                {
+                  "value": "item4",
+                  "text": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information."
+                },
+                {
+                  "value": "item5",
+                  "text": "The organization is protecting a public interest by handling the personal information."
+                },
+                {
+                  "value": "item6",
+                  "text": "The organization has a legitimate business interest in handling the information."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "s5q30i1",
+              "title": "What is your organization doing with the \"Opinions, beliefs, or personal preference data\" at location #1?\nSample answer: \"The organization uses the identifying information to track how users interact with our products. The organization provides that information to third parties who help determine how to better market the products. When the organization is finished with the information, it stores the data on external, third-party servers.\" \n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc."
+            },
+            {
+              "type": "text",
+              "name": "s5q31i1",
+              "title": "What does your organization plan to do with the \"Opinions, beliefs, or personal preference data\" at location #1 in the future?\nThis question may seem repetitive, but it's important to note your future plans. \n\nSample answer: \"The organization plans to use the identifying information to track how users interact with our products. The organization also plans to provide the information to third parties to help determine how to better market those products.\" \n\nOther plans include: selling the information, improving user experiences, providing services, authenticating accounts, etc."
+            },
+            {
+              "type": "text",
+              "name": "s5q31i1",
+              "title": "What departments within your organization handle the \"Opinions, beliefs, or personal preference data\" at location #1?\nSample answer: \"The organization's marketing and sales departments handle the personal information.\"\n\nOther departments include: human resources, security, IT, accounting, etc."
+            },
+            {
+              "type": "text",
+              "name": "s5q32i1",
+              "title": "What departments within your organization handle the \"Opinions, beliefs, or personal preference data\" at location #1?\nSample answer: \"The organization's marketing and sales departments handle the personal information.\"\n\nOther departments include: human resources, security, IT, accounting, etc."
+            },
+            {
+              "type": "radiogroup",
+              "name": "question11",
+              "title": "Does your organization share the \"Opinions, beliefs, or personal preference data\" at location #1 with third parties?\nThird parties include: subsidiaries, affiliates, vendors, software developers, cloud service providers, etc. \n\n",
+              "choices": [
+                "yes",
+                "no"
+              ]
+            },
+            {
+              "type": "text",
+              "name": "s5q34i1",
+              "title": "Name those organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"\n\nYou will need to remember these organizations when you complete the next document: Record of Processing (External). You may want to write them down."
+            },
+            {
+              "type": "text",
+              "name": "s5q35i1",
+              "title": "In what countries are those organizations located?\nSample answer: \"USA, Canada and Mexico\""
+            },
+            {
+              "type": "text",
+              "name": "s5q36i1",
+              "title": "What safeguards are in place to protect the \"Opinions, beliefs, or personal preference data\" at location #1 when it is transferred to another organization?\nSample answer: \"The organization transfers the personal information to the third party via an encrypted FTP site. The organization also audits how the third party vendors uses the information every quarter.\" \n\nOther safeguards include: secure transfer, encryption, periodic audits, firewalls, etc."
+            },
+            {
+              "type": "radiogroup",
+              "name": "question12",
+              "title": "Does your organization plan to share the \"Opinions, beliefs, or personal preference data\" at location #1 with third parties in the future?",
+              "choices": [
+                "yes",
+                "no"
+              ]
+            },
+            {
+              "type": "text",
+              "name": "s5q38i1",
+              "title": "Name the organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\""
+            },
+            {
+              "type": "text",
+              "name": "s5q39i1",
+              "title": "After your organization is finished with the \"Opinions, beliefs, or personal preference data\" at location #1, how long does your organization expect to retain it?\nSample answer: \"2 years\""
+            },
+            {
+              "type": "dropdown",
+              "name": "question13",
+              "title": "Rate the risk to the confidentiality of the \"Opinions, beliefs, or personal preference data\" at location #1.\n\"Risk to confidentiality\" means unauthorized disclosure or access to the information.",
+              "choices": [
+                "High",
+                "Medium",
+                "Low"
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "question14",
+              "title": "Rate the risk to the integrity of the \"Opinions, beliefs, or personal preference data\" at location #1.\n\"Risk to integrity\" means unintended alteration or destruction of the information.",
+              "choices": [
+                "High",
+                "Medium",
+                "Low"
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "question15",
+              "title": "Rate the risk to the accessibility of the \"Opinions, beliefs, or personal preference data\" at location #1.\n\"Risk to accessibility\" means loss of the information.",
+              "choices": [
+                "High",
+                "Medium",
+                "Low"
+              ]
+            },
+            {
+              "type": "text",
+              "name": "s5q43i1",
+              "title": "What organizational measures are in place to secure the \"Opinions, beliefs, or personal preference data\" at location #1?\nSample answer:\"The organization has policies and procedures in place for handling personal information. Employees receive training in accordance with those policies and procedures. The organization also audits how it handles personal information every quarter.\" \n\nOther organizational measures include: reporting procedures, etc."
+            },
+            {
+              "type": "text",
+              "name": "s5q44i1",
+              "title": "What physical measures are in place at your organization to secure the \"Opinions, beliefs, or personal preference data\" at location #1?\nSample answer: \"The organization requires ID badges to enter the facilities. There are also security personnel on site 24 hours per day. There are security cameras in every hall and at the entrances.\"\n\nOther physical measures include: locks, physical barriers, etc. \n\n"
+            },
+            {
+              "type": "text",
+              "name": "s5q45i1",
+              "title": "What technical measures are in place at your organization to secure the \"Opinions, beliefs, or personal preference data\" at location #1?\nSample answer: \"The organization has two-factor authentication on its login process. It also employs anti-malware software.\" \n\nTechnical measures include: firewalls, segmented data, account authentication, etc."
+            },
+            {
+              "type": "text",
+              "name": "s5q48i1",
+              "title": "What is included in the \"Physical characteristics data\" at location #1?\nSample answer: \"Phone numbers, emails, addresses, and dates of birth\""
+            },
+            {
+              "type": "text",
+              "name": "s5q49i1",
+              "title": "Who is the \"Physical characteristics data\" at location #1 collected from?\nSample answer: \"The personal information is collected from users of our mobile app.\" \n\nOther types of people include: patients, customers, employees, students, system users, device users, etc."
+            },
+            {
+              "type": "checkbox",
+              "name": "question16",
+              "title": "Click all that apply to the \"Physical characteristics data\" handled at location #1?",
+              "choices": [
+                {
+                  "value": "item1",
+                  "text": "The organization received consent to handle the personal information."
+                },
+                {
+                  "value": "item2",
+                  "text": "The organization is under contract to handle the personal information."
+                },
+                {
+                  "value": "item3",
+                  "text": "The organization has a legal obligation to handle the personal information."
+                },
+                {
+                  "value": "item4",
+                  "text": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information."
+                },
+                {
+                  "value": "item5",
+                  "text": "The organization is protecting a public interest by handling the personal information."
+                },
+                {
+                  "value": "item6",
+                  "text": "The organization has a legitimate business interest in handling the information."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "s5q51i1",
+              "title": "What is your organization doing with the \"Physical characteristics data\" at location #1?\nSample answer: \"The organization uses the identifying information to track how users interact with our products. The organization provides that information to third parties who help determine how to better market the products. When the organization is finished with the information, it stores the data on external, third-party servers.\" \n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc."
+            },
+            {
+              "type": "text",
+              "name": "s5q52i1",
+              "title": "What does your organization plan to do with the \"Physical characteristics data\" at location #1 in the future?\nThis question may seem repetitive, but it's important to note your future plans. \n\nSample answer: \"The organization plans to use the identifying information to track how users interact with our products. The organization also plans to provide the information to third parties to help determine how to better market those products.\" \n\nOther plans include: selling the information, improving user experiences, providing services, authenticating accounts, etc."
+            },
+            {
+              "type": "text",
+              "name": "s5q53i1",
+              "title": "What departments within your organization handle the \"Physical characteristics data\" at location #1?\nSample answer: \"The organization's marketing and sales departments handle the personal information.\"\n\nOther departments include: human resources, security, IT, accounting, etc."
+            },
+            {
+              "type": "radiogroup",
+              "name": "question17",
+              "title": "Does your organization share the \"Physical characteristics data\" at location #1 with third parties?\nThird parties include: subsidiaries, affiliates, vendors, software developers, cloud service providers, etc.",
+              "choices": [
+                "Yes",
+                "No"
+              ]
+            },
+            {
+              "type": "text",
+              "name": "s5q55i1",
+              "title": "Name those organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"\n\nYou will need to remember these organizations when you complete the next document: Record of Processing (External). You may want to write them down."
+            },
+            {
+              "type": "text",
+              "name": "s5q56i1",
+              "title": "In what countries are those organizations located?\nSample answer: \"USA, Canada and Mexico\""
+            },
+            {
+              "type": "text",
+              "name": "s5q57i1",
+              "title": "What safeguards are in place to protect the \"Physical characteristics data\" at location #1 when it is transferred to another organization?\nSample answer: \"The organization transfers the personal information to the third party via an encrypted FTP site. The organization also audits how the third party vendors uses the information every quarter.\" \n\nOther safeguards include: secure transfer, encryption, periodic audits, firewalls, etc."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
