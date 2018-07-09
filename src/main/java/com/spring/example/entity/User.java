@@ -1,27 +1,30 @@
 package com.spring.example.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String email;
     private String password;
     private String phone;
     private String name;
+    @ManyToOne
+    @JoinColumn(name="admin_user_id")
+    private AdminUser adminUser;
 
     public User() {
     }
 
-    public User(String email, String password) {
+    public User(String email, String password, String phone, String name, AdminUser adminUser) {
         this.email = email;
         this.password = password;
+        this.phone = phone;
+        this.name = name;
+        this.adminUser = adminUser;
     }
 
     public String getEmail() {
@@ -42,5 +45,9 @@ public class User {
 
     public Long getId() {
         return id;
+    }
+
+    public Long getAdminUserId() {
+        return adminUser.getId();
     }
 }

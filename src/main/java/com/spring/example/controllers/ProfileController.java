@@ -1,6 +1,8 @@
 package com.spring.example.controllers;
 
+import com.spring.example.entity.AdminUser;
 import com.spring.example.entity.User;
+import com.spring.example.repository.AdminUserRepository;
 import com.spring.example.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +20,9 @@ public class ProfileController {
 
     @Resource
     private UserRepository userRepository;
+
+    @Resource
+    private AdminUserRepository adminUserRepository;
 
     @GetMapping("user/home")
     public String getLogin(Model model) {
@@ -38,9 +43,23 @@ public class ProfileController {
 
 
     @GetMapping("/admin/home")
-    public String getAdminLogin(@RequestParam(required = false) String role, Model model) {
+    public String getAdminLogin(@RequestParam(required = false) String role, Model model, Principal principal) {
 
-        return "index";
+        String adminEmail = principal.getName();
+        AdminUser adminUser = adminUserRepository.findByEmail(adminEmail);
+        model.addAttribute("users",adminUser.getUser());
+
+        return "admin_index";
+    }
+
+    @GetMapping("admin/profile")
+    public String getAdminProfile(Model model, Principal principal) {
+
+        String emailAddress = principal.getName();
+        model.addAttribute("email",emailAddress);
+        AdminUser user = adminUserRepository.findByEmail(emailAddress);
+        model.addAttribute("name",user.getEmail());
+        return "admin_profile";
     }
 
 }

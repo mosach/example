@@ -11,12 +11,13 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/user/home" th:text="${name}"></a>
+            <a class="navbar-brand" href="/admin/home" th:text="${name}"></a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="/user/home">Home</a></li>
-            <li><a href="/user/profile">Profile</a></li>
-            <li><a href="/user/logout">Logout</a></li>
+            <li><a href="/admin/home">Home</a></li>
+            <li><a href="/admin/register/user">Create User</a></li>
+            <li class="active"><a href="/admin/profile">Profile</a></li>
+            <li><a href="/admin/logout">Logout</a></li>
         </ul>
     </div>
 </nav>
@@ -37,12 +38,6 @@
                                 <tr>
                                     <td>Email</td>
                                     <td><a th:href="'mailto:' + ${email}" th:text="${email}"></a></td>
-                                </tr>
-                                <tr>
-                                <td>Phone Number</td>
-                                <td th:text="${phone}">
-                                </td>
-
                                 </tr>
 
                                 </tbody>

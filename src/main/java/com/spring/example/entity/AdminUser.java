@@ -1,9 +1,8 @@
 package com.spring.example.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class AdminUser {
@@ -12,6 +11,12 @@ public class AdminUser {
     private Long id;
     private String email;
     private String password;
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY,
+            mappedBy = "adminUser"
+    )
+    private List<User> user = new ArrayList<>();
 
     public AdminUser() {
     }
@@ -27,5 +32,13 @@ public class AdminUser {
 
     public String getPassword() {
         return password;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public List<User> getUser() {
+        return user;
     }
 }

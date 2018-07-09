@@ -36,12 +36,7 @@ public class GdprController {
     @Autowired
     private FormEntityRepository formEntityRepository;
 
-    @GetMapping("/form/create")
-    public String createNewGdprForm(Model model, Principal principal) {
-        return "";
-    }
-
-    @GetMapping("/form/{form_number}")
+    @GetMapping("/user/form/{form_number}")
     public String getGdprForm(@PathVariable("form_number") Integer formNumber, Model model, Principal principal) {
         StringBuilder contentBuilder = new StringBuilder();
 
