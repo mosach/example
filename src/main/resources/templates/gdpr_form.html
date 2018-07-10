@@ -20,7 +20,6 @@
 //send Ajax request to your web server.
 
                 var formNumber = /*[[${form_number}]]*/ 'default';
-                alert("The results are:" + JSON.stringify(survey.data));
                 $.post({
                     url: "/user/form/" + formNumber,
                     data: JSON.stringify(survey.data),

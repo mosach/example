@@ -79,15 +79,16 @@ public class PdfController {
             context.setVariable(s,formMap.get(s));
         }
 
-        String html = templateEngine.process("templates/test2", context);
+        String html = templateEngine.process("templates/Q"+formNumber, context);
 
 
         org.jsoup.nodes.Document document1 = Jsoup.parse(html);
         document1.outputSettings().syntax(org.jsoup.nodes.Document.OutputSettings.Syntax.xml);
 
+        String name = "/tmp/"+user.getId()+"_"+Instant.now().toEpochMilli()+".html";
+
         try {
-            String xhtml = document1.html();
-            OutputStream outputStream1 = new FileOutputStream("/tmp/"+user.getId()+Instant.now().toEpochMilli()+".html");
+            OutputStream outputStream1 = new FileOutputStream(name);
             PrintWriter printWriter = new PrintWriter(outputStream1);
             printWriter.print(html);
             outputStream1.close();
@@ -108,18 +109,18 @@ public class PdfController {
             e.printStackTrace();
         }
         HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Disposition", "inline; filename=form.pdf");
+        headers.add("Content-Disposition", "inline; filename=form.html");
 
         InputStream inputStream = null;
         try {
-            inputStream = new FileInputStream("/Users/mcherukuri/Downloads/form.pdf");
+            inputStream = new FileInputStream(name);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         return ResponseEntity
                 .ok()
                 .headers(headers)
-                .contentType(MediaType.APPLICATION_PDF)
+                .contentType(MediaType.TEXT_HTML)
                 .body(new InputStreamResource(inputStream));
 
 
