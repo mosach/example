@@ -6,10 +6,10 @@ import com.spring.example.repository.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.io.PrintWriter;
@@ -107,6 +107,31 @@ public class ProfileController {
         AdminUser user = adminUserRepository.findByEmail(emailAddress);
         model.addAttribute("name",user.getEmail());
         return "admin_profile";
+    }
+
+    @RequestMapping(value = "/admin/user/{user_id}", method = RequestMethod.GET)
+    public String getUserProfile(@PathVariable("user_id") Integer userId, Model model, Principal principal) {
+        String emailAddress = principal.getName();
+        AdminUser adminUser = adminUserRepository.findByEmail(emailAddress);
+
+        List<User> users =adminUser.getUser();
+        boolean found = false;
+        User foundUser = null;
+        for (User user : users) {
+            if(user.getId().equals(Long.valueOf(userId))) {
+                found  = true;
+                foundUser = user;
+                break;
+            }
+        }
+        if (!found) {
+            throw new AccessDeniedException("User doesn't belong to your company");
+        }
+        model.addAttribute("email",emailAddress);
+        AdminUser user = adminUserRepository.findByEmail(emailAddress);
+        model.addAttribute("user",foundUser);
+        model.addAttribute("count",7);
+        return "admin_user_profile";
     }
 
 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="/webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet">
+    <title th:text="'Welcome to' + ${user.name}">Welcome</title>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/user/home">GDPR</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/user/home">Home</a></li>
+            <li class="active"><a href="/user/generate">Documents</a></li>
+            <li><a href="/user/profile">Profile</a></li>
+            <li><a href="/user/logout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+
+
+        <div class="col-md-12">
+            <h4>Generate Forms! You need to answer all questions before doing this!</h4>
+            <div class="table-responsive">
+
+
+                <table id="mytable" class="table table-bordred table-striped">
+
+                    <thead>
+
+                    <th>Form Number</th>
+                    <th>Generation Link</th>
+                    <th>Preview Link</th>
+
+                    </thead>
+                    <tbody>
+
+                    <tr th:each="number: ${#numbers.sequence(1,7)}">
+                        <td th:text="'Form'+ ${number}"></td>
+                        <td><a th:href="@{/user/generate/{num}(num = ${number})}">Click to Generate Document</a> </td>
+                        <td><a th:href="@{/user/preview/{num}(num = ${number})}">Click to Preview Document</a> </td>
+                    </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
