@@ -21,13 +21,36 @@
     </div>
 </nav>
 <div class="container">
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-            <th scope="col">Recent Activity</th>
-        </tr>
-        </thead>
-    </table>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>
+                        Form Name
+                    </th>
+                    <th>
+                        Last Submission
+                    </th>
+                    <th>
+                        Status
+                    </th>
+                    <th>
+                       Form Link
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="link : ${form_links}" th:class="${link.type}">
+                    <td th:text="${link.id}"></td>
+                    <td th:text="${link.date}"></td>
+                    <td th:text="${link.status}"></td>
+                    <td><a th:href="@{/user/form/{id}/(id=${link.id})}">Fill Out Form</a> </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 </body>
 </html>

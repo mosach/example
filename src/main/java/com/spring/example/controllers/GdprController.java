@@ -4,6 +4,8 @@ package com.spring.example.controllers;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.spring.example.logic.FormCreator;
 import com.spring.example.pojo.Questionaire;
+import com.spring.example.repository.Form2Repository;
+import com.spring.example.repository.Form3Repository;
 import com.spring.example.repository.FormEntityRepository;
 import com.spring.example.repository.UserRepository;
 import org.slf4j.Logger;
@@ -36,11 +38,24 @@ public class GdprController {
     @Autowired
     private FormEntityRepository formEntityRepository;
 
+    @Autowired
+    private Form2Repository form2Repository;
+
+    @Autowired
+    private Form3Repository form3Repository;
+
+
     @GetMapping("/user/form/{form_number}")
     public String getGdprForm(@PathVariable("form_number") Integer formNumber, Model model, Principal principal) {
         StringBuilder contentBuilder = new StringBuilder();
 
-        String path = getClass().getClassLoader().getResource("static/section1.json").getPath();
+        if(formNumber > 3 && formNumber < 1) {
+            throw new RuntimeException("Form value is not valid");
+        }
+
+        String name = "static/section"+formNumber+".json";
+
+        String path = getClass().getClassLoader().getResource(name).getPath();
 
         String username = principal.getName();
 
@@ -52,14 +67,11 @@ public class GdprController {
         {
             e.printStackTrace();
         }
-
-        FormCreator formCreator = new FormCreator(username, formEntityRepository, userRepository);
         String json =  contentBuilder.toString();
         model.addAttribute("survey",json);
-        model.addAttribute("form_number",1);
+        model.addAttribute("form_number",formNumber);
         try {
             Questionaire questionaire = new ObjectMapper().readValue(new File(path), Questionaire.class);
-            formCreator.addDefaultValues(questionaire);
             String survey = new ObjectMapper().writeValueAsString(questionaire);
             model.addAttribute("survey",survey);
         } catch (IOException e) {
@@ -72,8 +84,16 @@ public class GdprController {
     public String postGDPRForm(@PathVariable("form_number") Integer formNumber, @RequestBody Map<String,Object> data, Model model, Principal principal) {
 
         String username = principal.getName();
-        FormCreator formCreator = new FormCreator(username,formEntityRepository,userRepository);
-        formCreator.saveAsEntity(data);
+        FormCreator formCreator =  new FormCreator(username, userRepository);
+        if(formNumber == 1) {
+            formCreator.saveAsEntity(formEntityRepository,data);
+        }
+        if(formNumber == 2) {
+            formCreator.saveAsEntity(form2Repository,data);
+        }
+        if(formNumber == 3) {
+            formCreator.saveAsEntity(form3Repository,data);
+        }
         logger.info("Data received"+ data);
         return "redirect:/user/home";
     }

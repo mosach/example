@@ -5,9 +5,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.node.ValueNode;
-import com.spring.example.entity.FormEntity;
+import com.spring.example.entity.Form1;
+import com.spring.example.entity.Form2;
+import com.spring.example.entity.Form3;
 import com.spring.example.entity.User;
 import com.spring.example.pojo.Questionaire;
+import com.spring.example.repository.Form2Repository;
+import com.spring.example.repository.Form3Repository;
 import com.spring.example.repository.FormEntityRepository;
 import com.spring.example.repository.UserRepository;
 import org.slf4j.Logger;
@@ -23,12 +27,10 @@ public class FormCreator {
     private static final Logger logger = LoggerFactory.getLogger("FormCreator");
 
     private String username;
-    private final FormEntityRepository formEntityRepository;
     private final UserRepository userRepository;
 
-    public FormCreator(String username, FormEntityRepository formEntityRepository, UserRepository userRepository) {
+    public FormCreator(String username, UserRepository userRepository) {
         this.username = username;
-        this.formEntityRepository = formEntityRepository;
         this.userRepository = userRepository;
     }
 
@@ -40,24 +42,48 @@ public class FormCreator {
 
     }
 
-    public void saveAsEntity(Map<String, Object> data) {
+    public void saveAsEntity(FormEntityRepository formEntityRepository, Map<String, Object> data) {
         try {
             String json = new ObjectMapper().writeValueAsString(data);
             Map<String,String> map = new HashMap<>();
             addKeys("",new ObjectMapper().readTree(json),map);
             User user = userRepository.findByEmail(username);
-            FormEntity formEntity = new FormEntity();
-            formEntity.setUserId(user.getId());
-            formEntity.setMyMap(map);
-            formEntityRepository.save(formEntity);
+            Form1 form1 = new Form1();
+            form1.setUserId(user.getId());
+            form1.setMyMap(map);
+            formEntityRepository.save(form1);
 
-//            EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPAService");
-//            EntityManager em = emf.createEntityManager();
-//            em.getTransaction().begin();
-//            em.merge(formEntity);
-//            em.flush();
-//            em.getTransaction().commit();
-//            em.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void saveAsEntity(Form2Repository formEntityRepository, Map<String, Object> data) {
+        try {
+            String json = new ObjectMapper().writeValueAsString(data);
+            Map<String,String> map = new HashMap<>();
+            addKeys("",new ObjectMapper().readTree(json),map);
+            User user = userRepository.findByEmail(username);
+            Form2 form2 = new Form2();
+            form2.setUserId(user.getId());
+            form2.setMyMap(map);
+            formEntityRepository.save(form2);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void saveAsEntity(Form3Repository formEntityRepository, Map<String, Object> data) {
+        try {
+            String json = new ObjectMapper().writeValueAsString(data);
+            Map<String,String> map = new HashMap<>();
+            addKeys("",new ObjectMapper().readTree(json),map);
+            User user = userRepository.findByEmail(username);
+            Form3 form3 = new Form3();
+            form3.setUserId(user.getId());
+            form3.setMyMap(map);
+            formEntityRepository.save(form3);
 
         } catch (IOException e) {
             e.printStackTrace();

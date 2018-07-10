@@ -11,9 +11,13 @@ import java.util.List;
         "type",
         "name",
         "title",
-        "defaultValue",
+        "items",
         "isRequired",
-        "items"
+        "choices",
+        "visibleIf",
+        "enableIf",
+        "inputType",
+        "templateElements"
 })
 public class Element {
 
@@ -23,12 +27,20 @@ public class Element {
     private String name;
     @JsonProperty("title")
     private String title;
-    @JsonProperty("defaultValue")
-    private String defaultValue;
-    @JsonProperty("isRequired")
-    private Boolean isRequired;
     @JsonProperty("items")
     private List<Item> items = null;
+    @JsonProperty("isRequired")
+    private Boolean isRequired;
+    @JsonProperty("choices")
+    private List<String> choices = null;
+    @JsonProperty("visibleIf")
+    private String visibleIf;
+    @JsonProperty("enableIf")
+    private String enableIf;
+    @JsonProperty("inputType")
+    private String inputType;
+    @JsonProperty("templateElements")
+    private List<TemplateElement> templateElements = null;
 
     @JsonProperty("type")
     public String getType() {
@@ -60,14 +72,14 @@ public class Element {
         this.title = title;
     }
 
-    @JsonProperty("defaultValue")
-    public String getDefaultValue() {
-        return defaultValue;
+    @JsonProperty("items")
+    public List<Item> getItems() {
+        return items;
     }
 
-    @JsonProperty("defaultValue")
-    public void setDefaultValue(String defaultValue) {
-        this.defaultValue = defaultValue;
+    @JsonProperty("items")
+    public void setItems(List<Item> items) {
+        this.items = items;
     }
 
     @JsonProperty("isRequired")
@@ -80,14 +92,54 @@ public class Element {
         this.isRequired = isRequired;
     }
 
-    @JsonProperty("items")
-    public List<Item> getItems() {
-        return items;
+    @JsonProperty("choices")
+    public List<String> getChoices() {
+        return choices;
     }
 
-    @JsonProperty("items")
-    public void setItems(List<Item> items) {
-        this.items = items;
+    @JsonProperty("choices")
+    public void setChoices(List<String> choices) {
+        this.choices = choices;
+    }
+
+    @JsonProperty("visibleIf")
+    public String getVisibleIf() {
+        return visibleIf;
+    }
+
+    @JsonProperty("visibleIf")
+    public void setVisibleIf(String visibleIf) {
+        this.visibleIf = visibleIf;
+    }
+
+    @JsonProperty("enableIf")
+    public String getEnableIf() {
+        return enableIf;
+    }
+
+    @JsonProperty("enableIf")
+    public void setEnableIf(String enableIf) {
+        this.enableIf = enableIf;
+    }
+
+    @JsonProperty("inputType")
+    public String getInputType() {
+        return inputType;
+    }
+
+    @JsonProperty("inputType")
+    public void setInputType(String inputType) {
+        this.inputType = inputType;
+    }
+
+    @JsonProperty("templateElements")
+    public List<TemplateElement> getTemplateElements() {
+        return templateElements;
+    }
+
+    @JsonProperty("templateElements")
+    public void setTemplateElements(List<TemplateElement> templateElements) {
+        this.templateElements = templateElements;
     }
 
 }
