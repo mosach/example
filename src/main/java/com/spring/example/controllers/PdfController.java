@@ -57,13 +57,13 @@ public class PdfController {
     @Autowired
     private UserRecordsRepository userRecordsRepository;
 
-    @RequestMapping(value = "/user/preview/{form_number}",produces = MediaType.APPLICATION_PDF_VALUE, method = RequestMethod.GET)
+    @RequestMapping(value = "/user/preview/{form_number}", produces = MediaType.APPLICATION_PDF_VALUE, method = RequestMethod.GET)
     public ResponseEntity<InputStreamResource> returnPdf(@PathVariable("form_number") Integer formNumber, Model model, Principal principal) {
         String username = principal.getName();
         User user = userRepository.findByEmail(username);
         UserRecords userRecords = userRecordsRepository.findFirstByUserIdAndFormIdOrderByIdDesc(user.getId(), Long.valueOf(formNumber));
 
-        if(userRecords == null) {
+        if (userRecords == null) {
             throw new ResourceNotFoundException();
         }
 
@@ -72,17 +72,17 @@ public class PdfController {
 
     }
 
-    @RequestMapping(value = "/admin/user/{user_id}/preview/{form_number}",produces = MediaType.APPLICATION_PDF_VALUE, method = RequestMethod.GET)
-    public ResponseEntity<InputStreamResource> previewUserPdf(@PathVariable("user_id") Integer userId,@PathVariable("form_number") Integer formNumber, Model model, Principal principal) throws FileNotFoundException {
+    @RequestMapping(value = "/admin/user/{user_id}/preview/{form_number}", produces = MediaType.APPLICATION_PDF_VALUE, method = RequestMethod.GET)
+    public ResponseEntity<InputStreamResource> previewUserPdf(@PathVariable("user_id") Integer userId, @PathVariable("form_number") Integer formNumber, Model model, Principal principal) throws FileNotFoundException {
         String username = principal.getName();
 
         AdminUser adminUser = adminUserRepository.findByEmail(username);
 
-        List<User> users =adminUser.getUser();
+        List<User> users = adminUser.getUser();
         boolean found = false;
         for (User user : users) {
-            if(user.getId().equals(Long.valueOf(userId))) {
-                found  = true;
+            if (user.getId().equals(Long.valueOf(userId))) {
+                found = true;
                 break;
             }
         }
@@ -92,7 +92,7 @@ public class PdfController {
 
         UserRecords userRecords = userRecordsRepository.findFirstByUserIdAndFormIdOrderByIdDesc(Long.valueOf(userId), Long.valueOf(formNumber));
 
-        if(userRecords == null) {
+        if (userRecords == null) {
             throw new ResourceNotFoundException();
         }
 
@@ -112,7 +112,7 @@ public class PdfController {
     public String generatePage(Model model, Principal principal) {
         String username = principal.getName();
         User user = userRepository.findByEmail(username);
-        model.addAttribute("user",user);
+        model.addAttribute("user", user);
         return "generate";
     }
 
@@ -135,33 +135,40 @@ public class PdfController {
         templateEngine.setTemplateResolver(classLoaderTemplateResolver);
 
         Context context = new Context();
-        Map<String,String> formMap = form1.getMyMap();
-        for (String s : formMap.keySet()) {
-            context.setVariable(s,formMap.get(s));
+        Map<String, String> formMap;
+        if (form1 != null) {
+            formMap = form1.getMyMap();
+            for (String s : formMap.keySet()) {
+                context.setVariable(s, formMap.get(s));
+            }
         }
 
-        formMap = form2.getMyMap();
-        for (String s : formMap.keySet()) {
-            context.setVariable(s,formMap.get(s));
+        if (form2 != null) {
+            formMap = form2.getMyMap();
+            for (String s : formMap.keySet()) {
+                context.setVariable(s, formMap.get(s));
+            }
+        }
+        if (form3 != null) {
+            formMap = form3.getMyMap();
+            for (String s : formMap.keySet()) {
+                context.setVariable(s, formMap.get(s));
+            }
         }
 
-        formMap = form3.getMyMap();
-        for (String s : formMap.keySet()) {
-            context.setVariable(s,formMap.get(s));
-        }
 
-
-        String html = templateEngine.process("templates/Q"+formNumber, context);
+        String html = templateEngine.process("templates/Q" + formNumber, context);
 
 
 //        org.jsoup.nodes.Document document1 = Jsoup.parse(html);
 //        document1.outputSettings().syntax(org.jsoup.nodes.Document.OutputSettings.Syntax.xml);
 
 
+        String name = "/tmp/" + user.getId() + "_" + Instant.now().toEpochMilli() + ".html";
 
-        String name = "/tmp/"+user.getId()+"_"+Instant.now().toEpochMilli()+".html";
+        try
 
-        try {
+        {
             OutputStream outputStream1 = new FileOutputStream(name);
             PrintWriter printWriter = new PrintWriter(outputStream1);
             printWriter.print(html);
@@ -185,18 +192,22 @@ public class PdfController {
 //            renderer.finishPDF();
 //            outputStream.close();
 
-        } catch ( IOException e) {
+        } catch (
+                IOException e)
+
+        {
             e.printStackTrace();
         }
-        return getInputStreamResourceResponseEntity(formNumber, name);
+        return
 
+                getInputStreamResourceResponseEntity(formNumber, name);
 
 
     }
 
     private ResponseEntity<InputStreamResource> getInputStreamResourceResponseEntity(@PathVariable("form_number") Integer formNumber, String name) {
         HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Disposition", "inline; filename=Q"+formNumber+".html");
+        headers.add("Content-Disposition", "inline; filename=Q" + formNumber + ".html");
 
         InputStream inputStream = null;
         try {
@@ -234,8 +245,7 @@ public class PdfController {
         matcher = pattern.matcher(clean_html);
         if (matcher.find()) {
             orig_html = matcher.replaceAll("");
-        }
-        else {
+        } else {
             orig_html = clean_html;
         }
 
