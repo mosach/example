@@ -2,16 +2,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Fill your GDPR</title>
+    <meta charset="utf-8">
+    <title>Fill your GDPR Form</title>
+    <meta name="generator" content="Google Web Designer 4.1.0.0711">
     <link href="/webjars/bootstrap/3.3.6/css/bootstrap.min.css"
           rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://surveyjs.azureedge.net/1.0.29/survey.jquery.min.js"></script>
+    <link rel="stylesheet" href="https://surveyjs.azureedge.net/1.0.35/survey.css"/>
     <script th:inline="javascript">
         window.onload = function () {
+            var defaultThemeColors = Survey
+                .StylesManager
+                .ThemeColors["default"];
+            defaultThemeColors["$main-color"] = "#1b279f";
+            defaultThemeColors["$main-hover-color"] = "#000000";
+            defaultThemeColors["$text-color"] = "#000000";
+            defaultThemeColors["$header-color"] = "#1b279f";
 
-            Survey.Survey.cssType = "bootstrap";
+            defaultThemeColors["$header-background-color"] = "#4459ee";
+            defaultThemeColors["$body-container-background-color"] = "#f7d861";
+
+            Survey
+                .StylesManager
+                .applyTheme();
+            //Survey.Survey.cssType = "bootstrap";
             Survey.Survey.showCompletedPage = false;
             var surveyString = /*[[${survey}]]*/ 'default';
             var surveyJSON = JSON.parse(surveyString);
@@ -39,24 +54,290 @@
         }
 
     </script>
+    <style type="text/css" id="gwd-text-style">
+        p {
+            margin: 0px;
+        }
+        h1 {
+            margin: 0px;
+        }
+        h2 {
+            margin: 0px;
+        }
+        h3 {
+            margin: 0px;
+        }
+    </style>
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+        body {
+            background-color: transparent;
+            transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform-style: preserve-3d;
+        }
+        .gwd-span-1xgk {
+            background-color: rgb(0, 0, 0);
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            display: block;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            height: 7.44%;
+            left: 0px;
+            position: absolute;
+            text-size-adjust: 100%;
+            top: 0px;
+            width: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transform-origin: 481.5px 24.9922px 0px;
+        }
+        .gwd-br-1qea {
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        .gwd-span-1aiw {
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            display: block;
+            font-family: Roboto;
+            font-size: 14px;
+            height: 2.98%;
+            left: 85.5%;
+            position: absolute;
+            text-align: center;
+            text-size-adjust: 100%;
+            top: 2.24%;
+            width: 13.4%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transform-origin: 131px -149px 0px;
+        }
+        .gwd-a-4021 {
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            font-family: Roboto;
+            font-size: 14px;
+            text-align: center;
+            text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        .gwd-span-12ml {
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            display: block;
+            font-family: Roboto;
+            font-size: 14px;
+            height: 2.98%;
+            left: 78%;
+            position: absolute;
+            text-align: center;
+            text-size-adjust: 100%;
+            top: 2.45%;
+            width: 13.4%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transform-origin: 131px -149px 0px;
+        }
+        .gwd-a-qqlg {
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            font-family: Roboto;
+            font-size: 14px;
+            text-align: center;
+            text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        .gwd-span-gkl0 {
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            display: block;
+            font-family: Roboto;
+            font-size: 14px;
+            height: 2.98%;
+            left: 69.1%;
+            position: absolute;
+            text-align: center;
+            text-size-adjust: 100%;
+            top: 2.45%;
+            width: 13.4%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transform-origin: 131px -149px 0px;
+        }
+        .gwd-a-1ur0 {
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            font-family: Roboto;
+            font-size: 14px;
+            text-align: center;
+            text-decoration-line: none;
+            text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-text-decorations-in-effect: none;
+        }
+        .gwd-span-1ypv {
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            display: block;
+            font-family: Roboto;
+            font-size: 14px;
+            height: 2.98%;
+            left: 61.2%;
+            position: absolute;
+            text-align: center;
+            text-size-adjust: 100%;
+            top: 2.4%;
+            width: 13.4%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transform-origin: 131px -149px 0px;
+        }
+        .gwd-a-w08m {
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            font-family: Roboto;
+            font-size: 14px;
+            text-align: center;
+            text-decoration-line: none;
+            text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-text-decorations-in-effect: none;
+        }
+        .gwd-spritesheet-3gyy {
+            background-color: rgb(0, 0, 0);
+            border-color: rgb(255, 255, 255);
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            display: block;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            height: 7.29%;
+            left: 46.7%;
+            overflow: hidden;
+            position: absolute;
+            text-size-adjust: 100%;
+            top: 0.15%;
+            width: 7.37%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transform-origin: 34.4992px 28.5781px 0px;
+        }
+        .gwd-span-1n7s {
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            display: block;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            height: 74.85%;
+            left: 0px;
+            position: absolute;
+            text-size-adjust: 100%;
+            top: 7.29%;
+            width: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            background-image: none;
+            background-color: rgb(68, 89, 238);
+        }
+        .gwd-br-7teq {
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        .gwd-span-1uve {
+            background-color: rgb(255, 255, 255);
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            display: block;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            height: 17.71%;
+            left: 0px;
+            position: absolute;
+            text-size-adjust: 100%;
+            top: 82.29%;
+            width: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transform-origin: 481.5px -95.5156px 0px;
+        }
+        .gwd-br-2nfi {
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        .gwd-spritesheet-1u15 {
+            height: 8.93%;
+            left: 46.58%;
+            top: 91.07%;
+            transform-origin: 34.484px 35.016px 0px;
+        }
+        .gwd-span-8wyk {
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            display: block;
+            font-family: "Open Sans";
+            font-size: 20px;
+            height: 4.46%;
+            left: 33.64%;
+            position: absolute;
+            text-align: center;
+            text-size-adjust: 100%;
+            top: 86.61%;
+            width: 32.71%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transform-origin: 134.5px 150px 0px;
+        }
+        .gwd-span-130m {
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            display: block;
+            font-family: "Open Sans";
+            font-size: 13px;
+            height: 2.68%;
+            left: 88.7%;
+            position: absolute;
+            text-size-adjust: 100%;
+            top: 90%;
+            width: 9.87%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transform-origin: 2.5px -130.532px 0px;
+        }
+        .gwd-span-snn1 {
+            left: 88.79%;
+            top: 93.75%;
+        }
+        .gwd-div-1rlo {
+            position: absolute;
+            top: 7.44%;
+            height: 74.7%;
+            left: 5.5%;
+            width: 89.3%;
+            transform-origin: 430.016px 250.969px 0px;
+            overflow: scroll;
+        }
+        .gwd-div-s6cp {}
+    </style>
+    <script data-source="/js/googbase_min.js" data-version="4" data-exports-type="googbase" src="/js/googbase_min.js"></script>
+    <script data-source="/js/gwd_webcomponents_min.js" data-version="5" data-exports-type="gwd_webcomponents" src="/js/gwd_webcomponents_min.js"></script>
+    <script data-source="/js/gwdspritesheet_min.js" data-version="10" data-exports-type="gwd-spritesheet" src="/js/gwdspritesheet_min.js"></script>
 </head>
-<body>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/user/home" th:text="${name}"></a>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-            <l><a href="/user/home">Home</a></l>
-            <li><a href="/user/generate">Documents</a></li>
-            <li><a href="/user/profile">Profile</a></li>
-            <li><a href="/user/logout">Logout</a></li>
-        </ul>
-    </div>
-</nav>
-<div class="container">
-    <div id="surveyContainer"></div>
-</div>
 
+<body class="htmlNoPages">
+<span class="gwd-span-1xgk"><br class="gwd-br-1qea"></span><span class="gwd-span-1aiw gwd-span-1ck3"><a href="/user/logout" style="text-decoration:none" class="gwd-a-4021">LOGOUT</a></span><span class="gwd-span-1aiw gwd-span-12ml gwd-span-1pt7"><a href="/user/profile" class="gwd-a-qqlg" style="text-decoration:none">PROFILE</a>
+    </span><span class="gwd-span-1aiw gwd-span-12ml gwd-span-gkl0 gwd-span-s419"><a href="/user/generate" class="gwd-a-1ur0">DOCUMENTS</a></span><span class="gwd-span-1aiw gwd-span-12ml gwd-span-gkl0 gwd-span-1ypv"><a href="/user/home" class="gwd-a-w08m gwd-a-2wyl">HOME</a></span>
+<gwd-spritesheet
+        id="owlicon1_1" imagesource="/assets/logo-02.png" offsetx="1550" offsety="1025" clipwidth="1100" clipheight="1300" scaling="cover" class="gwd-spritesheet-3gyy gwd-spritesheet-n6g6" src="/assets/logo-02.png" alignment="center"></gwd-spritesheet><span class="gwd-span-1n7s"><br class="gwd-br-7teq"></span><span class="gwd-span-1uve"><br class="gwd-br-2nfi"></span>
+<gwd-spritesheet id="owlicon1" imagesource="/assets/logo-02.png" offsetx="140" offsety="25" clipwidth="1100" clipheight="1300"
+                 scaling="cover" class="gwd-spritesheet-3gyy gwd-spritesheet-1u15" src="/assets/logo-02.png" alignment="center"></gwd-spritesheet><span class="gwd-span-8wyk">GET&nbsp; READY FOR GDPR</span><span class="gwd-span-130m gwd-span-p3iy">CONTACT US</span><span class="gwd-span-130m gwd-span-snn1">ABOUT US</span>
+<div class="gwd-div-1rlo" id="surveyContainer"></div>
 </body>
+
 </html>
