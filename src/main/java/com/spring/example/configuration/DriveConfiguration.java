@@ -32,7 +32,7 @@ public class DriveConfiguration {
         final NetHttpTransport HTTP_TRANSPORT;
         try {
             GoogleCredential credential =
-                    GoogleCredential.fromStream(new FileInputStream("/Users/mcherukuri/Downloads/Platform.json")).createScoped(Collections.singleton(DriveScopes.DRIVE));
+                    GoogleCredential.fromStream(new FileInputStream("/home/toolkitgdpr/Platform.json")).createScoped(Collections.singleton(DriveScopes.DRIVE));
 
             HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
 
@@ -50,7 +50,7 @@ public class DriveConfiguration {
         Drive drive = null;
         try {
             GoogleCredential credential =
-                    GoogleCredential.fromStream(new FileInputStream("/Users/mcherukuri/Downloads/Platform.json")).createScoped(Collections.singleton(DriveScopes.DRIVE));
+                    GoogleCredential.fromStream(new FileInputStream("/home/toolkitgdpr/Platform.json")).createScoped(Collections.singleton(DriveScopes.DRIVE));
 
             HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
 

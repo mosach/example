@@ -183,7 +183,7 @@ public class PdfController {
             file.setName(user.getId()+"_"+formNumber);
             file.setMimeType("application/vnd.google-apps.document");
 
-            OutputStream outputStream = new FileOutputStream("/tmp/"+fileName+".pdf");
+            OutputStream outputStream = new FileOutputStream("/tmp/" + fileName + ".pdf");
 
             FileContent mediaContent = new FileContent("text/html", filePath);
             Drive drive = new DriveConfiguration().createDrive();
@@ -191,8 +191,12 @@ public class PdfController {
             String id = uploaded.getId();
             drive = new DriveConfiguration().createDrive();
             Drive.Files.Export export = drive.files().export(id, "application/pdf");
-            export.getMediaHttpDownloader().setDirectDownloadEnabled(true);
+//            export.getMediaHttpDownloader().setDirectDownloadEnabled(true);
             export.executeMediaAndDownloadTo(outputStream);
+            byte[] bytes = ((ByteArrayOutputStream) outputStream).toByteArray();
+//            FileOutputStream fileOutputStream = new FileOutputStream("/tmp/" + fileName + ".pdf");
+//            fileOutputStream.write(bytes);
+//            fileOutputStream.close();
             outputStream.close();
 
         } catch (
