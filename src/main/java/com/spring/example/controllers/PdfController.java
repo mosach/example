@@ -191,6 +191,7 @@ public class PdfController {
                 IOException e)
 
         {
+            logger.error("Issue with Pdf processing",e);
             e.printStackTrace();
         }
         return getInputStreamResourceResponseEntity(formNumber, name);

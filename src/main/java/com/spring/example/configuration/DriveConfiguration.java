@@ -6,14 +6,15 @@ import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.drive.Drive;
-import com.google.auth.oauth2.ComputeEngineCredentials;
-import com.google.auth.oauth2.GoogleCredentials;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 
 public class DriveConfiguration {
 
+    private static final Logger logger = LoggerFactory.getLogger("DriveConfiguration");
     private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
 
     private static Drive drive;
@@ -24,10 +25,11 @@ public class DriveConfiguration {
             GoogleCredential credential = GoogleCredential.getApplicationDefault();
             HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
 
-            Drive drive = new Drive.Builder(HTTP_TRANSPORT, JSON_FACTORY, credential)
+            drive = new Drive.Builder(HTTP_TRANSPORT, JSON_FACTORY, credential)
                     .setApplicationName("ESOMAR application")
                     .build();
         } catch (GeneralSecurityException | IOException e) {
+            logger.error("Failed Instantiation",e);
             e.printStackTrace();
         }
     }
