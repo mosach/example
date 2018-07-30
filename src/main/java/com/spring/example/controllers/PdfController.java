@@ -1,14 +1,14 @@
 package com.spring.example.controllers;
 
-import com.lowagie.text.DocumentException;
+import com.google.api.client.http.FileContent;
+import com.google.api.services.drive.Drive;
+import com.google.auth.oauth2.ComputeEngineCredentials;
+import com.google.auth.oauth2.GoogleCredentials;
+import com.spring.example.configuration.DriveConfiguration;
 import com.spring.example.entity.*;
 import com.spring.example.repository.*;
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.fit.pdfdom.PDFDomTree;
-import org.jsoup.Jsoup;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -20,19 +20,14 @@ import org.springframework.web.bind.annotation.*;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
-//import org.w3c.tidy.Tidy;
-import org.w3c.tidy.Tidy;
-import org.xhtmlrenderer.pdf.ITextRenderer;
 
-
-import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.security.Principal;
 import java.time.Instant;
 import java.util.List;
 import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
+//import org.w3c.tidy.Tidy;
 
 @Controller
 public class PdfController {
@@ -160,11 +155,8 @@ public class PdfController {
         String html = templateEngine.process("templates/Q" + formNumber, context);
 
 
-//        org.jsoup.nodes.Document document1 = Jsoup.parse(html);
-//        document1.outputSettings().syntax(org.jsoup.nodes.Document.OutputSettings.Syntax.xml);
-
-
-        String name = "/tmp/" + user.getId() + "_" + Instant.now().toEpochMilli() + ".html";
+        String fileName = user.getId() + "_" + formNumber + "_" + Instant.now().toEpochMilli();
+        String name = "/tmp/" + fileName + ".html";
 
         try
 
@@ -180,17 +172,18 @@ public class PdfController {
             userRecords.setUserId(user.getId());
             userRecordsRepository.save(userRecords);
 
-//            OutputStream outputStream = new FileOutputStream("/Users/mcherukuri/Downloads/form.pdf");
-//            ITextRenderer renderer = new ITextRenderer();
-////            renderer.getFontResolver().addFont("static/ff1.ttf", IDENTITY_H, EMBEDDED);
-////            renderer.getFontResolver().addFont("static/Georgia.ttf", IDENTITY_H, EMBEDDED);
-////            renderer.getFontResolver().addFont("static/sans-serif.ttf", IDENTITY_H, EMBEDDED);
-////            renderer.setDocumentFromString(html);
-//            renderer.setDocumentFromString(html);
-//            renderer.layout();
-//            renderer.createPDF(outputStream);
-//            renderer.finishPDF();
-//            outputStream.close();
+            java.io.File filePath = new java.io.File(name);
+            com.google.api.services.drive.model.File file = new com.google.api.services.drive.model.File();
+            file.setName(name);
+
+            OutputStream outputStream = new FileOutputStream("/tmp/"+fileName+".pdf");
+
+            FileContent mediaContent = new FileContent("text/html", filePath);
+            Drive drive = DriveConfiguration.getDrive();
+            com.google.api.services.drive.model.File uploaded = drive.files().create(file, mediaContent).setFields("id").execute();
+            String id = uploaded.getId();
+            drive.files().export(id,"application/pdf").executeMediaAndDownloadTo(outputStream);
+            outputStream.close();
 
         } catch (
                 IOException e)
@@ -198,9 +191,7 @@ public class PdfController {
         {
             e.printStackTrace();
         }
-        return
-
-                getInputStreamResourceResponseEntity(formNumber, name);
+        return getInputStreamResourceResponseEntity(formNumber, name);
 
 
     }
@@ -222,34 +213,5 @@ public class PdfController {
                 .body(new InputStreamResource(inputStream));
     }
 
-    private String convertToXhtml(String html) throws UnsupportedEncodingException {
-        Tidy tidy = new Tidy();
-        tidy.setInputEncoding(UTF_8);
-        tidy.setOutputEncoding(UTF_8);
-        tidy.setXHTML(true);
-        ByteArrayInputStream inputStream = new ByteArrayInputStream(html.getBytes(UTF_8));
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        tidy.parseDOM(inputStream, outputStream);
-        return outputStream.toString(UTF_8);
-    }
-
-    private String prepareTempHTML(String clean_html) throws IOException {
-
-        // XML 1.0 only allows the following characters
-        // #x9 | #xA | #xD | [#x20-#xD7FF] | [#xE000-#xFFFD] | [#x10000-#x10FFFF]
-
-        String orig_html = null;
-        Pattern pattern = null;
-        Matcher matcher = null;
-        pattern = Pattern.compile("[\\000]*");
-        matcher = pattern.matcher(clean_html);
-        if (matcher.find()) {
-            orig_html = matcher.replaceAll("");
-        } else {
-            orig_html = clean_html;
-        }
-
-        return orig_html;
-    }
 
 }
