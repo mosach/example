@@ -2,11 +2,11 @@ package com.spring.example.controllers;
 
 import com.google.api.client.http.FileContent;
 import com.google.api.services.drive.Drive;
-import com.google.auth.oauth2.ComputeEngineCredentials;
-import com.google.auth.oauth2.GoogleCredentials;
 import com.spring.example.configuration.DriveConfiguration;
 import com.spring.example.entity.*;
 import com.spring.example.repository.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
@@ -31,6 +31,8 @@ import java.util.Map;
 
 @Controller
 public class PdfController {
+
+    private static final Logger logger = LoggerFactory.getLogger("PdfController");
 
     private static final String UTF_8 = "UTF-8";
 
