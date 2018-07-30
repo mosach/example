@@ -1,7 +1,10 @@
 package com.spring.example.controllers;
 
 import com.google.api.client.http.FileContent;
+import com.google.api.client.http.HttpRequest;
+import com.google.api.client.http.HttpRequestInitializer;
 import com.google.api.services.drive.Drive;
+import com.google.api.services.drive.model.FileList;
 import com.spring.example.configuration.DriveConfiguration;
 import com.spring.example.entity.*;
 import com.spring.example.repository.*;
@@ -22,6 +25,7 @@ import org.thymeleaf.context.Context;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import java.io.*;
+import java.security.GeneralSecurityException;
 import java.security.Principal;
 import java.time.Instant;
 import java.util.List;
@@ -176,19 +180,23 @@ public class PdfController {
 
             java.io.File filePath = new java.io.File(name);
             com.google.api.services.drive.model.File file = new com.google.api.services.drive.model.File();
-            file.setName(name);
+            file.setName(user.getId()+"_"+formNumber);
+            file.setMimeType("application/vnd.google-apps.document");
 
             OutputStream outputStream = new FileOutputStream("/tmp/"+fileName+".pdf");
 
             FileContent mediaContent = new FileContent("text/html", filePath);
-            Drive drive = DriveConfiguration.getDrive();
+            Drive drive = new DriveConfiguration().createDrive();
             com.google.api.services.drive.model.File uploaded = drive.files().create(file, mediaContent).setFields("id").execute();
             String id = uploaded.getId();
-            drive.files().export(id,"application/pdf").executeMediaAndDownloadTo(outputStream);
+            drive = new DriveConfiguration().createDrive();
+            Drive.Files.Export export = drive.files().export(id, "application/pdf");
+            export.getMediaHttpDownloader().setDirectDownloadEnabled(true);
+            export.executeMediaAndDownloadTo(outputStream);
             outputStream.close();
 
         } catch (
-                IOException e)
+                GeneralSecurityException | IOException e)
 
         {
             logger.error("Issue with Pdf processing",e);
