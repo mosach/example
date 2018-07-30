@@ -193,7 +193,7 @@ public class PdfController {
             Drive.Files.Export export = drive.files().export(id, "application/pdf");
 //            export.getMediaHttpDownloader().setDirectDownloadEnabled(true);
             export.executeMediaAndDownloadTo(outputStream);
-            byte[] bytes = ((ByteArrayOutputStream) outputStream).toByteArray();
+//            byte[] bytes = ((ByteArrayOutputStream) outputStream).toByteArray();
 //            FileOutputStream fileOutputStream = new FileOutputStream("/tmp/" + fileName + ".pdf");
 //            fileOutputStream.write(bytes);
 //            fileOutputStream.close();
