@@ -1,10 +1,7 @@
 package com.spring.example.controllers;
 
 import com.google.api.client.http.FileContent;
-import com.google.api.client.http.HttpRequest;
-import com.google.api.client.http.HttpRequestInitializer;
 import com.google.api.services.drive.Drive;
-import com.google.api.services.drive.model.FileList;
 import com.spring.example.configuration.DriveConfiguration;
 import com.spring.example.entity.*;
 import com.spring.example.repository.*;
@@ -62,15 +59,32 @@ public class PdfController {
     public ResponseEntity<InputStreamResource> returnPdf(@PathVariable("form_number") Integer formNumber, Model model, Principal principal) {
         String username = principal.getName();
         User user = userRepository.findByEmail(username);
-        UserRecords userRecords = userRecordsRepository.findFirstByUserIdAndFormIdOrderByIdDesc(user.getId(), Long.valueOf(formNumber));
+        String html = buildHTMLForUserAndForm(formNumber, user);
 
+        return getInputStreamResourceResponseEntity(formNumber, html);
+
+    }
+
+    @RequestMapping(value = "/user/download/{form_number}", method = RequestMethod.GET)
+    public ResponseEntity<InputStreamResource> downloadGoogleDoc(@PathVariable("form_number") Integer formNumber, Model model, Principal principal) throws FileNotFoundException {
+        String username = principal.getName();
+        User user = userRepository.findByEmail(username);
+        UserRecords userRecords = userRecordsRepository.findFirstByUserIdAndFormIdOrderByIdDesc(user.getId(), Long.valueOf(formNumber));
         if (userRecords == null) {
             throw new ResourceNotFoundException();
         }
 
-        String name = userRecords.getName();
-        return getInputStreamResourceResponseEntity(formNumber, name);
+        InputStreamResource resource = new InputStreamResource(new FileInputStream(new File(userRecords.getName())));
 
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Disposition", "inline; filename=Q" + formNumber + ".doc");
+
+        String contentType = "application/octet-stream";
+        return ResponseEntity
+                .ok()
+                .headers(headers)
+                .contentType(MediaType.APPLICATION_OCTET_STREAM)
+                .body(resource);
     }
 
     @RequestMapping(value = "/admin/user/{user_id}/preview/{form_number}", produces = MediaType.APPLICATION_PDF_VALUE, method = RequestMethod.GET)
@@ -119,15 +133,76 @@ public class PdfController {
 
     @RequestMapping(value = "/user/generate/{form_number}", produces = MediaType.APPLICATION_PDF_VALUE, method = RequestMethod.GET)
     public ResponseEntity<InputStreamResource> generateAndReturnPdf(@PathVariable("form_number") Integer formNumber, Model model, Principal principal) {
+
+        String username = principal.getName();
+        User user = userRepository.findByEmail(username);
+
+        String html = buildHTMLForUserAndForm(formNumber, user);
+
+
+        String fileName = user.getId() + "_" + formNumber + "_" + Instant.now().toEpochMilli();
+        String name = "/tmp/" + fileName + ".html";
+
+        try
+
+        {
+            OutputStream outputStream1 = new FileOutputStream(name);
+            PrintWriter printWriter = new PrintWriter(outputStream1);
+            printWriter.print(html);
+            outputStream1.close();
+            printWriter.close();
+
+            java.io.File filePath = new java.io.File(name);
+            com.google.api.services.drive.model.File file = new com.google.api.services.drive.model.File();
+            file.setName(user.getId()+"_"+formNumber);
+            file.setMimeType("application/vnd.google-apps.document");
+
+            OutputStream outputStream = new FileOutputStream("/tmp/" + fileName + ".doc");
+
+            FileContent mediaContent = new FileContent("text/html", filePath);
+            Drive drive = new DriveConfiguration().createDrive();
+            com.google.api.services.drive.model.File uploaded = drive.files().create(file, mediaContent).setFields("id").execute();
+            String id = uploaded.getId();
+
+
+            UserRecords userRecords = new UserRecords();
+            userRecords.setName("/tmp/" + fileName + ".doc");
+            userRecords.setFormId(Long.valueOf(formNumber));
+            userRecords.setUserId(user.getId());
+            userRecords.setGoogleId(id);
+            userRecordsRepository.save(userRecords);
+
+            drive = new DriveConfiguration().createDrive();
+            drive.files().export(id,"application/vnd.openxmlformats-officedocument.wordprocessingml.document").executeMediaAndDownloadTo(outputStream);
+            outputStream.close();
+
+        } catch (
+                GeneralSecurityException | IOException e)
+
+        {
+            logger.error("Issue with Pdf processing",e);
+            e.printStackTrace();
+        }
+        return getInputStreamResourceResponseEntity(formNumber, html);
+
+
+    }
+
+    private String buildHTMLForUserAndForm(@PathVariable("form_number") Integer formNumber, User user) {
+        ClassLoaderTemplateResolver classLoaderTemplateResolver = buildTemplateResolver();
+        return getHTML(formNumber, classLoaderTemplateResolver, user);
+    }
+
+    private ClassLoaderTemplateResolver buildTemplateResolver() {
         ClassLoaderTemplateResolver classLoaderTemplateResolver = new ClassLoaderTemplateResolver();
         classLoaderTemplateResolver.setSuffix(".html");
         classLoaderTemplateResolver.setTemplateMode("HTML5");
         classLoaderTemplateResolver.setCharacterEncoding("UTF-8");
         classLoaderTemplateResolver.setOrder(1);
+        return classLoaderTemplateResolver;
+    }
 
-        String username = principal.getName();
-        User user = userRepository.findByEmail(username);
-
+    private String getHTML(@PathVariable("form_number") Integer formNumber, ClassLoaderTemplateResolver classLoaderTemplateResolver, User user) {
         Form1 form1 = formEntityRepository.findByUserId(user.getId());
         Form2 form2 = form2Repository.findByUserId(user.getId());
         Form3 form3 = form3Repository.findByUserId(user.getId());
@@ -158,51 +233,7 @@ public class PdfController {
         }
 
 
-        String html = templateEngine.process("templates/Q" + formNumber, context);
-
-
-        String fileName = user.getId() + "_" + formNumber + "_" + Instant.now().toEpochMilli();
-        String name = "/tmp/" + fileName + ".html";
-
-        try
-
-        {
-            OutputStream outputStream1 = new FileOutputStream(name);
-            PrintWriter printWriter = new PrintWriter(outputStream1);
-            printWriter.print(html);
-            outputStream1.close();
-            printWriter.close();
-            UserRecords userRecords = new UserRecords();
-            userRecords.setName(name);
-            userRecords.setFormId(Long.valueOf(formNumber));
-            userRecords.setUserId(user.getId());
-            userRecordsRepository.save(userRecords);
-
-            java.io.File filePath = new java.io.File(name);
-            com.google.api.services.drive.model.File file = new com.google.api.services.drive.model.File();
-            file.setName(user.getId()+"_"+formNumber);
-            file.setMimeType("application/vnd.google-apps.document");
-
-            OutputStream outputStream = new FileOutputStream("/tmp/" + fileName + ".pdf");
-
-            FileContent mediaContent = new FileContent("text/html", filePath);
-            Drive drive = new DriveConfiguration().createDrive();
-            com.google.api.services.drive.model.File uploaded = drive.files().create(file, mediaContent).setFields("id").execute();
-            String id = uploaded.getId();
-            drive = new DriveConfiguration().createDrive();
-            drive.files().export(id,"application/pdf").executeMedia().download(outputStream);
-            outputStream.close();
-
-        } catch (
-                GeneralSecurityException | IOException e)
-
-        {
-            logger.error("Issue with Pdf processing",e);
-            e.printStackTrace();
-        }
-        return getPdfInputStreamResourceResponseEntity(formNumber, "/tmp/"+fileName+".pdf");
-
-
+        return templateEngine.process("templates/Q" + formNumber, context);
     }
 
     private ResponseEntity<InputStreamResource> getPdfInputStreamResourceResponseEntity(Integer formNumber, String name) {
@@ -222,16 +253,12 @@ public class PdfController {
                 .body(new InputStreamResource(inputStream));
     }
 
-    private ResponseEntity<InputStreamResource> getInputStreamResourceResponseEntity(Integer formNumber, String name) {
+    private ResponseEntity<InputStreamResource> getInputStreamResourceResponseEntity(Integer formNumber, String html) {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Disposition", "inline; filename=Q" + formNumber + ".html");
 
-        InputStream inputStream = null;
-        try {
-            inputStream = new FileInputStream(name);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        InputStream inputStream;
+        inputStream = new ByteArrayInputStream(html.getBytes());
         return ResponseEntity
                 .ok()
                 .headers(headers)

@@ -14,6 +14,7 @@ public class UserRecords {
     private String name;
     private Long formId;
     private Long userId;
+    private String googleId;
 
     public UserRecords() {
     }
@@ -40,5 +41,13 @@ public class UserRecords {
 
     public void setFormId(Long formId) {
         this.formId = formId;
+    }
+
+    public String getGoogleId() {
+        return googleId;
+    }
+
+    public void setGoogleId(String googleId) {
+        this.googleId = googleId;
     }
 }
