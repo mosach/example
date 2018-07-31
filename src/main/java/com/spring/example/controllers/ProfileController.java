@@ -36,6 +36,9 @@ public class ProfileController {
     @Autowired
     private Form3Repository form3Repository;
 
+    @Autowired
+    private Form7Repository form7Repository;
+
     @GetMapping("user/home")
     public String getLogin(Model model, Principal principal) {
         String emailAddress = principal.getName();
@@ -47,6 +50,7 @@ public class ProfileController {
         Form1 form1 = formEntityRepository.findByUserId(user.getId());
         Form2 form2 = form2Repository.findByUserId(user.getId());
         Form3 form3 = form3Repository.findByUserId(user.getId());
+        Form7 form7 = form7Repository.findByUserId(user.getId());
 
         List<FormLink> formLinkList = new ArrayList<>();
 
@@ -69,6 +73,12 @@ public class ProfileController {
         }
         else {
             formLinkList.add(new FormLink(3,form3.getUpdatedAt(),"Submitted","success" ));
+        }
+        if(form7 == null) {
+            formLinkList.add(new FormLink(7,null,"Not Submitted","danger" ));
+        }
+        else {
+            formLinkList.add(new FormLink(7,form7.getUpdatedAt(),"Submitted","success" ));
         }
 
         model.addAttribute("form_links",formLinkList);

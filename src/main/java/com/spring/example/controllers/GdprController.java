@@ -4,10 +4,7 @@ package com.spring.example.controllers;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.spring.example.logic.FormCreator;
 import com.spring.example.pojo.Questionaire;
-import com.spring.example.repository.Form2Repository;
-import com.spring.example.repository.Form3Repository;
-import com.spring.example.repository.FormEntityRepository;
-import com.spring.example.repository.UserRepository;
+import com.spring.example.repository.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,12 +41,15 @@ public class GdprController {
     @Autowired
     private Form3Repository form3Repository;
 
+    @Autowired
+    private Form7Repository form7epository;
+
 
     @GetMapping("/user/form/{form_number}")
     public String getGdprForm(@PathVariable("form_number") Integer formNumber, Model model, Principal principal) {
         StringBuilder contentBuilder = new StringBuilder();
 
-        if(formNumber > 3 && formNumber < 1) {
+        if(formNumber > 8 && formNumber < 1) {
             throw new RuntimeException("Form value is not valid");
         }
 
