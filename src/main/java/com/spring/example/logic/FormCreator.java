@@ -5,15 +5,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.node.ValueNode;
-import com.spring.example.entity.Form1;
-import com.spring.example.entity.Form2;
-import com.spring.example.entity.Form3;
-import com.spring.example.entity.User;
+import com.spring.example.entity.*;
 import com.spring.example.pojo.Questionaire;
-import com.spring.example.repository.Form2Repository;
-import com.spring.example.repository.Form3Repository;
-import com.spring.example.repository.FormEntityRepository;
-import com.spring.example.repository.UserRepository;
+import com.spring.example.repository.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -81,6 +75,22 @@ public class FormCreator {
             addKeys("",new ObjectMapper().readTree(json),map);
             User user = userRepository.findByEmail(username);
             Form3 form3 = new Form3();
+            form3.setUserId(user.getId());
+            form3.setMyMap(map);
+            formEntityRepository.save(form3);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void saveAsEntity(Form7Repository formEntityRepository, Map<String, Object> data) {
+        try {
+            String json = new ObjectMapper().writeValueAsString(data);
+            Map<String,String> map = new HashMap<>();
+            addKeys("",new ObjectMapper().readTree(json),map);
+            User user = userRepository.findByEmail(username);
+            Form7 form3 = new Form7();
             form3.setUserId(user.getId());
             form3.setMyMap(map);
             formEntityRepository.save(form3);

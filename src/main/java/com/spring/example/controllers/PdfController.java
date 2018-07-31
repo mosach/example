@@ -53,6 +53,9 @@ public class PdfController {
     private Form3Repository form3Repository;
 
     @Autowired
+    private Form7Repository form7Repository;
+
+    @Autowired
     private UserRecordsRepository userRecordsRepository;
 
     @RequestMapping(value = "/user/preview/{form_number}", produces = MediaType.APPLICATION_PDF_VALUE, method = RequestMethod.GET)
@@ -206,6 +209,7 @@ public class PdfController {
         Form1 form1 = formEntityRepository.findByUserId(user.getId());
         Form2 form2 = form2Repository.findByUserId(user.getId());
         Form3 form3 = form3Repository.findByUserId(user.getId());
+        Form7 form7 = form7Repository.findByUserId(user.getId());
 
         TemplateEngine templateEngine = new TemplateEngine();
         templateEngine.setTemplateResolver(classLoaderTemplateResolver);
@@ -227,6 +231,13 @@ public class PdfController {
         }
         if (form3 != null) {
             formMap = form3.getMyMap();
+            for (String s : formMap.keySet()) {
+                context.setVariable(s, formMap.get(s));
+            }
+        }
+
+        if (form7 != null) {
+            formMap = form7.getMyMap();
             for (String s : formMap.keySet()) {
                 context.setVariable(s, formMap.get(s));
             }

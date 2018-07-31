@@ -128,8 +128,7 @@
         {
           "type": "text",
           "name": "s11q7i1",
-          "title": "What is included in the \"Identifying information\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\"",
-          "defaultValue": "/*[[${s11q7i1}]]*/ 'default'"
+          "title": "What is included in the \"Identifying information\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\""
         },
         {
           "type": "checkbox",
@@ -175,14 +174,12 @@
         {
           "type": "text",
           "name": "s11q9i1",
-          "title": "How was the \"Identifying information\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\"",
-          "defaultValue": "/*[[${s11q9i1}]]*/ 'default'"
+          "title": "How was the \"Identifying information\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\""
         },
         {
           "type": "text",
           "name": "s11q10i1",
-          "title": "Why is your organization handling people's \"Identifying information\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
-          "defaultValue": "/*[[${s11q10i1}]]*/ 'default'"
+          "title": "Why is your organization handling people's \"Identifying information\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc."
         }
       ]
     },
@@ -192,8 +189,7 @@
         {
           "type": "text",
           "name": "s11q11i1",
-          "title": "Why is it important that your organization handle people's \"Identifying information\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\"",
-          "defaultValue": "/*[[${s11q11i1}]]*/ 'default'"
+          "title": "Why is it important that your organization handle people's \"Identifying information\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\""
         },
         {
           "type": "radiogroup",
@@ -214,14 +210,12 @@
         {
           "type": "text",
           "name": "s11q13i1",
-          "title": "Describe how your organization could achieve the same purpose without handling people's \"Identifying information\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\"",
-          "defaultValue": "/*[[${s11q13i1}]]*/ 'default'"
+          "title": "Describe how your organization could achieve the same purpose without handling people's \"Identifying information\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\""
         },
         {
           "type": "text",
           "name": "s11q14i1",
-          "title": "How would your organization be affected if it could not handle people's \"Identifying information\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\"",
-          "defaultValue": "/*[[${s11q14i1}]]*/ 'default'"
+          "title": "How would your organization be affected if it could not handle people's \"Identifying information\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\""
         },
         {
           "type": "radiogroup",
@@ -247,8 +241,7 @@
         {
           "type": "text",
           "name": "s11q16i1",
-          "title": "Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"",
-          "defaultValue": "/*[[${s11q16i1}]]*/ 'default'"
+          "title": "Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\""
         },
         {
           "type": "radiogroup",
@@ -269,8 +262,7 @@
         {
           "type": "text",
           "name": "s11q18i1",
-          "title": "How would those third parties be affected if your organization could not handle people's \"Identifying information\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\"",
-          "defaultValue": "/*[[${s11q18i1}]]*/ 'default'"
+          "title": "How would those third parties be affected if your organization could not handle people's \"Identifying information\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\""
         },
         {
           "type": "radiogroup",
@@ -312,26 +304,22 @@
         {
           "type": "text",
           "name": "s11q21i1",
-          "title": "Describe how people benefit by your organization handling their \"Identifying information.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\"",
-          "defaultValue": "/*[[${s11q21i1}]]*/ 'default'"
+          "title": "Describe how people benefit by your organization handling their \"Identifying information.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\""
         },
         {
           "type": "text",
           "name": "s11q22i1",
-          "title": "Describe how people could be harmed by your organization handling their \"Identifying information.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\"",
-          "defaultValue": "/*[[${s11q22i1}]]*/ 'default'"
+          "title": "Describe how people could be harmed by your organization handling their \"Identifying information.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\""
         },
         {
           "type": "text",
           "name": "s11q23i1",
-          "title": "Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\"",
-          "defaultValue": "/*[[${s11q23i1}]]*/ 'default'"
+          "title": "Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\""
         },
         {
           "type": "text",
           "name": "s11q24i1",
-          "title": "Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\"",
-          "defaultValue": "/*[[${s11q24i1}]]*/ 'default'"
+          "title": "Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\""
         },
         {
           "type": "radiogroup",
@@ -357,8 +345,7 @@
         {
           "type": "text",
           "name": "s11q26i1",
-          "title": "Based on your previous answers, do you believe your organization is justified in handling people's \"Identifying information\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\"",
-          "defaultValue": "/*[[${s11q26i1}]]*/ 'default'"
+          "title": "Based on your previous answers, do you believe your organization is justified in handling people's \"Identifying information\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\""
         },
         {
           "type": "radiogroup",
@@ -427,8 +414,7 @@
         {
           "type": "text",
           "name": "s11q31i1",
-          "title": "What is included in the \"Opinions, beliefs, or personal preferences data\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\"",
-          "defaultValue": "/*[[${s11q31i1}]]*/ 'default'"
+          "title": "What is included in the \"Opinions, beliefs, or personal preferences data\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\""
         },
         {
           "type": "checkbox",
@@ -502,20 +488,17 @@
         {
           "type": "text",
           "name": "s11q33i1",
-          "title": "How was the \"Opinions, beliefs, or personal preferences data\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\"",
-          "defaultValue": "/*[[${s11q33i1}]]*/ 'default'"
+          "title": "How was the \"Opinions, beliefs, or personal preferences data\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\""
         },
         {
           "type": "text",
           "name": "s11q34i1",
-          "title": "Why is your organization handling people's \"Opinions, beliefs, or personal preferences data\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
-          "defaultValue": "/*[[${s11q34i1}]]*/ 'default'"
+          "title": "Why is your organization handling people's \"Opinions, beliefs, or personal preferences data\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc."
         },
         {
           "type": "text",
           "name": "s11q35i1",
-          "title": "Why is it important that your organization handle people's \"Opinions, beliefs, or personal preferences data\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\"",
-          "defaultValue": "/*[[${s11q35i1}]]*/ 'default'"
+          "title": "Why is it important that your organization handle people's \"Opinions, beliefs, or personal preferences data\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\""
         }
       ]
     },
@@ -541,14 +524,12 @@
         {
           "type": "text",
           "name": "s11q37i1",
-          "title": "Describe how your organization could achieve the same purpose without handling people's \"Opinions, beliefs, or personal preferences data\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\"",
-          "defaultValue": "/*[[${s11q37i1}]]*/ 'default'"
+          "title": "Describe how your organization could achieve the same purpose without handling people's \"Opinions, beliefs, or personal preferences data\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\""
         },
         {
           "type": "text",
           "name": "s11q38i1",
-          "title": "How would your organization be affected if it could not handle people's \"Opinions, beliefs, or personal preferences data\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\"",
-          "defaultValue": "/*[[${s11q38i1}]]*/ 'default'"
+          "title": "How would your organization be affected if it could not handle people's \"Opinions, beliefs, or personal preferences data\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\""
         },
         {
           "type": "radiogroup",
@@ -569,8 +550,7 @@
         {
           "type": "text",
           "name": "s11q40i1",
-          "title": "Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"",
-          "defaultValue": "/*[[${s11q40i1}]]*/ 'default'"
+          "title": "Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\""
         }
       ]
     },
@@ -596,8 +576,7 @@
         {
           "type": "text",
           "name": "s11q42i1",
-          "title": "How would those third parties be affected if your organization could not handle people's \"Opinions, beliefs, or personal preferences data\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\"",
-          "defaultValue": "/*[[${s11q42i1}]]*/ 'default'"
+          "title": "How would those third parties be affected if your organization could not handle people's \"Opinions, beliefs, or personal preferences data\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\""
         },
         {
           "type": "radiogroup",
@@ -634,8 +613,7 @@
         {
           "type": "text",
           "name": "s11q45i1",
-          "title": "Describe how people benefit by your organization handling their \"Opinions, beliefs, or personal preferences data.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\"",
-          "defaultValue": "/*[[${s11q45i1}]]*/ 'default'"
+          "title": "Describe how people benefit by your organization handling their \"Opinions, beliefs, or personal preferences data.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\""
         }
       ]
     },
@@ -645,20 +623,17 @@
         {
           "type": "text",
           "name": "s11q46i1",
-          "title": "Describe how people could be harmed by your organization handling their \"Opinions, beliefs, or personal preferences data.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\"",
-          "defaultValue": "/*[[${s11q46i1}]]*/ 'default'"
+          "title": "Describe how people could be harmed by your organization handling their \"Opinions, beliefs, or personal preferences data.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\""
         },
         {
           "type": "text",
           "name": "s11q47i1",
-          "title": "Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\"",
-          "defaultValue": "/*[[${s11q47i1}]]*/ 'default'"
+          "title": "Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\""
         },
         {
           "type": "text",
           "name": "s11q48i1",
-          "title": "Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\"",
-          "defaultValue": "/*[[${s11q48i1}]]*/ 'default'"
+          "title": "Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\""
         },
         {
           "type": "radiogroup",
@@ -679,8 +654,7 @@
         {
           "type": "text",
           "name": "s11q50i1",
-          "title": "Based on your previous answers, do you believe your organization is justified in handling people's \"Opinions, beliefs, or personal preferences data\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\"",
-          "defaultValue": "/*[[${s11q50i1}]]*/ 'default'"
+          "title": "Based on your previous answers, do you believe your organization is justified in handling people's \"Opinions, beliefs, or personal preferences data\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\""
         }
       ]
     },
@@ -749,8 +723,7 @@
         {
           "type": "text",
           "name": "s11q55i1",
-          "title": "What is included in the \"Physical characteristics data\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\"",
-          "defaultValue": "/*[[${s11q55i1}]]*/ 'default'"
+          "title": "What is included in the \"Physical characteristics data\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\""
         }
       ]
     },
@@ -829,20 +802,17 @@
         {
           "type": "text",
           "name": "s11q57i1",
-          "title": "How was the \"Physical characteristics data\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\"",
-          "defaultValue": "/*[[${s11q57i1}]]*/ 'default'"
+          "title": "How was the \"Physical characteristics data\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\""
         },
         {
           "type": "text",
           "name": "s11q58i1",
-          "title": "Why is your organization handling people's \"Physical characteristics data\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.\n\n",
-          "defaultValue": "/*[[${s11q58i1}]]*/ 'default'"
+          "title": "Why is your organization handling people's \"Physical characteristics data\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.\n\n"
         },
         {
           "type": "text",
           "name": "s11q59i1",
-          "title": "Why is it important that your organization handle people's \"Physical characteristics data\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\"",
-          "defaultValue": "/*[[${s11q59i1}]]*/ 'default'"
+          "title": "Why is it important that your organization handle people's \"Physical characteristics data\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\""
         },
         {
           "type": "radiogroup",
@@ -868,14 +838,12 @@
         {
           "type": "text",
           "name": "s11q61i1",
-          "title": "Describe how your organization could achieve the same purpose without handling people's \"Physical characteristics data\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\"",
-          "defaultValue": "/*[[${s11q61i1}]]*/ 'default'"
+          "title": "Describe how your organization could achieve the same purpose without handling people's \"Physical characteristics data\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\""
         },
         {
           "type": "text",
           "name": "s11q62i1",
-          "title": "How would your organization be affected if it could not handle people's \"Physical characteristics data\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\"",
-          "defaultValue": "/*[[${s11q62i1}]]*/ 'default'"
+          "title": "How would your organization be affected if it could not handle people's \"Physical characteristics data\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\""
         },
         {
           "type": "radiogroup",
@@ -896,8 +864,7 @@
         {
           "type": "text",
           "name": "s11q64i1",
-          "title": "Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"\n\n",
-          "defaultValue": "/*[[${s11q64i1}]]*/ 'default'"
+          "title": "Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"\n\n"
         },
         {
           "type": "radiogroup",
@@ -923,8 +890,7 @@
         {
           "type": "text",
           "name": "s11q66i1",
-          "title": "How would those third parties be affected if your organization could not handle people's \"Physical characteristics data\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\"",
-          "defaultValue": "/*[[${s11q66i1}]]*/ 'default'"
+          "title": "How would those third parties be affected if your organization could not handle people's \"Physical characteristics data\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\""
         },
         {
           "type": "radiogroup",
@@ -961,14 +927,12 @@
         {
           "type": "text",
           "name": "s11q69i1",
-          "title": "Describe how people benefit by your organization handling their \"Physical characteristics data.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\"",
-          "defaultValue": "/*[[${s11q69i1}]]*/ 'default'"
+          "title": "Describe how people benefit by your organization handling their \"Physical characteristics data.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\""
         },
         {
           "type": "text",
           "name": "s11q70i1",
-          "title": "Describe how people could be harmed by your organization handling their \"Physical characteristics data.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\"",
-          "defaultValue": "/*[[${s11q70i1}]]*/ 'default'"
+          "title": "Describe how people could be harmed by your organization handling their \"Physical characteristics data.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\""
         }
       ]
     },
@@ -978,14 +942,12 @@
         {
           "type": "text",
           "name": "s11q71i1",
-          "title": "Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\"\n\n",
-          "defaultValue": "/*[[${s11q71i1}]]*/ 'default'"
+          "title": "Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\"\n\n"
         },
         {
           "type": "text",
           "name": "s11q72i1",
-          "title": "Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\"",
-          "defaultValue": "/*[[${s11q72i1}]]*/ 'default'"
+          "title": "Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\""
         },
         {
           "type": "radiogroup",
@@ -1006,8 +968,7 @@
         {
           "type": "text",
           "name": "s11q74i1",
-          "title": "Based on your previous answers, do you believe your organization is justified in handling people's \"Physical characteristics data\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\" \n\n",
-          "defaultValue": "/*[[${s11q74i1}]]*/ 'default'"
+          "title": "Based on your previous answers, do you believe your organization is justified in handling people's \"Physical characteristics data\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\" \n\n"
         },
         {
           "type": "radiogroup",
@@ -1076,8 +1037,7 @@
         {
           "type": "text",
           "name": "s11q79i1",
-          "title": "What is included in the \"Personal history data\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\"",
-          "defaultValue": "/*[[${s11q79i1}]]*/ 'default'"
+          "title": "What is included in the \"Personal history data\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\""
         },
         {
           "type": "checkbox",
@@ -1156,20 +1116,17 @@
         {
           "type": "text",
           "name": "s11q81i1",
-          "title": "How was the \"Personal history data\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\"\n\n",
-          "defaultValue": "/*[[${s11q81i1}]]*/ 'default'"
+          "title": "How was the \"Personal history data\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\"\n\n"
         },
         {
           "type": "text",
           "name": "s11q82i1",
-          "title": "Why is your organization handling people's \"Personal history data\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.\n\n",
-          "defaultValue": "/*[[${s11q82i1}]]*/ 'default'"
+          "title": "Why is your organization handling people's \"Personal history data\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.\n\n"
         },
         {
           "type": "text",
           "name": "s11q83i1",
-          "title": "Why is it important that your organization handle people's \"Personal history data\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\"",
-          "defaultValue": "/*[[${s11q83i1}]]*/ 'default'"
+          "title": "Why is it important that your organization handle people's \"Personal history data\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\""
         },
         {
           "type": "radiogroup",
@@ -1190,8 +1147,7 @@
         {
           "type": "text",
           "name": "s11q85i1",
-          "title": "Describe how your organization could achieve the same purpose without handling people's \"Personal history data\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\"",
-          "defaultValue": "/*[[${s11q85i1}]]*/ 'default'"
+          "title": "Describe how your organization could achieve the same purpose without handling people's \"Personal history data\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\""
         }
       ]
     },
@@ -1201,8 +1157,7 @@
         {
           "type": "text",
           "name": "s11q86i1",
-          "title": "How would your organization be affected if it could not handle people's \"Personal history data\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\"",
-          "defaultValue": "/*[[${s11q86i1}]]*/ 'default'"
+          "title": "How would your organization be affected if it could not handle people's \"Personal history data\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\""
         },
         {
           "type": "radiogroup",
@@ -1223,8 +1178,7 @@
         {
           "type": "text",
           "name": "s11q88i1",
-          "title": "Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"\n\n",
-          "defaultValue": "/*[[${s11q88i1}]]*/ 'default'"
+          "title": "Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"\n\n"
         },
         {
           "type": "radiogroup",
@@ -1245,8 +1199,7 @@
         {
           "type": "text",
           "name": "s11q90i1",
-          "title": "How would those third parties be affected if your organization could not handle people's \"Personal history data\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\"",
-          "defaultValue": "/*[[${s11q90i1}]]*/ 'default'"
+          "title": "How would those third parties be affected if your organization could not handle people's \"Personal history data\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\""
         }
       ]
     },
@@ -1295,14 +1248,12 @@
         {
           "type": "text",
           "name": "s11q94i1",
-          "title": "Describe how people benefit by your organization handling their \"Personal history data.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\"",
-          "defaultValue": "/*[[${s11q94i1}]]*/ 'default'"
+          "title": "Describe how people benefit by your organization handling their \"Personal history data.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\""
         },
         {
           "type": "text",
           "name": "s11q95i1",
-          "title": "Describe how people could be harmed by your organization handling their \"Personal history data.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\"",
-          "defaultValue": "/*[[${s11q95i1}]]*/ 'default'"
+          "title": "Describe how people could be harmed by your organization handling their \"Personal history data.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\""
         }
       ]
     },
@@ -1312,14 +1263,12 @@
         {
           "type": "text",
           "name": "s11q96i1",
-          "title": "Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\"\n\n",
-          "defaultValue": "/*[[${s11q96i1}]]*/ 'default'"
+          "title": "Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\"\n\n"
         },
         {
           "type": "text",
           "name": "s11q97i1",
-          "title": "Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\"",
-          "defaultValue": "/*[[${s11q97i1}]]*/ 'default'"
+          "title": "Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\""
         },
         {
           "type": "radiogroup",
@@ -1340,8 +1289,7 @@
         {
           "type": "text",
           "name": "s11q99i1",
-          "title": "Based on your previous answers, do you believe your organization is justified in handling people's \"Personal history data\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\"",
-          "defaultValue": "/*[[${s11q99i1}]]*/ 'default'"
+          "title": "Based on your previous answers, do you believe your organization is justified in handling people's \"Personal history data\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\""
         },
         {
           "type": "radiogroup",
@@ -1410,8 +1358,7 @@
         {
           "type": "text",
           "name": "s11q104i1",
-          "title": "What is included in the \"Social and contact information\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\"",
-          "defaultValue": "/*[[${s11q104i1}]]*/ 'default'"
+          "title": "What is included in the \"Social and contact information\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\""
         },
         {
           "type": "checkbox",
@@ -1490,20 +1437,17 @@
         {
           "type": "text",
           "name": "s11q106i1",
-          "title": "How was the \"Social and contact information\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\"",
-          "defaultValue": "/*[[${s11q106i1}]]*/ 'default'"
+          "title": "How was the \"Social and contact information\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\""
         },
         {
           "type": "text",
           "name": "s11q107i1",
-          "title": "Why is your organization handling people's \"Social and contact information\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
-          "defaultValue": "/*[[${s11q107i1}]]*/ 'default'"
+          "title": "Why is your organization handling people's \"Social and contact information\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc."
         },
         {
           "type": "text",
           "name": "s11q108i1",
-          "title": "Why is it important that your organization handle people's \"Social and contact information\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\"",
-          "defaultValue": "/*[[${s11q108i1}]]*/ 'default'"
+          "title": "Why is it important that your organization handle people's \"Social and contact information\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\""
         },
         {
           "type": "radiogroup",
@@ -1524,8 +1468,7 @@
         {
           "type": "text",
           "name": "s11q110i1",
-          "title": "Describe how your organization could achieve the same purpose without handling people's \"Social and contact information\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\"",
-          "defaultValue": "/*[[${s11q110i1}]]*/ 'default'"
+          "title": "Describe how your organization could achieve the same purpose without handling people's \"Social and contact information\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\""
         }
       ]
     },
@@ -1535,8 +1478,7 @@
         {
           "type": "text",
           "name": "s11q111i1",
-          "title": "How would your organization be affected if it could not handle people's \"Social and contact information\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\"",
-          "defaultValue": "/*[[${s11q111i1}]]*/ 'default'"
+          "title": "How would your organization be affected if it could not handle people's \"Social and contact information\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\""
         },
         {
           "type": "radiogroup",
@@ -1557,8 +1499,7 @@
         {
           "type": "text",
           "name": "s11q113i1",
-          "title": "Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"\n\n",
-          "defaultValue": "/*[[${s11q113i1}]]*/ 'default'"
+          "title": "Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"\n\n"
         },
         {
           "type": "radiogroup",
@@ -1579,8 +1520,7 @@
         {
           "type": "text",
           "name": "s11q115i1",
-          "title": "How would those third parties be affected if your organization could not handle people's \"Social and contact information\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\"",
-          "defaultValue": "/*[[${s11q115i1}]]*/ 'default'"
+          "title": "How would those third parties be affected if your organization could not handle people's \"Social and contact information\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\""
         }
       ]
     },
@@ -1629,14 +1569,12 @@
         {
           "type": "text",
           "name": "s11q119i1",
-          "title": "Describe how people benefit by your organization handling their \"Social and contact information.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\"",
-          "defaultValue": "/*[[${s11q119i1}]]*/ 'default'"
+          "title": "Describe how people benefit by your organization handling their \"Social and contact information.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\""
         },
         {
           "type": "text",
           "name": "s11q120i1",
-          "title": "Describe how people could be harmed by your organization handling their \"Social and contact information.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\"\n\n",
-          "defaultValue": "/*[[${s11q120i1}]]*/ 'default'"
+          "title": "Describe how people could be harmed by your organization handling their \"Social and contact information.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\"\n\n"
         }
       ]
     },
@@ -1646,14 +1584,12 @@
         {
           "type": "text",
           "name": "s11q121i1",
-          "title": "Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\"",
-          "defaultValue": "/*[[${s11q121i1}]]*/ 'default'"
+          "title": "Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\""
         },
         {
           "type": "text",
           "name": "s11q122i1",
-          "title": "Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\"",
-          "defaultValue": "/*[[${s11q122i1}]]*/ 'default'"
+          "title": "Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\""
         },
         {
           "type": "radiogroup",
@@ -1674,8 +1610,7 @@
         {
           "type": "text",
           "name": "s11q124i1",
-          "title": "Based on your previous answers, do you believe your organization is justified in handling people's \"Social and contact information\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\"",
-          "defaultValue": "/*[[${s11q124i1}]]*/ 'default'"
+          "title": "Based on your previous answers, do you believe your organization is justified in handling people's \"Social and contact information\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\""
         },
         {
           "type": "radiogroup",
@@ -1744,8 +1679,7 @@
         {
           "type": "text",
           "name": "s11q129i1",
-          "title": "What is included in the \"Financial data\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\"",
-          "defaultValue": "/*[[${s11q129i1}]]*/ 'default'"
+          "title": "What is included in the \"Financial data\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\""
         },
         {
           "type": "checkbox",
@@ -1824,20 +1758,17 @@
         {
           "type": "text",
           "name": "s11q131i1",
-          "title": "How was the \"Financial data\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\"",
-          "defaultValue": "/*[[${s11q131i1}]]*/ 'default'"
+          "title": "How was the \"Financial data\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\""
         },
         {
           "type": "text",
           "name": "s11q132i1",
-          "title": "Why is your organization handling people's \"Financial data\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
-          "defaultValue": "/*[[${s11q132i1}]]*/ 'default'"
+          "title": "Why is your organization handling people's \"Financial data\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc."
         },
         {
           "type": "text",
           "name": "s11q133i1",
-          "title": "Why is it important that your organization handle people's \"Financial data\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\"",
-          "defaultValue": "/*[[${s11q133i1}]]*/ 'default'"
+          "title": "Why is it important that your organization handle people's \"Financial data\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\""
         },
         {
           "type": "radiogroup",
@@ -1858,8 +1789,7 @@
         {
           "type": "text",
           "name": "s11q135i1",
-          "title": "Describe how your organization could achieve the same purpose without handling people's \"Financial data\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\"",
-          "defaultValue": "/*[[${s11q135i1}]]*/ 'default'"
+          "title": "Describe how your organization could achieve the same purpose without handling people's \"Financial data\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\""
         }
       ]
     },
@@ -1869,8 +1799,7 @@
         {
           "type": "text",
           "name": "s11q136i1",
-          "title": "How would your organization be affected if it could not handle people's \"Financial data\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\"",
-          "defaultValue": "/*[[${s11q136i1}]]*/ 'default'"
+          "title": "How would your organization be affected if it could not handle people's \"Financial data\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\""
         },
         {
           "type": "radiogroup",
@@ -1891,8 +1820,7 @@
         {
           "type": "text",
           "name": "s11q138i1",
-          "title": "Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"",
-          "defaultValue": "/*[[${s11q138i1}]]*/ 'default'"
+          "title": "Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\""
         },
         {
           "type": "radiogroup",
@@ -1913,8 +1841,7 @@
         {
           "type": "text",
           "name": "s11q140i1",
-          "title": "How would those third parties be affected if your organization could not handle people's \"Financial data\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\"",
-          "defaultValue": "/*[[${s11q140i1}]]*/ 'default'"
+          "title": "How would those third parties be affected if your organization could not handle people's \"Financial data\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\""
         }
       ]
     },
@@ -1956,20 +1883,17 @@
         {
           "type": "text",
           "name": "s11q143i1",
-          "title": "Describe how people benefit by your organization handling their \"Financial data.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\"",
-          "defaultValue": "/*[[${s11q143i1}]]*/ 'default'"
+          "title": "Describe how people benefit by your organization handling their \"Financial data.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\""
         },
         {
           "type": "text",
           "name": "s11q144i1",
-          "title": "Describe how people could be harmed by your organization handling their \"Financial data.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\"",
-          "defaultValue": "/*[[${s11q144i1}]]*/ 'default'"
+          "title": "Describe how people could be harmed by your organization handling their \"Financial data.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\""
         },
         {
           "type": "text",
           "name": "s11q145i1",
-          "title": "Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\"",
-          "defaultValue": "/*[[${s11q145i1}]]*/ 'default'"
+          "title": "Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\""
         }
       ]
     },
@@ -1979,8 +1903,7 @@
         {
           "type": "text",
           "name": "s11q146i1",
-          "title": "Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\"",
-          "defaultValue": "/*[[${s11q146i1}]]*/ 'default'"
+          "title": "Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\""
         },
         {
           "type": "radiogroup",
@@ -2001,8 +1924,7 @@
         {
           "type": "text",
           "name": "s11q148i1",
-          "title": "Based on your previous answers, do you believe your organization is justified in handling people's \"Financial data\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\"",
-          "defaultValue": "/*[[${s11q148i1}]]*/ 'default'"
+          "title": "Based on your previous answers, do you believe your organization is justified in handling people's \"Financial data\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\""
         },
         {
           "type": "radiogroup",
@@ -2059,8 +1981,7 @@
         {
           "type": "text",
           "name": "s11q153i1",
-          "title": "What is included in the \"Tracking data\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\"\n\n",
-          "defaultValue": "/*[[${s11q153i1}]]*/ 'default'"
+          "title": "What is included in the \"Tracking data\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\"\n\n"
         },
         {
           "type": "checkbox",
@@ -2139,20 +2060,17 @@
         {
           "type": "text",
           "name": "s11q155i1",
-          "title": "How was the \"Tracking data\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\"",
-          "defaultValue": "/*[[${s11q155i1}]]*/ 'default'"
+          "title": "How was the \"Tracking data\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\""
         },
         {
           "type": "text",
           "name": "s11q156i1",
-          "title": "Why is your organization handling people's \"Tracking data\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
-          "defaultValue": "/*[[${s11q156i1}]]*/ 'default'"
+          "title": "Why is your organization handling people's \"Tracking data\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc."
         },
         {
           "type": "text",
           "name": "s11q157i1",
-          "title": "Why is it important that your organization handle people's \"Tracking data\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\"\n\n",
-          "defaultValue": "/*[[${s11q157i1}]]*/ 'default'"
+          "title": "Why is it important that your organization handle people's \"Tracking data\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\"\n\n"
         },
         {
           "type": "radiogroup",
@@ -2173,8 +2091,7 @@
         {
           "type": "text",
           "name": "s11q159i1",
-          "title": "Describe how your organization could achieve the same purpose without handling people's \"Tracking data\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\"\n\n",
-          "defaultValue": "/*[[${s11q159i1}]]*/ 'default'"
+          "title": "Describe how your organization could achieve the same purpose without handling people's \"Tracking data\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\"\n\n"
         }
       ]
     },
@@ -2184,8 +2101,7 @@
         {
           "type": "text",
           "name": "s11q160i1",
-          "title": "How would your organization be affected if it could not handle people's \"Tracking data\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\"",
-          "defaultValue": "/*[[${s11q160i1}]]*/ 'default'"
+          "title": "How would your organization be affected if it could not handle people's \"Tracking data\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\""
         },
         {
           "type": "radiogroup",
@@ -2206,8 +2122,7 @@
         {
           "type": "text",
           "name": "s11q162i1",
-          "title": "Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"",
-          "defaultValue": "/*[[${s11q162i1}]]*/ 'default'"
+          "title": "Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\""
         },
         {
           "type": "radiogroup",
@@ -2228,8 +2143,7 @@
         {
           "type": "text",
           "name": "s11q164i1",
-          "title": "How would those third parties be affected if your organization could not handle people's \"Tracking data\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\"",
-          "defaultValue": "/*[[${s11q164i1}]]*/ 'default'"
+          "title": "How would those third parties be affected if your organization could not handle people's \"Tracking data\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\""
         },
         {
           "type": "radiogroup",
@@ -2278,20 +2192,17 @@
         {
           "type": "text",
           "name": "s11q168i1",
-          "title": "Describe how people benefit by your organization handling their \"Tracking data.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\"",
-          "defaultValue": "/*[[${s11q168i1}]]*/ 'default'"
+          "title": "Describe how people benefit by your organization handling their \"Tracking data.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\""
         },
         {
           "type": "text",
           "name": "s11q169i1",
-          "title": "Describe how people could be harmed by your organization handling their \"Tracking data.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\"",
-          "defaultValue": "/*[[${s11q169i1}]]*/ 'default'"
+          "title": "Describe how people could be harmed by your organization handling their \"Tracking data.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\""
         },
         {
           "type": "text",
           "name": "s11q170i1",
-          "title": "Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\"",
-          "defaultValue": "/*[[${s11q170i1}]]*/ 'default'"
+          "title": "Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\""
         }
       ]
     },
@@ -2301,8 +2212,7 @@
         {
           "type": "text",
           "name": "s11q171i1",
-          "title": "Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\"\n\n",
-          "defaultValue": "/*[[${s11q1171i1}]]*/ 'default'"
+          "title": "Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\"\n\n"
         },
         {
           "type": "radiogroup",
@@ -2323,8 +2233,7 @@
         {
           "type": "text",
           "name": "s11q173i1",
-          "title": "Based on your previous answers, do you believe your organization is justified in handling people's \"Tracking data\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\" \n\n",
-          "defaultValue": "/*[[${s11q173i1}]]*/ 'default'"
+          "title": "Based on your previous answers, do you believe your organization is justified in handling people's \"Tracking data\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\" \n\n"
         },
         {
           "type": "radiogroup",

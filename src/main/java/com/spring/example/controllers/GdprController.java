@@ -42,7 +42,7 @@ public class GdprController {
     private Form3Repository form3Repository;
 
     @Autowired
-    private Form7Repository form7epository;
+    private Form7Repository form7Repository;
 
 
     @GetMapping("/user/form/{form_number}")
@@ -93,6 +93,9 @@ public class GdprController {
         }
         if(formNumber == 3) {
             formCreator.saveAsEntity(form3Repository,data);
+        }
+        if(formNumber == 7) {
+            formCreator.saveAsEntity(form7Repository,data);
         }
         logger.info("Data received"+ data);
         return "redirect:/user/home";
