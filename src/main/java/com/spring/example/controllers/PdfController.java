@@ -183,14 +183,14 @@ public class PdfController {
             file.setName(user.getId()+"_"+formNumber);
             file.setMimeType("application/vnd.google-apps.document");
 
-            OutputStream outputStream = new FileOutputStream("/tmp/" + fileName + ".doc");
+            OutputStream outputStream = new FileOutputStream("/tmp/" + fileName + ".pdf");
 
             FileContent mediaContent = new FileContent("text/html", filePath);
             Drive drive = new DriveConfiguration().createDrive();
             com.google.api.services.drive.model.File uploaded = drive.files().create(file, mediaContent).setFields("id").execute();
             String id = uploaded.getId();
             drive = new DriveConfiguration().createDrive();
-            drive.files().export(id,"application/vnd.openxmlformats-officedocument.wordprocessingml.document").executeMediaAndDownloadTo(outputStream);
+            drive.files().export(id,"application/pdf").executeMedia().download(outputStream);
             outputStream.close();
 
         } catch (
@@ -200,12 +200,29 @@ public class PdfController {
             logger.error("Issue with Pdf processing",e);
             e.printStackTrace();
         }
-        return getInputStreamResourceResponseEntity(formNumber, name);
+        return getPdfInputStreamResourceResponseEntity(formNumber, "/tmp/"+fileName+".pdf");
 
 
     }
 
-    private ResponseEntity<InputStreamResource> getInputStreamResourceResponseEntity(@PathVariable("form_number") Integer formNumber, String name) {
+    private ResponseEntity<InputStreamResource> getPdfInputStreamResourceResponseEntity(Integer formNumber, String name) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Disposition", "inline; filename=Q" + formNumber + ".pdf");
+
+        InputStream inputStream = null;
+        try {
+            inputStream = new FileInputStream(name);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return ResponseEntity
+                .ok()
+                .headers(headers)
+                .contentType(MediaType.APPLICATION_PDF)
+                .body(new InputStreamResource(inputStream));
+    }
+
+    private ResponseEntity<InputStreamResource> getInputStreamResourceResponseEntity(Integer formNumber, String name) {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Disposition", "inline; filename=Q" + formNumber + ".html");
 

@@ -22,28 +22,6 @@ public class DriveConfiguration {
     private static final Logger logger = LoggerFactory.getLogger("DriveConfiguration");
     private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
 
-    private static Drive drive;
-
-    static {
-        createNewDrive();
-    }
-
-    private static void createNewDrive() {
-        final NetHttpTransport HTTP_TRANSPORT;
-        try {
-            GoogleCredential credential =
-                    GoogleCredential.fromStream(new FileInputStream("/home/toolkitgdpr/Platform.json")).createScoped(Collections.singleton(DriveScopes.DRIVE));
-
-            HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
-
-            drive = new Drive.Builder(HTTP_TRANSPORT, JSON_FACTORY, setHttpTimeout(credential))
-                    .setApplicationName("ESOMAR application")
-                    .build();
-        } catch (GeneralSecurityException | IOException e) {
-            logger.error("Failed Instantiation",e);
-            e.printStackTrace();
-        }
-    }
 
     public Drive createDrive() throws IOException, GeneralSecurityException {
         final NetHttpTransport HTTP_TRANSPORT;
@@ -76,7 +54,4 @@ public class DriveConfiguration {
         };
     }
 
-    public static Drive getDrive() {
-        return drive;
-    }
 }
