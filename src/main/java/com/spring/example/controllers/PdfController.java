@@ -69,18 +69,21 @@ public class PdfController {
     }
 
     @RequestMapping(value = "/user/download/{form_number}", method = RequestMethod.GET)
-    public ResponseEntity<InputStreamResource> downloadGoogleDoc(@PathVariable("form_number") Integer formNumber, Model model, Principal principal) throws FileNotFoundException {
+    public ResponseEntity<InputStreamResource> downloadGoogleDoc(@PathVariable("form_number") Integer formNumber, Model model, Principal principal) throws IOException, GeneralSecurityException {
         String username = principal.getName();
         User user = userRepository.findByEmail(username);
         UserRecords userRecords = userRecordsRepository.findFirstByUserIdAndFormIdOrderByIdDesc(user.getId(), Long.valueOf(formNumber));
         if (userRecords == null) {
             throw new ResourceNotFoundException();
         }
+        String googleId = userRecords.getGoogleId();
+        Drive drive = new DriveConfiguration().createDrive();
+        InputStream inputStream = drive.files().export(googleId, "application/pdf").executeMedia().getContent();
 
-        InputStreamResource resource = new InputStreamResource(new FileInputStream(new File(userRecords.getName())));
+        InputStreamResource resource = new InputStreamResource(inputStream);
 
         HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Disposition", "inline; filename=Q" + formNumber + ".doc");
+        headers.add("Content-Disposition", "inline; filename=Q" + formNumber + ".pdf");
 
         String contentType = "application/octet-stream";
         return ResponseEntity
@@ -90,17 +93,19 @@ public class PdfController {
                 .body(resource);
     }
 
-    @RequestMapping(value = "/admin/user/{user_id}/preview/{form_number}", produces = MediaType.APPLICATION_PDF_VALUE, method = RequestMethod.GET)
+    @RequestMapping(value = "/admin/user/{user_id}/preview/{form_number}", method = RequestMethod.GET)
     public ResponseEntity<InputStreamResource> previewUserPdf(@PathVariable("user_id") Integer userId, @PathVariable("form_number") Integer formNumber, Model model, Principal principal) throws FileNotFoundException {
         String username = principal.getName();
 
         AdminUser adminUser = adminUserRepository.findByEmail(username);
 
         List<User> users = adminUser.getUser();
+        User foundUser = null;
         boolean found = false;
         for (User user : users) {
             if (user.getId().equals(Long.valueOf(userId))) {
                 found = true;
+                foundUser = user;
                 break;
             }
         }
@@ -114,10 +119,17 @@ public class PdfController {
             throw new ResourceNotFoundException();
         }
 
-        String name = userRecords.getName();
+        InputStreamResource resource = new InputStreamResource(new FileInputStream(new File(userRecords.getName())));
 
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Disposition", "inline; filename="+foundUser.getEmail()+"_Q" + formNumber + ".doc");
 
-        return getInputStreamResourceResponseEntity(formNumber, name);
+        String contentType = "application/octet-stream";
+        return ResponseEntity
+                .ok()
+                .headers(headers)
+                .contentType(MediaType.APPLICATION_OCTET_STREAM)
+                .body(resource);
 
     }
 
@@ -152,8 +164,8 @@ public class PdfController {
             OutputStream outputStream1 = new FileOutputStream(name);
             PrintWriter printWriter = new PrintWriter(outputStream1);
             printWriter.print(html);
-            outputStream1.close();
             printWriter.close();
+            outputStream1.close();
 
             java.io.File filePath = new java.io.File(name);
             com.google.api.services.drive.model.File file = new com.google.api.services.drive.model.File();
@@ -205,7 +217,7 @@ public class PdfController {
         return classLoaderTemplateResolver;
     }
 
-    private String getHTML(@PathVariable("form_number") Integer formNumber, ClassLoaderTemplateResolver classLoaderTemplateResolver, User user) {
+    private String getHTML( Integer formNumber, ClassLoaderTemplateResolver classLoaderTemplateResolver, User user) {
         Form1 form1 = formEntityRepository.findByUserId(user.getId());
         Form2 form2 = form2Repository.findByUserId(user.getId());
         Form3 form3 = form3Repository.findByUserId(user.getId());

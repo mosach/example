@@ -42,7 +42,7 @@
                     </thead>
                     <tbody>
 
-                    <tr th:each="number: ${#numbers.sequence(1,7)}">
+                    <tr th:each="number: ${#numbers.sequence(1,26)}">
                         <td th:text="'Form'+ ${number}"></td>
                         <td><a th:href="@{/user/generate/{num}(num = ${number})}">Click to Generate Document</a> </td>
                         <td><a th:href="@{/user/preview/{num}(num = ${number})}">Click to Preview Document</a> </td>
