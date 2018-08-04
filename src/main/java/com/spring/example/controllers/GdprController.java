@@ -33,16 +33,7 @@ public class GdprController {
     private UserRepository userRepository;
 
     @Autowired
-    private FormEntityRepository formEntityRepository;
-
-    @Autowired
-    private Form2Repository form2Repository;
-
-    @Autowired
-    private Form3Repository form3Repository;
-
-    @Autowired
-    private Form7Repository form7Repository;
+    private UserFormRepository userFormRepository;
 
 
     @GetMapping("/user/form/{form_number}")
@@ -85,18 +76,7 @@ public class GdprController {
 
         String username = principal.getName();
         FormCreator formCreator =  new FormCreator(username, userRepository);
-        if(formNumber == 1) {
-            formCreator.saveAsEntity(formEntityRepository,data);
-        }
-        if(formNumber == 2) {
-            formCreator.saveAsEntity(form2Repository,data);
-        }
-        if(formNumber == 3) {
-            formCreator.saveAsEntity(form3Repository,data);
-        }
-        if(formNumber == 7) {
-            formCreator.saveAsEntity(form7Repository,data);
-        }
+        formCreator.saveAsEntity(userFormRepository,data,formNumber);
         logger.info("Data received"+ data);
         return "redirect:/user/home";
     }

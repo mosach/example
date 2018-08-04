@@ -121,4 +121,24 @@ public class FormCreator {
             map.put(currentPath, valueNode.asText());
         }
     }
+
+    public void saveAsEntity(UserFormRepository userFormRepository, Map<String, Object> data, Integer formNumber) {
+
+
+        try {
+            String json = new ObjectMapper().writeValueAsString(data);
+            Map<String,String> map = new HashMap<>();
+            addKeys("",new ObjectMapper().readTree(json),map);
+            User user = userRepository.findByEmail(username);
+            UserForms form = new UserForms();
+            UserFormId userFormId = new UserFormId(user.getId().intValue(),formNumber);
+            form.setUserFormId(userFormId);
+            form.setMyMap(map);
+            userFormRepository.save(form);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 }

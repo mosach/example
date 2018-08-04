@@ -28,16 +28,10 @@ public class ProfileController {
     private AdminUserRepository adminUserRepository;
 
     @Autowired
-    private FormEntityRepository formEntityRepository;
+    private UserFormRepository userFormRepository;
 
     @Autowired
-    private Form2Repository form2Repository;
-
-    @Autowired
-    private Form3Repository form3Repository;
-
-    @Autowired
-    private Form7Repository form7Repository;
+    private FormRepository formRepository;
 
     @GetMapping("user/home")
     public String getLogin(Model model, Principal principal) {
@@ -47,38 +41,24 @@ public class ProfileController {
         model.addAttribute("name",user.getName());
         model.addAttribute("phone",user.getPhone());
 
-        Form1 form1 = formEntityRepository.findByUserId(user.getId());
-        Form2 form2 = form2Repository.findByUserId(user.getId());
-        Form3 form3 = form3Repository.findByUserId(user.getId());
-        Form7 form7 = form7Repository.findByUserId(user.getId());
+        List<UserForms> userForms = userFormRepository.findByUserFormIdUserId(user.getId().intValue());
 
         List<FormLink> formLinkList = new ArrayList<>();
 
-        if(form1 == null) {
-            formLinkList.add(new FormLink(1,null,"Not Submitted","danger" ));
-        }
-        else {
-            formLinkList.add(new FormLink(1,form1.getUpdatedAt(),"Submitted" ,"success"));
+        List<Integer> foundList = new ArrayList<>();
+
+        for (UserForms userForm : userForms) {
+            Integer formId = userForm.getUserFormId().getFormId();
+            formLinkList.add(new FormLink(formId,userForm.getUpdatedAt(),"Submitted","success"));
+            foundList.add(formId);
         }
 
-        if(form2 == null) {
-            formLinkList.add(new FormLink(2,null,"Not Submitted","danger" ));
-        }
-        else {
-            formLinkList.add(new FormLink(2,form2.getUpdatedAt(),"Submitted","success" ));
-        }
+        Iterable<Form> forms = formRepository.findAll();
 
-        if(form3 == null) {
-            formLinkList.add(new FormLink(3,null,"Not Submitted","danger" ));
-        }
-        else {
-            formLinkList.add(new FormLink(3,form3.getUpdatedAt(),"Submitted","success" ));
-        }
-        if(form7 == null) {
-            formLinkList.add(new FormLink(7,null,"Not Submitted","danger" ));
-        }
-        else {
-            formLinkList.add(new FormLink(7,form7.getUpdatedAt(),"Submitted","success" ));
+        for (Form form : forms) {
+            if(! foundList.contains(form.getId())) {
+                formLinkList.add(new FormLink(form.getId(), null, "Not Submitted", "danger"));
+            }
         }
 
         model.addAttribute("form_links",formLinkList);

@@ -4,6 +4,7 @@ import com.google.api.client.http.FileContent;
 import com.google.api.services.drive.Drive;
 import com.spring.example.configuration.DriveConfiguration;
 import com.spring.example.entity.*;
+import com.spring.example.models.DocumentLink;
 import com.spring.example.repository.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +26,7 @@ import java.io.*;
 import java.security.GeneralSecurityException;
 import java.security.Principal;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -44,19 +46,13 @@ public class PdfController {
     private AdminUserRepository adminUserRepository;
 
     @Autowired
-    private FormEntityRepository formEntityRepository;
-
-    @Autowired
-    private Form2Repository form2Repository;
-
-    @Autowired
-    private Form3Repository form3Repository;
-
-    @Autowired
-    private Form7Repository form7Repository;
-
-    @Autowired
     private UserRecordsRepository userRecordsRepository;
+
+    @Autowired
+    private UserFormRepository userFormRepository;
+
+    @Autowired
+    private DocumentRepository documentRepository;
 
     @RequestMapping(value = "/user/preview/{form_number}", produces = MediaType.APPLICATION_PDF_VALUE, method = RequestMethod.GET)
     public ResponseEntity<InputStreamResource> returnPdf(@PathVariable("form_number") Integer formNumber, Model model, Principal principal) {
@@ -143,6 +139,14 @@ public class PdfController {
         String username = principal.getName();
         User user = userRepository.findByEmail(username);
         model.addAttribute("user", user);
+        List<DocumentLink> documentLinks = new ArrayList<>();
+        Iterable<Documents> documents = documentRepository.findAll();
+
+        for (Documents document : documents) {
+            documentLinks.add(new DocumentLink(document.getId(),document.getName()));
+        }
+
+        model.addAttribute("document_links",documentLinks);
         return "generate";
     }
 
@@ -218,43 +222,22 @@ public class PdfController {
     }
 
     private String getHTML( Integer formNumber, ClassLoaderTemplateResolver classLoaderTemplateResolver, User user) {
-        Form1 form1 = formEntityRepository.findByUserId(user.getId());
-        Form2 form2 = form2Repository.findByUserId(user.getId());
-        Form3 form3 = form3Repository.findByUserId(user.getId());
-        Form7 form7 = form7Repository.findByUserId(user.getId());
+        List<UserForms> forms = userFormRepository.findByUserFormIdUserId(user.getId().intValue());
 
         TemplateEngine templateEngine = new TemplateEngine();
         templateEngine.setTemplateResolver(classLoaderTemplateResolver);
 
         Context context = new Context();
         Map<String, String> formMap;
-        if (form1 != null) {
-            formMap = form1.getMyMap();
-            for (String s : formMap.keySet()) {
-                context.setVariable(s, formMap.get(s));
-            }
-        }
 
-        if (form2 != null) {
-            formMap = form2.getMyMap();
-            for (String s : formMap.keySet()) {
-                context.setVariable(s, formMap.get(s));
+        for (UserForms form : forms) {
+            if(form != null ) {
+                formMap = form.getMyMap();
+                for (String s : formMap.keySet()) {
+                    context.setVariable(s, formMap.get(s));
+                }
             }
         }
-        if (form3 != null) {
-            formMap = form3.getMyMap();
-            for (String s : formMap.keySet()) {
-                context.setVariable(s, formMap.get(s));
-            }
-        }
-
-        if (form7 != null) {
-            formMap = form7.getMyMap();
-            for (String s : formMap.keySet()) {
-                context.setVariable(s, formMap.get(s));
-            }
-        }
-
 
         return templateEngine.process("templates/Q" + formNumber, context);
     }

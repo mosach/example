@@ -34,7 +34,7 @@
 
                     <thead>
 
-                    <th>Form Number</th>
+                    <th>Form</th>
                     <th>Generation Link</th>
                     <th>Preview Link</th>
                     <th>Download Link</th>
@@ -42,11 +42,12 @@
                     </thead>
                     <tbody>
 
-                    <tr th:each="number: ${#numbers.sequence(1,26)}">
-                        <td th:text="'Form'+ ${number}"></td>
-                        <td><a th:href="@{/user/generate/{num}(num = ${number})}">Click to Generate Document</a> </td>
-                        <td><a th:href="@{/user/preview/{num}(num = ${number})}">Click to Preview Document</a> </td>
-                        <td><a th:href="@{/user/download/{num}(num = ${number})}">Click to Download Document</a> </td>
+
+                    <tr th:each="link : ${document_links}">
+                        <td th:text="${link.name}"></td>
+                        <td><a th:href="@{/user/generate/{num}(num = ${link.id})}">Click to Generate Document</a> </td>
+                        <td><a target="_blank" th:href="@{/user/preview/{num}(num = ${link.id})}">Click to Preview Document</a> </td>
+                        <td><a th:href="@{/user/download/{num}(num = ${link.id})}">Click to Download Document</a> </td>
                     </tr>
 
 
