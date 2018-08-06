@@ -1,10 +1,16 @@
+
 package com.spring.example.pojo;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-
-import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -17,7 +23,9 @@ import java.util.List;
         "visibleIf",
         "enableIf",
         "inputType",
-        "templateElements"
+        "templateElements",
+        "defaultValue",
+        "correctAnswer"
 })
 public class Element {
 
@@ -31,8 +39,12 @@ public class Element {
     private List<Item> items = null;
     @JsonProperty("isRequired")
     private Boolean isRequired;
+    @JsonProperty("defaultValue")
+    private String defaultValue = null;
+    @JsonProperty("correctAnswer")
+    private String correctAnswer;
     @JsonProperty("choices")
-    private List<String> choices = null;
+    private List<Choice> choices = null;
     @JsonProperty("visibleIf")
     private String visibleIf;
     @JsonProperty("enableIf")
@@ -92,13 +104,33 @@ public class Element {
         this.isRequired = isRequired;
     }
 
+    @JsonProperty("defaultValue")
+    public String getDefaultValue() {
+        return defaultValue;
+    }
+
+    @JsonProperty("defaultValue")
+    public void setDefaultValue(String defaultValue) {
+        this.defaultValue = defaultValue;
+    }
+
+    @JsonProperty("correctAnswer")
+    public String getCorrectAnswer() {
+        return correctAnswer;
+    }
+
+    @JsonProperty("correctAnswer")
+    public void setCorrectAnswer(String correctAnswer) {
+        this.correctAnswer = correctAnswer;
+    }
+
     @JsonProperty("choices")
-    public List<String> getChoices() {
+    public List<Choice> getChoices() {
         return choices;
     }
 
     @JsonProperty("choices")
-    public void setChoices(List<String> choices) {
+    public void setChoices(List<Choice> choices) {
         this.choices = choices;
     }
 

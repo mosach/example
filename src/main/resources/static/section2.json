@@ -1,4 +1,5 @@
 {
+  "completedHtml": "Thank you for sharing your information with us",
   "pages": [
     {
       "name": "page1",
@@ -7,6 +8,9 @@
           "type": "multipletext",
           "name": "s3q3",
           "title": "Your organization must appoint an \"event response coordinator.\"\nThe \"event response coordinator\" will be in charge of:\n\n1. being the point of contact when a data breach occurs; \n2. coordinating with the different departments within the organization to handle data breaches; and \n3. filling out the necessary paperwork to document the data breach and the organization's remedial measures.\nWho is your organization's \"event response coordinator\"?",
+          "defaultValue": {
+            "i1": [[${s1q3i1}]]
+          },
           "items": [
             {
               "name": "i1",
@@ -19,6 +23,7 @@
           "type": "radiogroup",
           "name": "question2",
           "title": "Your organization must designate a committee to oversee the data breach response process.\nMany business and nonprofits designate the Board of Directors.\n\nWill the Board of Directors be the committee that oversees the data breach process?",
+          "defaultValue": "yes",
           "isRequired": true,
           "choices": [
             "yes",
@@ -31,6 +36,9 @@
           "visibleIf": "{question2} = \"yes\"",
           "title": "What committee will oversee the data breach process?",
           "enableIf": "{question2} = \"yes\"",
+          "defaultValue": {
+            "i1": [[${s1q6i1}]]
+          },
           "items": [
             {
               "name": "i1",
@@ -45,6 +53,9 @@
           "visibleIf": "{question2} = \"yes\"",
           "title": "Who within that committee will be the principal point of contact in case of a data breach?",
           "enableIf": "{question2} = \"yes\"",
+          "defaultValue": {
+            "i1": [[${s1q7i1}]]
+          },
           "items": [
             {
               "name": "i1",
@@ -55,6 +66,5 @@
         }
       ]
     }
-  ],
-  "completedHtml":"Thank you for sharing your information with us"
+  ]
 }

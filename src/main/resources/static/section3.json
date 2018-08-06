@@ -1,18 +1,20 @@
 {
+  "completedHtml": "Thank you for sharing your information with us",
   "pages": [
     {
       "name": "page1",
       "elements": [
         {
           "type": "text",
-          "name": "question1",
+          "name": "s4q1i1",
           "title": "We need to ask you about how the different \"products, services, or processes\" within your organization use personal information from Europe.\nYou will need to provide this information to your users/customers.\n\n\n\n\n\"Processes\" include marketing analysis, product improvement, human resources decisionmaking, etc.\n\nHow many \"products, services, or processes\" within your organization involve personal information from Europe?\nPersonal information is any information that alone or with other information can identify a living person. Personal information includes: name, home address, business address, email, cell phone number, work number, employee ID number, usernames and passwords, etc. \n\nPersonal information can come from employees, customers, users, partners, etc. \n\nWhen you count the number of \"products, services or processes,\" only include the process generally, not the number of times the process is implemented (example: human resources decision making is one process, not every time a human resources decision is made).",
+          "defaultValue": [[${s4q1i1}]],
           "isRequired": true,
           "inputType": "number"
         },
         {
           "type": "paneldynamic",
-          "name": "question2",
+          "name": "s4dp",
           "title": "Please add the information for each of them",
           "templateElements": [
             {
@@ -156,6 +158,5 @@
         }
       ]
     }
-  ],
-  "completedHtml":"Thank you for sharing your information with us"
+  ]
 }

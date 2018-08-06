@@ -6,15 +6,15 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.node.ValueNode;
 import com.spring.example.entity.*;
+import com.spring.example.pojo.Element;
+import com.spring.example.pojo.Page;
 import com.spring.example.pojo.Questionaire;
 import com.spring.example.repository.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class FormCreator {
 
@@ -32,7 +32,34 @@ public class FormCreator {
         return 0;
     }
 
-    public void addDefaultValues(Questionaire questionaire) {
+    public void addDefaultValues(Questionaire questionaire, UserFormRepository userFormRepository) {
+        User user = userRepository.findByEmail(username);
+        List<UserForms> forms = userFormRepository.findByUserFormIdUserId(user.getId().intValue());
+
+        Map<String, String> formMap;
+
+        TreeMap<String, String> searchMap = new TreeMap<>();
+
+        for (UserForms form : forms) {
+            if(form != null ) {
+                formMap = form.getMyMap();
+                for (String s : formMap.keySet()) {
+                    searchMap.put(s,formMap.get(s));
+                }
+            }
+        }
+
+        List<Page> pages = questionaire.getPages();
+
+        for (Page page : pages) {
+            List<Element> elements = page.getElements();
+            for (Element element : elements) {
+                String name = element.getDefaultValue();
+                if(name != null && searchMap.containsKey(name)){
+                    element.setDefaultValue(searchMap.get(name));
+                }
+            }
+        }
 
     }
 
@@ -114,7 +141,7 @@ public class FormCreator {
         } else if (jsonNode.isArray()) {
             ArrayNode arrayNode = (ArrayNode) jsonNode;
             for (int i = 0; i < arrayNode.size(); i++) {
-                addKeys(currentPath + "[" + i + "]", arrayNode.get(i), map);
+                addKeys(currentPath + "_" + i + "_", arrayNode.get(i), map);
             }
         } else if (jsonNode.isValueNode()) {
             ValueNode valueNode = (ValueNode) jsonNode;

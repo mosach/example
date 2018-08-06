@@ -1,0 +1,1968 @@
+{
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "paneldynamic",
+          "name": "s5",
+          "title": "[Complete a new questionnaire for each location] - How many locations within your organization handle personal information from Europe? A location is defined as any place where an employee principally works. Personal information is any information that alone or with other information can identify a living person. Personal information includes: name, home address, business address, email, cell phone number, work number, employee ID number, usernames and passwords, etc. Personal information can come from employees, customers, users, partners, etc.",
+          "templateElements": [
+            {
+              "type": "multipletext",
+              "name": "q1",
+              "title": "What is the address of location #1?\n",
+              "defaultValue": {
+                "i1": [[${s5_0_q1i1}]],
+                "i2": [[${s5_0_q1i2}]],
+                "i3": [[${s5_0_q1i3}]],
+                "i4": [[${s5_0_q1i4}]],
+                "i5": [[${s5_0_q1i5}]],
+                "i6": [[${s5_0_q1i6}]]
+              },
+              "correctAnswer": {
+                "s5q2i1": "s5q2i1",
+                "s5q2i2": "s5q2i2",
+                "s5q2i3": "s5q2i3",
+                "s5q2i4": "s5q2i4",
+                "s5q2i5": "s5q2i5",
+                "s5q2i6": "s5q2i6"
+              },
+              "items": [
+                {
+                  "name": "i1",
+                  "isRequired": true,
+                  "title": "Adress1"
+                },
+                {
+                  "name": "i2",
+                  "isRequired": true,
+                  "title": "Adress2"
+                },
+                {
+                  "name": "i3",
+                  "isRequired": true,
+                  "title": "City"
+                },
+                {
+                  "name": "i4",
+                  "isRequired": true,
+                  "title": "State/province"
+                },
+                {
+                  "name": "i5",
+                  "isRequired": true,
+                  "title": "Country"
+                },
+                {
+                  "name": "i6",
+                  "isRequired": true,
+                  "title": "Zip/Mailng code"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "q3i1",
+              "title": "There are several categories of personal information that are important for the GDPR.\nWe're going to show you this list each time you run through the process. \n\n1. Identifying information: names, age, birth date, government ID, user-names, passwords, etc. \n\n2. Opinions, beliefs, or personal preference data: religious and political beliefs, buying habits, likes and dislikes, etc.\n\n3. Physical characteristics data: height, weight, hair color, eye color, race, fingerprint, voice, etc. \n\n4. Personal history data: work history, marriages, relationships, education, previous addresses, criminal record, etc. \n\n5. Social and contact information: phone number, address, friend networks, social groups, family, etc. \n\n6. Financial data: credit cards, bank accounts, debit accounts, investments, etc. \n\n7. Tracking data: monitoring physical movement, internet history, phone usage, app usage, etc.\n\n",
+              "defaultValue": "I understand",
+              "correctAnswer": "I understand",
+              "choices": [
+                {
+                  "value": "I understand",
+                  "text": "I understand"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "q4i1",
+              "title": "What categories of personal information does location #1 handle?\nTo see examples of each category, click the \"Go Back\" button to the previous screen.",
+              "defaultValue": [
+                "Identifying information",
+                "Opinions, beliefs, or personal preference data",
+                "Physical characteristics data",
+                "Personal history data",
+                "Social and contact information",
+                "Financial data",
+                "Tracking data"
+              ],
+              "correctAnswer": [
+                "Identifying information",
+                "Opinions, beliefs, or personal preference data",
+                "Physical characteristics data",
+                "Personal history data",
+                "Social and contact information",
+                "Financial data",
+                "Tracking data"
+              ],
+              "choices": [
+                {
+                  "value": "Identifying information",
+                  "text": "Identifying information"
+                },
+                {
+                  "value": "Opinions, beliefs, or personal preference data",
+                  "text": "Opinions, beliefs, or personal preference data"
+                },
+                {
+                  "value": "Physical characteristics data",
+                  "text": "Physical characteristics data"
+                },
+                {
+                  "value": "Personal history data",
+                  "text": "Personal history data"
+                },
+                {
+                  "value": "Social and contact information",
+                  "text": "Social and contact information"
+                },
+                {
+                  "value": "Financial data",
+                  "text": "Financial data"
+                },
+                {
+                  "value": "Tracking data",
+                  "text": "Tracking data"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "q5i1",
+              "title": "We need to ask you several questions about the \"Identifying information\" handled at location #1.\n",
+              "defaultValue": "I understand",
+              "correctAnswer": "I understand",
+              "choices": [
+                {
+                  "value": "I understand",
+                  "text": "I understand"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q6i1",
+              "title": "What is included in the \"Identifying information\" at location #1?\nSample answer: \"Phone numbers, emails, addresses, and dates of birth\"",
+              "defaultValue": "Description",
+              "correctAnswer": "s5q6i1"
+            },
+            {
+              "type": "text",
+              "name": "q7i1",
+              "title": "\nWho is the \"Identifying information\" at location #1 collected from? \nSample answer: \"The personal information is collected from users of our mobile app.\" \n\nOther types of people include: patients, customers, employees, students, system users, device users, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q7i1"
+            },
+            {
+              "type": "checkbox",
+              "name": "q8i1",
+              "title": "Click all that apply to the \"Identifying information\" handled at location #1?",
+              "defaultValue": [
+                "The organization received consent to handle the personal information.",
+                "The organization is under contract to handle the personal information.",
+                "The organization has a legal obligation to handle the personal information.",
+                "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                "The organization is protecting a public interest by handling the personal information.",
+                "The organization has a legitimate business interest in handling the information."
+              ],
+              "correctAnswer": [
+                "The organization received consent to handle the personal information.",
+                "The organization is under contract to handle the personal information.",
+                "The organization has a legal obligation to handle the personal information.",
+                "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                "The organization is protecting a public interest by handling the personal information.",
+                "The organization has a legitimate business interest in handling the information."
+              ],
+              "choices": [
+                {
+                  "value": "The organization received consent to handle the personal information.",
+                  "text": "The organization received consent to handle the personal information."
+                },
+                {
+                  "value": "The organization is under contract to handle the personal information.",
+                  "text": "The organization is under contract to handle the personal information."
+                },
+                {
+                  "value": "The organization has a legal obligation to handle the personal information.",
+                  "text": "The organization has a legal obligation to handle the personal information."
+                },
+                {
+                  "value": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                  "text": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information."
+                },
+                {
+                  "value": "The organization is protecting a public interest by handling the personal information.",
+                  "text": "The organization is protecting a public interest by handling the personal information."
+                },
+                {
+                  "value": "The organization has a legitimate business interest in handling the information.",
+                  "text": "The organization has a legitimate business interest in handling the information."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q9i1",
+              "title": "What is your organization doing with the \"Identifying information\" at location #1?\nSample answer: \"The organization uses the identifying information to track how users interact with our products. The organization provides that information to third parties who help determine how to better market the products. When the organization is finished with the information, it stores the data on external, third-party servers.\" \n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q9i1"
+            },
+            {
+              "type": "text",
+              "name": "q10i1",
+              "title": "What does your organization plan to do with the \"Identifying information\" at location #1 in the future?\nThis question may seem repetitive, but it's important to note your future plans. \n\nSample answer: \"The organization plans to use the identifying information to track how users interact with our products. The organization also plans to provide the information to third parties to help determine how to better market those products.\" \n\nOther plans include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q10i1"
+            },
+            {
+              "type": "text",
+              "name": "q11i1",
+              "title": "What departments within your organization handle the \"Identifying information\" at location #1?\nSample answer: \"The organization's marketing and sales departments handle the personal information.\"\n\nOther departments include: human resources, security, IT, accounting, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q11i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q12i1",
+              "title": "Does your organization share the \"Identifying information\" at location #1 with third parties?\nThird parties include: subsidiaries, affiliates, vendors, software developers, cloud service providers, etc. \n\n",
+              "defaultValue": "YES",
+              "correctAnswer": "YES",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "YES"
+                },
+                {
+                  "value": "NO",
+                  "text": "NO"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q13i1",
+              "title": "Name those organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"\n\nYou will need to remember these organizations when you complete the next document: Record of Processing (External). You may want to write them down.",
+              "defaultValue": "Organizations",
+              "correctAnswer": "s5q13i1"
+            },
+            {
+              "type": "text",
+              "name": "q14i1",
+              "title": "In what countries are those organizations located?\nSample answer: \"USA, Canada and Mexico\"",
+              "defaultValue": "Countries",
+              "correctAnswer": "s5q14i1"
+            },
+            {
+              "type": "text",
+              "name": "q15i1",
+              "title": "What safeguards are in place to protect the \"Identifying information\" at location #1 when it is transferred to another organization?\nSample answer: \"The organization transfers the personal information to the third party via an encrypted FTP site. The organization also audits how the third party vendors uses the information every quarter.\" \n\nOther safeguards include: secure transfer, encryption, periodic audits, firewalls, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q15i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q16i1",
+              "title": "Does your organization plan to share the \"Identifying information\" at location #1 with third parties in the future?",
+              "defaultValue": "YES",
+              "correctAnswer": "YES",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "YES"
+                },
+                {
+                  "value": "NO",
+                  "text": "NO"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q17i1",
+              "title": "Name the organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"",
+              "defaultValue": "Names",
+              "correctAnswer": "s5q17i1"
+            },
+            {
+              "type": "text",
+              "name": "q18i1",
+              "title": "After your organization is finished with the \"Identifying information\" at location #1, how long does your organization expect to retain it?\nSample answer: \"2 years\"",
+              "defaultValue": "Time",
+              "correctAnswer": "s5q18i1"
+            },
+            {
+              "type": "dropdown",
+              "name": "q19i1",
+              "title": "Rate the risk to the confidentiality of the \"Identifying information\" at location #1.\n\"Risk to confidentiality\" means unauthorized disclosure or access to the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "q20i1",
+              "title": "Rate the risk to the integrity of the \"Identifying information\" at location #1.\n\"Risk to integrity\" means unintended alteration or destruction of the information. \n\n",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "q21i1",
+              "title": "Rate the risk to the accessibility of the \"Identifying information\" at location #1.\n\"Risk to accessibility\" means loss of the information. \n\n\n",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q22i1",
+              "title": "What organizational measures are in place to secure the \"Identifying information\" at location #1?\nSample answer:\"The organization has policies and procedures in place for handling personal information. Employees receive training in accordance with those policies and procedures. The organization also audits how it handles personal information every quarter.\" \n\nOther organizational measures include: reporting procedures, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q22i1"
+            },
+            {
+              "type": "text",
+              "name": "q23i1",
+              "title": "What physical measures are in place at your organization to secure the \"Identifying information\" at location #1?\nSample answer: \"The organization requires ID badges to enter the facilities. There are also security personnel on site 24 hours per day. There are security cameras in every hall and at the entrances.\"\n\nOther physical measures include: locks, physical barriers, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q23i1"
+            },
+            {
+              "type": "text",
+              "name": "q24i1",
+              "title": "hat technical measures are in place at your organization to secure the \"Identifying information\" at location #1?\nSample answer: \"The organization has two-factor authentication on its login process. It also employs anti-malware software.\" \n\nTechnical measures include: firewalls, segmented data, account authentication, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q24i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q25i1",
+              "title": "We're done asking about the \"Identifying information\" at location #1.\nIf there are additional categories of information handled at this location, we'll ask you about those. If not, we'll ask you about the next location. If no other locations exist, we're nearly done with the document. \n\n",
+              "defaultValue": "I understand",
+              "correctAnswer": "I understand",
+              "choices": [
+                {
+                  "value": "I understand",
+                  "text": "I understand"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "q26i1",
+              "title": "We need to ask you several questions about the \"Opinions, beliefs, or personal preference data\" handled at location #1.",
+              "defaultValue": "I understand",
+              "correctAnswer": "I understand",
+              "choices": [
+                {
+                  "value": "I understand",
+                  "text": "I understand"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q27i1",
+              "title": "What is included in the \"Opinions, beliefs, or personal preference data\" at location #1?\nSample answer: \"Phone numbers, emails, addresses, and dates of birth\"",
+              "defaultValue": "Description",
+              "correctAnswer": "s5q27i1"
+            },
+            {
+              "type": "text",
+              "name": "q28i1",
+              "title": "Who is the \"Opinions, beliefs, or personal preference data\" at location #1 collected from?\nSample answer: \"The personal information is collected from users of our mobile app.\" \n\nOther types of people include: patients, customers, employees, students, system users, device users, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q28i1"
+            },
+            {
+              "type": "checkbox",
+              "name": "q29i1",
+              "title": "Click all that apply to the \"Opinions, beliefs, or personal preference data\" handled at location #1?",
+              "defaultValue": [
+                "The organization received consent to handle the personal information.",
+                "The organization is under contract to handle the personal information.",
+                "The organization has a legal obligation to handle the personal information.",
+                "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                "The organization is protecting a public interest by handling the personal information.",
+                "The organization has a legitimate business interest in handling the information."
+              ],
+              "correctAnswer": [
+                "The organization received consent to handle the personal information.",
+                "The organization is under contract to handle the personal information.",
+                "The organization has a legal obligation to handle the personal information.",
+                "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                "The organization is protecting a public interest by handling the personal information.",
+                "The organization has a legitimate business interest in handling the information."
+              ],
+              "choices": [
+                {
+                  "value": "The organization received consent to handle the personal information.",
+                  "text": "The organization received consent to handle the personal information."
+                },
+                {
+                  "value": "The organization is under contract to handle the personal information.",
+                  "text": "The organization is under contract to handle the personal information."
+                },
+                {
+                  "value": "The organization has a legal obligation to handle the personal information.",
+                  "text": "The organization has a legal obligation to handle the personal information."
+                },
+                {
+                  "value": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                  "text": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information."
+                },
+                {
+                  "value": "The organization is protecting a public interest by handling the personal information.",
+                  "text": "The organization is protecting a public interest by handling the personal information."
+                },
+                {
+                  "value": "The organization has a legitimate business interest in handling the information.",
+                  "text": "The organization has a legitimate business interest in handling the information."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q30i1",
+              "title": "What is your organization doing with the \"Opinions, beliefs, or personal preference data\" at location #1?\nSample answer: \"The organization uses the identifying information to track how users interact with our products. The organization provides that information to third parties who help determine how to better market the products. When the organization is finished with the information, it stores the data on external, third-party servers.\" \n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q30i1"
+            },
+            {
+              "type": "text",
+              "name": "q31i1",
+              "title": "What does your organization plan to do with the \"Opinions, beliefs, or personal preference data\" at location #1 in the future?\nThis question may seem repetitive, but it's important to note your future plans. \n\nSample answer: \"The organization plans to use the identifying information to track how users interact with our products. The organization also plans to provide the information to third parties to help determine how to better market those products.\" \n\nOther plans include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q31i1"
+            },
+            {
+              "type": "text",
+              "name": "q32i1",
+              "title": "What departments within your organization handle the \"Opinions, beliefs, or personal preference data\" at location #1?\nSample answer: \"The organization's marketing and sales departments handle the personal information.\"\n\nOther departments include: human resources, security, IT, accounting, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q32i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q33i1",
+              "title": "Does your organization share the \"Opinions, beliefs, or personal preference data\" at location #1 with third parties?\nThird parties include: subsidiaries, affiliates, vendors, software developers, cloud service providers, etc. \n\n",
+              "defaultValue": "YES",
+              "correctAnswer": "YES",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "YES"
+                },
+                {
+                  "value": "NO",
+                  "text": "NO"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q34i1",
+              "title": "Name those organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"\n\nYou will need to remember these organizations when you complete the next document: Record of Processing (External). You may want to write them down.",
+              "defaultValue": "Organizations",
+              "correctAnswer": "s5q34i1"
+            },
+            {
+              "type": "text",
+              "name": "q35i1",
+              "title": "In what countries are those organizations located?\nSample answer: \"USA, Canada and Mexico\"",
+              "defaultValue": "Countries",
+              "correctAnswer": "s5q35i1"
+            },
+            {
+              "type": "text",
+              "name": "q36i1",
+              "title": "What safeguards are in place to protect the \"Opinions, beliefs, or personal preference data\" at location #1 when it is transferred to another organization?\nSample answer: \"The organization transfers the personal information to the third party via an encrypted FTP site. The organization also audits how the third party vendors uses the information every quarter.\" \n\nOther safeguards include: secure transfer, encryption, periodic audits, firewalls, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q36i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q37i1",
+              "title": "Does your organization plan to share the \"Opinions, beliefs, or personal preference data\" at location #1 with third parties in the future?",
+              "defaultValue": "YES",
+              "correctAnswer": "YES",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "YES"
+                },
+                {
+                  "value": "NO",
+                  "text": "NO"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q38i1",
+              "title": "Name the organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"",
+              "defaultValue": "Names",
+              "correctAnswer": "s5q38i1"
+            },
+            {
+              "type": "text",
+              "name": "q39i1",
+              "title": "After your organization is finished with the \"Opinions, beliefs, or personal preference data\" at location #1, how long does your organization expect to retain it?\nSample answer: \"2 years\"",
+              "defaultValue": "Time",
+              "correctAnswer": "s5q39i1"
+            },
+            {
+              "type": "dropdown",
+              "name": "q40i1",
+              "title": "Rate the risk to the confidentiality of the \"Opinions, beliefs, or personal preference data\" at location #1.\n\"Risk to confidentiality\" means unauthorized disclosure or access to the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "q41i1",
+              "title": "Rate the risk to the integrity of the \"Opinions, beliefs, or personal preference data\" at location #1.\n\"Risk to integrity\" means unintended alteration or destruction of the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "q42i1",
+              "title": "Rate the risk to the accessibility of the \"Opinions, beliefs, or personal preference data\" at location #1.\n\"Risk to accessibility\" means loss of the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q43i1",
+              "title": "What organizational measures are in place to secure the \"Opinions, beliefs, or personal preference data\" at location #1?\nSample answer:\"The organization has policies and procedures in place for handling personal information. Employees receive training in accordance with those policies and procedures. The organization also audits how it handles personal information every quarter.\" \n\nOther organizational measures include: reporting procedures, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q43i1"
+            },
+            {
+              "type": "text",
+              "name": "q44i1",
+              "title": "What physical measures are in place at your organization to secure the \"Opinions, beliefs, or personal preference data\" at location #1?\nSample answer: \"The organization requires ID badges to enter the facilities. There are also security personnel on site 24 hours per day. There are security cameras in every hall and at the entrances.\"\n\nOther physical measures include: locks, physical barriers, etc. \n\n",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q44i1"
+            },
+            {
+              "type": "text",
+              "name": "q45i1",
+              "title": "What technical measures are in place at your organization to secure the \"Opinions, beliefs, or personal preference data\" at location #1?\nSample answer: \"The organization has two-factor authentication on its login process. It also employs anti-malware software.\" \n\nTechnical measures include: firewalls, segmented data, account authentication, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q45i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q46i1",
+              "title": "We're done asking about the \"Opinions, beliefs, or personal preference data\" at location #1.\nIf there are additional categories of information handled at this location, we'll ask you about those. If not, we'll ask you about the next location. If no other locations exist, we're nearly done with the document.",
+              "defaultValue": "I understand",
+              "correctAnswer": "I understand",
+              "choices": [
+                {
+                  "value": "I understand",
+                  "text": "I understand"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "q47i1",
+              "title": "We need to ask you several questions about the \"Physical characteristics data\" handled at location #1.",
+              "defaultValue": "I understand",
+              "correctAnswer": "I understand",
+              "choices": [
+                {
+                  "value": "I understand",
+                  "text": "I understand"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q48i1",
+              "title": "What is included in the \"Physical characteristics data\" at location #1?\nSample answer: \"Phone numbers, emails, addresses, and dates of birth\"",
+              "defaultValue": "Description",
+              "correctAnswer": "s5q48i1"
+            },
+            {
+              "type": "text",
+              "name": "q49i1",
+              "title": "Who is the \"Physical characteristics data\" at location #1 collected from?\nSample answer: \"The personal information is collected from users of our mobile app.\" \n\nOther types of people include: patients, customers, employees, students, system users, device users, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q49i1"
+            },
+            {
+              "type": "checkbox",
+              "name": "q50i1",
+              "title": "Click all that apply to the \"Physical characteristics data\" handled at location #1?",
+              "defaultValue": [
+                "The organization received consent to handle the personal information.",
+                "The organization is under contract to handle the personal information.",
+                "The organization has a legal obligation to handle the personal information.",
+                "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                "The organization is protecting a public interest by handling the personal information.",
+                "The organization has a legitimate business interest in handling the information."
+              ],
+              "correctAnswer": [
+                "The organization received consent to handle the personal information.",
+                "The organization is under contract to handle the personal information.",
+                "The organization has a legal obligation to handle the personal information.",
+                "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                "The organization is protecting a public interest by handling the personal information.",
+                "The organization has a legitimate business interest in handling the information."
+              ],
+              "choices": [
+                {
+                  "value": "The organization received consent to handle the personal information.",
+                  "text": "The organization received consent to handle the personal information."
+                },
+                {
+                  "value": "The organization is under contract to handle the personal information.",
+                  "text": "The organization is under contract to handle the personal information."
+                },
+                {
+                  "value": "The organization has a legal obligation to handle the personal information.",
+                  "text": "The organization has a legal obligation to handle the personal information."
+                },
+                {
+                  "value": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                  "text": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information."
+                },
+                {
+                  "value": "The organization is protecting a public interest by handling the personal information.",
+                  "text": "The organization is protecting a public interest by handling the personal information."
+                },
+                {
+                  "value": "The organization has a legitimate business interest in handling the information.",
+                  "text": "The organization has a legitimate business interest in handling the information."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q51i1",
+              "title": "What is your organization doing with the \"Physical characteristics data\" at location #1?\nSample answer: \"The organization uses the identifying information to track how users interact with our products. The organization provides that information to third parties who help determine how to better market the products. When the organization is finished with the information, it stores the data on external, third-party servers.\" \n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q51i1"
+            },
+            {
+              "type": "text",
+              "name": "q52i1",
+              "title": "What does your organization plan to do with the \"Physical characteristics data\" at location #1 in the future?\nThis question may seem repetitive, but it's important to note your future plans. \n\nSample answer: \"The organization plans to use the identifying information to track how users interact with our products. The organization also plans to provide the information to third parties to help determine how to better market those products.\" \n\nOther plans include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q52i1"
+            },
+            {
+              "type": "text",
+              "name": "q53i1",
+              "title": "What departments within your organization handle the \"Physical characteristics data\" at location #1?\nSample answer: \"The organization's marketing and sales departments handle the personal information.\"\n\nOther departments include: human resources, security, IT, accounting, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q53i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q54i1",
+              "title": "Does your organization share the \"Physical characteristics data\" at location #1 with third parties?\nThird parties include: subsidiaries, affiliates, vendors, software developers, cloud service providers, etc.",
+              "defaultValue": "YES",
+              "correctAnswer": "YES",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "YES"
+                },
+                {
+                  "value": "NO",
+                  "text": "NO"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q55i1",
+              "title": "Name those organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"\n\nYou will need to remember these organizations when you complete the next document: Record of Processing (External). You may want to write them down.",
+              "defaultValue": "Organizations",
+              "correctAnswer": "s5q55i1"
+            },
+            {
+              "type": "text",
+              "name": "q56i1",
+              "title": "In what countries are those organizations located?\nSample answer: \"USA, Canada and Mexico\"",
+              "defaultValue": "Countries",
+              "correctAnswer": "s5q56i1"
+            },
+            {
+              "type": "text",
+              "name": "q57i1",
+              "title": "What safeguards are in place to protect the \"Physical characteristics data\" at location #1 when it is transferred to another organization?\nSample answer: \"The organization transfers the personal information to the third party via an encrypted FTP site. The organization also audits how the third party vendors uses the information every quarter.\" \n\nOther safeguards include: secure transfer, encryption, periodic audits, firewalls, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q57i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q58i1",
+              "title": "Does your organization plan to share the \"Physical characteristics data\" at location #1 with third parties in the future?",
+              "defaultValue": "YES",
+              "correctAnswer": "YES",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "YES"
+                },
+                {
+                  "value": "NO",
+                  "text": "NO"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q59i1",
+              "title": "Name the organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"",
+              "defaultValue": "Names",
+              "correctAnswer": "s5q59i1"
+            },
+            {
+              "type": "text",
+              "name": "q60i1",
+              "title": "After your organization is finished with the \"Physical characteristics data\" at location #1, how long does your organization expect to retain it?\nSample answer: \"2 years\"",
+              "defaultValue": "\nTime",
+              "correctAnswer": "s5q60i1"
+            },
+            {
+              "type": "dropdown",
+              "name": "q61i1",
+              "title": "Rate the risk to the confidentiality of the \"Physical characteristics data\" at location #1.\n\"Risk to confidentiality\" means unauthorized disclosure or access to the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "q62i1",
+              "title": "Rate the risk to the integrity of the \"Physical characteristics data\" at location #1.\n\"Risk to integrity\" means unintended alteration or destruction of the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "q63i1",
+              "title": "Rate the risk to the accessibility of the \"Physical characteristics data\" at location #1.\n\"Risk to accessibility\" means loss of the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q64i1",
+              "title": "What organizational measures are in place to secure the \"Physical characteristics data\" at location #1?\nSample answer:\"The organization has policies and procedures in place for handling personal information. Employees receive training in accordance with those policies and procedures. The organization also audits how it handles personal information every quarter.\" \n\nOther organizational measures include: reporting procedures, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q64i1"
+            },
+            {
+              "type": "text",
+              "name": "q65i1",
+              "title": "What physical measures are in place at your organization to secure the \"Physical characteristics data\" at location #1?\nSample answer: \"The organization requires ID badges to enter the facilities. There are also security personnel on site 24 hours per day. There are security cameras in every hall and at the entrances.\"\n\nOther physical measures include: locks, physical barriers, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q65i1"
+            },
+            {
+              "type": "text",
+              "name": "q66i1",
+              "title": "What technical measures are in place at your organization to secure the \"Physical characteristics data\" at location #1?\nSample answer: \"The organization has two-factor authentication on its login process. It also employs anti-malware software.\" \n\nTechnical measures include: firewalls, segmented data, account authentication, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q66i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q67i1",
+              "title": "We're done asking about the \"Physical characteristics data\" at location #1.\nIf there are additional categories of information handled at this location, we'll ask you about those. If not, we'll ask you about the next location. If no other locations exist, we're nearly done with the document. \n\n",
+              "defaultValue": "I understand",
+              "correctAnswer": "I understand",
+              "choices": [
+                {
+                  "value": "I understand",
+                  "text": "I understand"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "q68i1",
+              "title": "We need to ask you several questions about the \"Personal history data\" handled at location #1.",
+              "defaultValue": "I understand",
+              "correctAnswer": "I understand",
+              "choices": [
+                {
+                  "value": "I understand",
+                  "text": "I understand"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q69i1",
+              "title": "What is included in the \"Personal history data\" at location #1?\nSample answer: \"Phone numbers, emails, addresses, and dates of birth\"",
+              "defaultValue": "Description",
+              "correctAnswer": "s5q69i1"
+            },
+            {
+              "type": "text",
+              "name": "q70i1",
+              "title": "Who is the \"Personal history data\" at location #1 collected from?\nSample answer: \"The personal information is collected from users of our mobile app.\" \n\nOther types of people include: patients, customers, employees, students, system users, device users, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q70i1"
+            },
+            {
+              "type": "checkbox",
+              "name": "q71i1",
+              "title": "Click all that apply to the \"Personal history data\" handled at location #1?",
+              "defaultValue": [
+                "The organization received consent to handle the personal information.",
+                "The organization is under contract to handle the personal information.",
+                "The organization has a legal obligation to handle the personal information.",
+                "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                "The organization is protecting a public interest by handling the personal information.",
+                "The organization has a legitimate business interest in handling the information."
+              ],
+              "correctAnswer": [
+                "The organization received consent to handle the personal information.",
+                "The organization is under contract to handle the personal information.",
+                "The organization has a legal obligation to handle the personal information.",
+                "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                "The organization is protecting a public interest by handling the personal information.",
+                "The organization has a legitimate business interest in handling the information."
+              ],
+              "choices": [
+                {
+                  "value": "The organization received consent to handle the personal information.",
+                  "text": "The organization received consent to handle the personal information."
+                },
+                {
+                  "value": "The organization is under contract to handle the personal information.",
+                  "text": "The organization is under contract to handle the personal information."
+                },
+                {
+                  "value": "The organization has a legal obligation to handle the personal information.",
+                  "text": "The organization has a legal obligation to handle the personal information."
+                },
+                {
+                  "value": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                  "text": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information."
+                },
+                {
+                  "value": "The organization is protecting a public interest by handling the personal information.",
+                  "text": "The organization is protecting a public interest by handling the personal information."
+                },
+                {
+                  "value": "The organization has a legitimate business interest in handling the information.",
+                  "text": "The organization has a legitimate business interest in handling the information."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q72i1",
+              "title": "What is your organization doing with the \"Personal history data\" at location #1?\nSample answer: \"The organization uses the identifying information to track how users interact with our products. The organization provides that information to third parties who help determine how to better market the products. When the organization is finished with the information, it stores the data on external, third-party servers.\" \n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q72i1"
+            },
+            {
+              "type": "text",
+              "name": "q73i1",
+              "title": "What does your organization plan to do with the \"Personal history data\" at location #1 in the future?\nThis question may seem repetitive, but it's important to note your future plans. \n\nSample answer: \"The organization plans to use the identifying information to track how users interact with our products. The organization also plans to provide the information to third parties to help determine how to better market those products.\" \n\nOther plans include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q73i1"
+            },
+            {
+              "type": "text",
+              "name": "q74i1",
+              "title": "What departments within your organization handle the \"Personal history data\" at location #1?\nSample answer: \"The organization's marketing and sales departments handle the personal information.\"\n\nOther departments include: human resources, security, IT, accounting, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q74i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q75i1",
+              "title": "Does your organization share the \"Personal history data\" at location #1 with third parties?\nThird parties include: subsidiaries, affiliates, vendors, software developers, cloud service providers, etc.",
+              "defaultValue": "YES",
+              "correctAnswer": "YES",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "YES"
+                },
+                {
+                  "value": "NO",
+                  "text": "NO"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q76i1",
+              "title": "Name those organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"\n\nYou will need to remember these organizations when you complete the next document: Record of Processing (External). You may want to write them down.",
+              "defaultValue": "Organizations",
+              "correctAnswer": "s5q76i1"
+            },
+            {
+              "type": "text",
+              "name": "q77i1",
+              "title": "In what countries are those organizations located?\nSample answer: \"USA, Canada and Mexico\"",
+              "defaultValue": "Countries",
+              "correctAnswer": "s5q77i1"
+            },
+            {
+              "type": "text",
+              "name": "q78i1",
+              "title": "What safeguards are in place to protect the \"Personal history data\" at location #1 when it is transferred to another organization?\nSample answer: \"The organization transfers the personal information to the third party via an encrypted FTP site. The organization also audits how the third party vendors uses the information every quarter.\" \n\nOther safeguards include: secure transfer, encryption, periodic audits, firewalls, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q78i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q79i1",
+              "title": "Does your organization plan to share the \"Personal history data\" at location #1 with third parties in the future?",
+              "defaultValue": "YES",
+              "correctAnswer": "YES",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "YES"
+                },
+                {
+                  "value": "NO",
+                  "text": "NO"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q80i1",
+              "title": "Name the organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"",
+              "defaultValue": "Names",
+              "correctAnswer": "s5q80i1"
+            },
+            {
+              "type": "text",
+              "name": "q81i1",
+              "title": "After your organization is finished with the \"Personal history data\" at location #1, how long does your organization expect to retain it?\nSample answer: \"2 years\"",
+              "defaultValue": "Time",
+              "correctAnswer": "s5q81i1"
+            },
+            {
+              "type": "dropdown",
+              "name": "q82i1",
+              "title": "Rate the risk to the confidentiality of the \"Personal history data\" at location #1.\n\"Risk to confidentiality\" means unauthorized disclosure or access to the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "q83i1",
+              "title": "Rate the risk to the integrity of the \"Personal history data\" at location #1.\n\"Risk to integrity\" means unintended alteration or destruction of the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "q84i1",
+              "title": "Rate the risk to the accessibility of the \"Personal history data\" at location #1.\n\"Risk to accessibility\" means loss of the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q85i1",
+              "title": "What organizational measures are in place to secure the \"Personal history data\" at location #1?\nSample answer:\"The organization has policies and procedures in place for handling personal information. Employees receive training in accordance with those policies and procedures. The organization also audits how it handles personal information every quarter.\" \n\nOther organizational measures include: reporting procedures, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q85i1"
+            },
+            {
+              "type": "text",
+              "name": "q86i1",
+              "title": "What physical measures are in place at your organization to secure the \"Personal history data\" at location #1?\nSample answer: \"The organization requires ID badges to enter the facilities. There are also security personnel on site 24 hours per day. There are security cameras in every hall and at the entrances.\"\n\nOther physical measures include: locks, physical barriers, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q86i1"
+            },
+            {
+              "type": "text",
+              "name": "q87i1",
+              "title": "What technical measures are in place at your organization to secure the \"Personal history data\" at location #1?\nSample answer: \"The organization has two-factor authentication on its login process. It also employs anti-malware software.\" \n\nTechnical measures include: firewalls, segmented data, account authentication, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q87i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q88i1",
+              "title": "We're done asking about the \"Personal history data\" at location #1.\nIf there are additional categories of information handled at this location, we'll ask you about those. If not, we'll ask you about the next location. If no other locations exist, we're nearly done with the document.",
+              "defaultValue": "I understand",
+              "correctAnswer": "I understand",
+              "choices": [
+                {
+                  "value": "I understand",
+                  "text": "I understand"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "q89i1",
+              "title": "We need to ask you several questions about the \"Social and contact information\" handled at location #1.\n",
+              "defaultValue": "I understand",
+              "correctAnswer": "I understand",
+              "choices": [
+                {
+                  "value": "I understand",
+                  "text": "I understand"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q90i1",
+              "title": "What is included in the \"Social and contact information\" at location #1?\nSample answer: \"Phone numbers, emails, addresses, and dates of birth\"",
+              "defaultValue": "Description",
+              "correctAnswer": "s5q90i1"
+            },
+            {
+              "type": "text",
+              "name": "q91i1",
+              "title": "Who is the \"Social and contact information\" at location #1 collected from?\nSample answer: \"The personal information is collected from users of our mobile app.\" \n\nOther types of people include: patients, customers, employees, students, system users, device users, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q91i1"
+            },
+            {
+              "type": "checkbox",
+              "name": "q92i1",
+              "title": "Click all that apply to the \"Social and contact information\" handled at location #1?",
+              "defaultValue": [
+                "The organization received consent to handle the personal information.",
+                "The organization is under contract to handle the personal information.",
+                "The organization has a legal obligation to handle the personal information.",
+                "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                "The organization is protecting a public interest by handling the personal information.",
+                "The organization has a legitimate business interest in handling the information."
+              ],
+              "correctAnswer": [
+                "The organization received consent to handle the personal information.",
+                "The organization is under contract to handle the personal information.",
+                "The organization has a legal obligation to handle the personal information.",
+                "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                "The organization is protecting a public interest by handling the personal information.",
+                "The organization has a legitimate business interest in handling the information."
+              ],
+              "choices": [
+                {
+                  "value": "The organization received consent to handle the personal information.",
+                  "text": "The organization received consent to handle the personal information."
+                },
+                {
+                  "value": "The organization is under contract to handle the personal information.",
+                  "text": "The organization is under contract to handle the personal information."
+                },
+                {
+                  "value": "The organization has a legal obligation to handle the personal information.",
+                  "text": "The organization has a legal obligation to handle the personal information."
+                },
+                {
+                  "value": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                  "text": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information."
+                },
+                {
+                  "value": "The organization is protecting a public interest by handling the personal information.",
+                  "text": "The organization is protecting a public interest by handling the personal information."
+                },
+                {
+                  "value": "The organization has a legitimate business interest in handling the information.",
+                  "text": "The organization has a legitimate business interest in handling the information."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q93i1",
+              "title": "What is your organization doing with the \"Social and contact information\" at location #1?\nSample answer: \"The organization uses the identifying information to track how users interact with our products. The organization provides that information to third parties who help determine how to better market the products. When the organization is finished with the information, it stores the data on external, third-party servers.\" \n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q93i1"
+            },
+            {
+              "type": "text",
+              "name": "q94i1",
+              "title": "What does your organization plan to do with the \"Social and contact information\" at location #1 in the future?\nThis question may seem repetitive, but it's important to note your future plans. \n\nSample answer: \"The organization plans to use the identifying information to track how users interact with our products. The organization also plans to provide the information to third parties to help determine how to better market those products.\" \n\nOther plans include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q94i1"
+            },
+            {
+              "type": "text",
+              "name": "q95i1",
+              "title": "What departments within your organization handle the \"Social and contact information\" at location #1?\nSample answer: \"The organization's marketing and sales departments handle the personal information.\"\n\nOther departments include: human resources, security, IT, accounting, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q95i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q96i1",
+              "title": "Does your organization share the \"Social and contact information\" at location #1 with third parties?\nThird parties include: subsidiaries, affiliates, vendors, software developers, cloud service providers, etc.",
+              "defaultValue": "YES",
+              "correctAnswer": "YES",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "YES"
+                },
+                {
+                  "value": "NO",
+                  "text": "NO"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q97i1",
+              "title": "Name those organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"\n\nYou will need to remember these organizations when you complete the next document: Record of Processing (External). You may want to write them down.",
+              "defaultValue": "Organizations",
+              "correctAnswer": "s5q97i1"
+            },
+            {
+              "type": "text",
+              "name": "q98i1",
+              "title": "In what countries are those organizations located?\nSample answer: \"USA, Canada and Mexico\"",
+              "defaultValue": "Countries",
+              "correctAnswer": "s5q98i1"
+            },
+            {
+              "type": "text",
+              "name": "q99i1",
+              "title": "What safeguards are in place to protect the \"Social and contact information\" at location #1 when it is transferred to another organization?\nSample answer: \"The organization transfers the personal information to the third party via an encrypted FTP site. The organization also audits how the third party vendors uses the information every quarter.\" \n\nOther safeguards include: secure transfer, encryption, periodic audits, firewalls, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q99i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q100i1",
+              "title": "Does your organization plan to share the \"Social and contact information\" at location #1 with third parties in the future?",
+              "defaultValue": "YES",
+              "correctAnswer": "YES",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "YES"
+                },
+                {
+                  "value": "NO",
+                  "text": "NO"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q101i1",
+              "title": "Name the organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"",
+              "defaultValue": "Names",
+              "correctAnswer": "s5q101i1"
+            },
+            {
+              "type": "text",
+              "name": "q102i1",
+              "title": "After your organization is finished with the \"Social and contact information\" at location #1, how long does your organization expect to retain it?\nSample answer: \"2 years\"",
+              "defaultValue": "Time",
+              "correctAnswer": "s5q102i1"
+            },
+            {
+              "type": "dropdown",
+              "name": "q103i1",
+              "title": "Rate the risk to the confidentiality of the \"Social and contact information\" at location #1.\n\"Risk to confidentiality\" means unauthorized disclosure or access to the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "q104i1",
+              "title": "Rate the risk to the integrity of the \"Social and contact information\" at location #1.\n\"Risk to integrity\" means unintended alteration or destruction of the information. \n\n",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "q105i1",
+              "title": "Rate the risk to the accessibility of the \"Social and contact information\" at location #1.\n\"Risk to accessibility\" means loss of the information. \n\n",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q106i1",
+              "title": "What organizational measures are in place to secure the \"Social and contact information\" at location #1?\nSample answer:\"The organization has policies and procedures in place for handling personal information. Employees receive training in accordance with those policies and procedures. The organization also audits how it handles personal information every quarter.\" \n\nOther organizational measures include: reporting procedures, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q106i1"
+            },
+            {
+              "type": "text",
+              "name": "q107i1",
+              "title": "What physical measures are in place at your organization to secure the \"Social and contact information\" at location #1?\nSample answer: \"The organization requires ID badges to enter the facilities. There are also security personnel on site 24 hours per day. There are security cameras in every hall and at the entrances.\"\n\nOther physical measures include: locks, physical barriers, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q107i1"
+            },
+            {
+              "type": "text",
+              "name": "q108i1",
+              "title": "What technical measures are in place at your organization to secure the \"Social and contact information\" at location #1?\nSample answer: \"The organization has two-factor authentication on its login process. It also employs anti-malware software.\" \n\nTechnical measures include: firewalls, segmented data, account authentication, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q108i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q109i1",
+              "title": "We're done asking about the \"Social and contact information\" at location #1.\nIf there are additional categories of information handled at this location, we'll ask you about those. If not, we'll ask you about the next location. If no other locations exist, we're nearly done with the document. \n\n",
+              "defaultValue": "I understand",
+              "correctAnswer": "I understand",
+              "choices": [
+                {
+                  "value": "I understand",
+                  "text": "I understand"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "q110i1",
+              "title": "We need to ask you several questions about the \"Financial data\" handled at location #1.",
+              "defaultValue": "I understand",
+              "correctAnswer": "I understand",
+              "choices": [
+                {
+                  "value": "I understand",
+                  "text": "I understand"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q111i1",
+              "title": "What is included in the \"Financial data\" at location #1?\nSample answer: \"Phone numbers, emails, addresses, and dates of birth\"",
+              "defaultValue": "Description",
+              "correctAnswer": "s5q111i1"
+            },
+            {
+              "type": "text",
+              "name": "q112i1",
+              "title": "Who is the \"Financial data\" at location #1 collected from?\nSample answer: \"The personal information is collected from users of our mobile app.\" \n\nOther types of people include: patients, customers, employees, students, system users, device users, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q112i1"
+            },
+            {
+              "type": "checkbox",
+              "name": "q113i1",
+              "title": "Click all that apply to the \"Financial data\" handled at location #1?",
+              "defaultValue": [
+                "The organization received consent to handle the personal information.",
+                "The organization is under contract to handle the personal information.",
+                "The organization has a legal obligation to handle the personal information.",
+                "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                "The organization is protecting a public interest by handling the personal information.",
+                "The organization has a legitimate business interest in handling the information."
+              ],
+              "correctAnswer": [
+                "The organization received consent to handle the personal information.",
+                "The organization is under contract to handle the personal information.",
+                "The organization has a legal obligation to handle the personal information.",
+                "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                "The organization is protecting a public interest by handling the personal information.",
+                "The organization has a legitimate business interest in handling the information."
+              ],
+              "choices": [
+                {
+                  "value": "The organization received consent to handle the personal information.",
+                  "text": "The organization received consent to handle the personal information."
+                },
+                {
+                  "value": "The organization is under contract to handle the personal information.",
+                  "text": "The organization is under contract to handle the personal information."
+                },
+                {
+                  "value": "The organization has a legal obligation to handle the personal information.",
+                  "text": "The organization has a legal obligation to handle the personal information."
+                },
+                {
+                  "value": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                  "text": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information."
+                },
+                {
+                  "value": "The organization is protecting a public interest by handling the personal information.",
+                  "text": "The organization is protecting a public interest by handling the personal information."
+                },
+                {
+                  "value": "The organization has a legitimate business interest in handling the information.",
+                  "text": "The organization has a legitimate business interest in handling the information."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q114i1",
+              "title": "What is your organization doing with the \"Financial data\" at location #1?\nSample answer: \"The organization uses the identifying information to track how users interact with our products. The organization provides that information to third parties who help determine how to better market the products. When the organization is finished with the information, it stores the data on external, third-party servers.\" \n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q114i1"
+            },
+            {
+              "type": "text",
+              "name": "q115i1",
+              "title": "What does your organization plan to do with the \"Financial data\" at location #1 in the future?\nThis question may seem repetitive, but it's important to note your future plans. \n\nSample answer: \"The organization plans to use the identifying information to track how users interact with our products. The organization also plans to provide the information to third parties to help determine how to better market those products.\" \n\nOther plans include: selling the information, improving user experiences, providing services, authenticating accounts, etc. \n\n",
+              "defaultValue": "please use complete sentences.",
+              "correctAnswer": "s5q115i1"
+            },
+            {
+              "type": "text",
+              "name": "q116i1",
+              "title": "What departments within your organization handle the \"Financial data\" at location #1?\nSample answer: \"The organization's marketing and sales departments handle the personal information.\"\n\nOther departments include: human resources, security, IT, accounting, etc.",
+              "defaultValue": "please use complete sentences.",
+              "correctAnswer": "s5q116i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q117i1",
+              "title": "Does your organization share the \"Financial data\" at location #1 with third parties?\nThird parties include: subsidiaries, affiliates, vendors, software developers, cloud service providers, etc. \n\n",
+              "defaultValue": "YES",
+              "correctAnswer": "YES",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "YES"
+                },
+                {
+                  "value": "NO",
+                  "text": "NO"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q118i1",
+              "title": "Name those organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"\n\nYou will need to remember these organizations when you complete the next document: Record of Processing (External). You may want to write them down.",
+              "defaultValue": "Organizations",
+              "correctAnswer": "s5q118i1"
+            },
+            {
+              "type": "text",
+              "name": "q119i1",
+              "title": "In what countries are those organizations located?\nSample answer: \"USA, Canada and Mexico\"",
+              "defaultValue": "Countries",
+              "correctAnswer": "s5q119i1"
+            },
+            {
+              "type": "text",
+              "name": "q120i1",
+              "title": "What safeguards are in place to protect the \"Financial data\" at location #1 when it is transferred to another organization?\nSample answer: \"The organization transfers the personal information to the third party via an encrypted FTP site. The organization also audits how the third party vendors uses the information every quarter.\" \n\nOther safeguards include: secure transfer, encryption, periodic audits, firewalls, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q120i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q121i1",
+              "title": "Does your organization plan to share the \"Financial data\" at location #1 with third parties in the future?\n",
+              "defaultValue": "YES",
+              "correctAnswer": "YES",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "YES"
+                },
+                {
+                  "value": "NO",
+                  "text": "NO"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q122i1",
+              "title": "Name the organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"",
+              "defaultValue": "Names",
+              "correctAnswer": "s5q122i1"
+            },
+            {
+              "type": "text",
+              "name": "q123i1",
+              "title": "After your organization is finished with the \"Financial data\" at location #1, how long does your organization expect to retain it?\nSample answer: \"2 years\"",
+              "defaultValue": "Time",
+              "correctAnswer": "s5q123i1"
+            },
+            {
+              "type": "dropdown",
+              "name": "q124i1",
+              "title": "Rate the risk to the confidentiality of the \"Financial data\" at location #1.\n\"Risk to confidentiality\" means unauthorized disclosure or access to the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "q125i1",
+              "title": "Rate the risk to the integrity of the \"Financial data\" at location #1.\n\"Risk to integrity\" means unintended alteration or destruction of the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "q126i1",
+              "title": "Rate the risk to the accessibility of the \"Financial data\" at location #1.\n\"Risk to accessibility\" means loss of the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q127i1",
+              "title": "What organizational measures are in place to secure the \"Financial data\" at location #1?\nSample answer:\"The organization has policies and procedures in place for handling personal information. Employees receive training in accordance with those policies and procedures. The organization also audits how it handles personal information every quarter.\" \n\nOther organizational measures include: reporting procedures, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q127i1"
+            },
+            {
+              "type": "text",
+              "name": "q128i1",
+              "title": "What physical measures are in place at your organization to secure the \"Financial data\" at location #1?\nSample answer: \"The organization requires ID badges to enter the facilities. There are also security personnel on site 24 hours per day. There are security cameras in every hall and at the entrances.\"\n\nOther physical measures include: locks, physical barriers, etc. \n\n",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q128i1"
+            },
+            {
+              "type": "text",
+              "name": "q129i1",
+              "title": "What technical measures are in place at your organization to secure the \"Financial data\" at location #1?\nSample answer: \"The organization has two-factor authentication on its login process. It also employs anti-malware software.\" \n\nTechnical measures include: firewalls, segmented data, account authentication, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q129i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q130i1",
+              "title": "We're done asking about the \"Financial data\" at location #1.\nIf there are additional categories of information handled at this location, we'll ask you about those. If not, we'll ask you about the next location. If no other locations exist, we're nearly done with the document.",
+              "defaultValue": "I understand",
+              "correctAnswer": "I understand",
+              "choices": [
+                {
+                  "value": "I understand",
+                  "text": "I understand"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "q131i1",
+              "title": "We need to ask you several questions about the \"Tracking data\" handled at location #1.",
+              "defaultValue": "I understand",
+              "correctAnswer": "I understand",
+              "choices": [
+                {
+                  "value": "I understand",
+                  "text": "I understand"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q132i1",
+              "title": "What is included in the \"Tracking data\" at location #1?\nSample answer: \"Phone numbers, emails, addresses, and dates of birth\"",
+              "defaultValue": "Description",
+              "correctAnswer": "s5q132i1"
+            },
+            {
+              "type": "text",
+              "name": "q133i1",
+              "title": "Who is the \"Tracking data\" at location #1 collected from?\nSample answer: \"The personal information is collected from users of our mobile app.\" \n\nOther types of people include: patients, customers, employees, students, system users, device users, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q133i1"
+            },
+            {
+              "type": "checkbox",
+              "name": "q134i1",
+              "title": "Click all that apply to the \"Tracking data\" handled at location #1?",
+              "defaultValue": [
+                "The organization received consent to handle the personal information.",
+                "The organization is under contract to handle the personal information.",
+                "The organization has a legal obligation to handle the personal information.",
+                "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                "The organization is protecting a public interest by handling the personal information.",
+                "The organization has a legitimate business interest in handling the information."
+              ],
+              "correctAnswer": [
+                "The organization received consent to handle the personal information.",
+                "The organization is under contract to handle the personal information.",
+                "The organization has a legal obligation to handle the personal information.",
+                "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                "The organization is protecting a public interest by handling the personal information.",
+                "The organization has a legitimate business interest in handling the information."
+              ],
+              "choices": [
+                {
+                  "value": "The organization received consent to handle the personal information.",
+                  "text": "The organization received consent to handle the personal information."
+                },
+                {
+                  "value": "The organization is under contract to handle the personal information.",
+                  "text": "The organization is under contract to handle the personal information."
+                },
+                {
+                  "value": "The organization has a legal obligation to handle the personal information.",
+                  "text": "The organization has a legal obligation to handle the personal information."
+                },
+                {
+                  "value": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information.",
+                  "text": "The organization is protecting people's vital interest (or a third-party's vital interest) by handling the personal information."
+                },
+                {
+                  "value": "The organization is protecting a public interest by handling the personal information.",
+                  "text": "The organization is protecting a public interest by handling the personal information."
+                },
+                {
+                  "value": "The organization has a legitimate business interest in handling the information.",
+                  "text": "The organization has a legitimate business interest in handling the information."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q135i1",
+              "title": "What is your organization doing with the \"Tracking data\" at location #1?\nSample answer: \"The organization uses the identifying information to track how users interact with our products. The organization provides that information to third parties who help determine how to better market the products. When the organization is finished with the information, it stores the data on external, third-party servers.\" \n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q135i1"
+            },
+            {
+              "type": "text",
+              "name": "q136i1",
+              "title": "What does your organization plan to do with the \"Tracking data\" at location #1 in the future?\nThis question may seem repetitive, but it's important to note your future plans. \n\nSample answer: \"The organization plans to use the identifying information to track how users interact with our products. The organization also plans to provide the information to third parties to help determine how to better market those products.\" \n\nOther plans include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q136i1"
+            },
+            {
+              "type": "text",
+              "name": "q137i1",
+              "title": "What departments within your organization handle the \"Tracking data\" at location #1?\nSample answer: \"The organization's marketing and sales departments handle the personal information.\"\n\nOther departments include: human resources, security, IT, accounting, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q137i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q138i1",
+              "title": "Does your organization share the \"Tracking data\" at location #1 with third parties?\nThird parties include: subsidiaries, affiliates, vendors, software developers, cloud service providers, etc.",
+              "defaultValue": "YES",
+              "correctAnswer": "YES",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "YES"
+                },
+                {
+                  "value": "NO",
+                  "text": "NO"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q139i1",
+              "title": "Name those organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"\n\nYou will need to remember these organizations when you complete the next document: Record of Processing (External). You may want to write them down.",
+              "defaultValue": "Organizations",
+              "correctAnswer": "s5q139i1"
+            },
+            {
+              "type": "text",
+              "name": "q140i1",
+              "title": "In what countries are those organizations located?\nSample answer: \"USA, Canada and Mexico\"\n\n",
+              "defaultValue": "Countries",
+              "correctAnswer": "s5q140i1"
+            },
+            {
+              "type": "text",
+              "name": "q141i1",
+              "title": "What safeguards are in place to protect the \"Tracking data\" at location #1 when it is transferred to another organization?\nSample answer: \"The organization transfers the personal information to the third party via an encrypted FTP site. The organization also audits how the third party vendors uses the information every quarter.\" \n\nOther safeguards include: secure transfer, encryption, periodic audits, firewalls, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q141i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q142i1",
+              "title": "Does your organization plan to share the \"Tracking data\" at location #1 with third parties in the future?\n",
+              "defaultValue": "YES",
+              "correctAnswer": "YES",
+              "choices": [
+                {
+                  "value": "YES",
+                  "text": "YES"
+                },
+                {
+                  "value": "NO",
+                  "text": "NO"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q143i1",
+              "title": "Name the organizations.\nSample answer: \"Marketing Enterprises and Amazon Web Services\"",
+              "defaultValue": "Names",
+              "correctAnswer": "s5q143i1"
+            },
+            {
+              "type": "text",
+              "name": "q144i1",
+              "title": "After your organization is finished with the \"Tracking data\" at location #1, how long does your organization expect to retain it?\nSample answer: \"2 years\"",
+              "defaultValue": "Time",
+              "correctAnswer": "s5q144i1"
+            },
+            {
+              "type": "dropdown",
+              "name": "q145i1",
+              "title": "Rate the risk to the confidentiality of the \"Tracking data\" at location #1.\n\"Risk to confidentiality\" means unauthorized disclosure or access to the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "q146i1",
+              "title": "Rate the risk to the integrity of the \"Tracking data\" at location #1.\n\"Risk to integrity\" means unintended alteration or destruction of the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "q147i1",
+              "title": "Rate the risk to the accessibility of the \"Tracking data\" at location #1.\n\"Risk to accessibility\" means loss of the information.",
+              "defaultValue": "HIGH",
+              "correctAnswer": "HIGH",
+              "choices": [
+                {
+                  "value": "HIGH",
+                  "text": "HIGH"
+                },
+                {
+                  "value": "MEDIUM",
+                  "text": "MEDIUM"
+                },
+                {
+                  "value": "LOW",
+                  "text": "LOW"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "q148i1",
+              "title": "What organizational measures are in place to secure the \"Tracking data\" at location #1?\nSample answer:\"The organization has policies and procedures in place for handling personal information. Employees receive training in accordance with those policies and procedures. The organization also audits how it handles personal information every quarter.\" \n\nOther organizational measures include: reporting procedures, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q148i1"
+            },
+            {
+              "type": "text",
+              "name": "q149i1",
+              "title": "What physical measures are in place at your organization to secure the \"Tracking data\" at location #1?\nSample answer: \"The organization requires ID badges to enter the facilities. There are also security personnel on site 24 hours per day. There are security cameras in every hall and at the entrances.\"\n\nOther physical measures include: locks, physical barriers, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q149i1"
+            },
+            {
+              "type": "text",
+              "name": "q150i1",
+              "title": "What technical measures are in place at your organization to secure the \"Tracking data\" at location #1?\nSample answer: \"The organization has two-factor authentication on its login process. It also employs anti-malware software.\" \n\nTechnical measures include: firewalls, segmented data, account authentication, etc.",
+              "defaultValue": "Please use complete sentences.",
+              "correctAnswer": "s5q150i1"
+            },
+            {
+              "type": "radiogroup",
+              "name": "q151i1",
+              "title": "We're done asking about the \"Tracking data\" at location #1.\nIf there are additional categories of information handled at this location, we'll ask you about those. If not, we'll ask you about the next location. If no other locations exist, we're nearly done with the document. \n\n",
+              "defaultValue": "I understand",
+              "correctAnswer": "I understand",
+              "choices": [
+                {
+                  "value": "I understand",
+                  "text": "I understand"
+                }
+              ]
+            }
+          ],
+          "panelCount": 1,
+          "panelAddText": "Complete a new questionary for another location",
+          "panelRemoveText": "Remove",
+          "panelPrevText": "prev",
+          "panelNextText": "next"
+        }
+      ],
+      "navigationButtonsVisibility": "show"
+    }
+  ]
+}

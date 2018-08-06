@@ -1,4 +1,5 @@
 {
+  "completedHtml": "Thank you for sharing your information with us",
   "pages": [
     {
       "name": "page1",
@@ -7,12 +8,17 @@
           "type": "text",
           "name": "s1q1i1",
           "title": "What is the name of your organization?",
+          "defaultValue": [[${s1q1i1}]],
           "isRequired": true
         },
         {
           "type": "multipletext",
           "name": "s1q2",
           "title": "What is the best email and phone number for people to contact your organization about their personal information? This should be an email and phone number your organization checks regularly.",
+          "defaultValue": {
+            "i1": [[${s1q2i1}]],
+            "i2": [[${s1q2i2}]]
+          },
           "isRequired": true,
           "items": [
             {
@@ -46,6 +52,14 @@
           "type": "multipletext",
           "name": "s1q3",
           "title": "What is the best mailing address for people to contact your organization about their personal information? This should be a mailing address your organization checks regularly.",
+          "defaultValue": {
+            "i1": [[${s1q3i1}]],
+            "i2": [[${s1q3i2}]],
+            "i3": [[${s1q3i3}]],
+            "i4": [[${s1q3i4}]],
+            "i5": [[${s1q3i5}]],
+            "i6": [[${s1q3i6}]]
+          },
           "items": [
             {
               "name": "i1",
@@ -81,6 +95,11 @@
           "type": "multipletext",
           "name": "s1q5",
           "title": "Your organization must appoint a \"privacy point of contact.\"\nThe \"privacy point of contact\" is in charge of:\n\n1. monitoring compliance with the GDPR;\n2. analyzing how projects affect data privacy;\n3. working with regulatory authorities; and\n4. managing privacy requests from people in Europe.\n\nWhat is the name, email address, and phone number of your organization's \"privacy point of contact?\"",
+          "defaultValue": {
+            "i1": [[${s1q5i1}]],
+            "i2": [[${s1q5i2}]],
+            "i3": [[${s1q5i3}]]
+          },
           "items": [
             {
               "name": "i1",
@@ -118,6 +137,14 @@
           "type": "multipletext",
           "name": "s1q6",
           "title": "What is the mailing address of your organization's \"privacy point of contact?\"",
+          "defaultValue": {
+            "i1": [[${s1q6i1}]],
+            "i2": [[${s1q6i2}]],
+            "i3": [[${s1q6i3}]],
+            "i4": [[${s1q6i4}]],
+            "i5": [[${s1q6i5}]],
+            "i6": [[${s1q6i6}]]
+          },
           "items": [
             {
               "name": "i1",
@@ -151,6 +178,5 @@
         }
       ]
     }
-  ],
-  "completedHtml":"Thank you for sharing your information with us"
+  ]
 }

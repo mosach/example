@@ -2,6 +2,8 @@ package com.spring.example.controllers;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.spring.example.entity.User;
+import com.spring.example.entity.UserForms;
 import com.spring.example.logic.FormCreator;
 import com.spring.example.pojo.Questionaire;
 import com.spring.example.repository.*;
@@ -14,6 +16,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.context.Context;
+import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,6 +26,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.Principal;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
 
@@ -62,10 +68,13 @@ public class GdprController {
         model.addAttribute("survey",json);
         model.addAttribute("form_number",formNumber);
         try {
-            Questionaire questionaire = new ObjectMapper().readValue(new File(path), Questionaire.class);
-            String survey = new ObjectMapper().writeValueAsString(questionaire);
+//            Questionaire questionaire = new ObjectMapper().readValue(new File(path), Questionaire.class);
+//            FormCreator formCreator = new FormCreator(username,userRepository);
+//            formCreator.addDefaultValues(questionaire, userFormRepository);
+//            String survey = new ObjectMapper().writeValueAsString(questionaire);
+            String survey = buildHTMLForUserAndForm(formNumber,userRepository.findByEmail(username));
             model.addAttribute("survey",survey);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();                                    // No need to fail if the default values cannot be loaded
         }
         return "gdpr_form";
@@ -79,6 +88,42 @@ public class GdprController {
         formCreator.saveAsEntity(userFormRepository,data,formNumber);
         logger.info("Data received"+ data);
         return "redirect:/user/home";
+    }
+
+
+    private String buildHTMLForUserAndForm(Integer sectionNumber, User user) {
+        ClassLoaderTemplateResolver classLoaderTemplateResolver = buildTemplateResolver();
+        return getHTML(sectionNumber, classLoaderTemplateResolver, user);
+    }
+
+    private ClassLoaderTemplateResolver buildTemplateResolver() {
+        ClassLoaderTemplateResolver classLoaderTemplateResolver = new ClassLoaderTemplateResolver();
+        classLoaderTemplateResolver.setSuffix(".json");
+        classLoaderTemplateResolver.setTemplateMode("HTML5");
+        classLoaderTemplateResolver.setCharacterEncoding("UTF-8");
+        classLoaderTemplateResolver.setOrder(1);
+        return classLoaderTemplateResolver;
+    }
+
+    private String getHTML( Integer formNumber, ClassLoaderTemplateResolver classLoaderTemplateResolver, User user) {
+        List<UserForms> forms = userFormRepository.findByUserFormIdUserId(user.getId().intValue());
+
+        TemplateEngine templateEngine = new TemplateEngine();
+        templateEngine.setTemplateResolver(classLoaderTemplateResolver);
+
+        Context context = new Context();
+        Map<String, String> formMap;
+
+        for (UserForms form : forms) {
+            if(form != null ) {
+                formMap = form.getMyMap();
+                for (String s : formMap.keySet()) {
+                    context.setVariable(s, formMap.get(s));
+                }
+            }
+        }
+
+        return templateEngine.process("static/section" + formNumber, context);
     }
 
 }

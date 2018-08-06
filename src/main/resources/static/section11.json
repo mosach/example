@@ -1,0 +1,2252 @@
+{
+  "pages":[
+    {
+      "name":"s11",
+      "elements":[
+        {
+          "name":"s11q1i1",
+          "title":"Does one of the following apply to EVERY piece of personal information your organization handles from Europe?\n1. Your organization received consent to handle the personal information.\n\n2. Your organization is under contract to handle the personal information.\n\n3. Your organization has a legal obligation to handle the personal information.\n\n4. Your organization is protecting people's vital interest (or a third party's vital interest) by handling the personal information.\n\n5. Your organization is protecting a public interest by handling the personal information.",
+          "defaultValue":"We have personal information where NONE of these apply",
+          "correctAnswer":"We have personal information where NONE of these apply",
+          "choices":[
+            {
+              "value":"We have personal information where NONE of these apply",
+              "text":"We have personal information where NONE of these apply"
+            },
+            {
+              "value":"One of these applies to EVERY piece of personal information",
+              "text":"One of these applies to EVERY piece of personal information"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q2i1",
+          "title":"We need to ask you the same question in a different way.\nBe prepared to answer seemingly repetitive questions.",
+          "defaultValue":"I understand",
+          "correctAnswer":"I understand",
+          "choices":[
+            {
+              "value":"I understand",
+              "text":"I understand"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q3i1",
+          "title":"There are several categories of personal information that are important for the GDPR.\nYou may have seen this list before. But it's important to the next question. \n\n1. Identifying information: names, age, birth date, government ID, user-names, passwords, etc. \n\n2. Opinions, beliefs, or personal preference data: religious and political beliefs, buying habits, likes and dislikes, etc.\n\n3. Physical characteristics data: height, weight, hair color, eye color, race, fingerprint, voice, etc. \n\n4. Personal history data: work history, marriages, relationships, education, addresses, criminal record, etc. \n\n5. Social and contact information: phone number, address, friend networks, social groups, family, etc. \n\n6. Financial data: credit cards, bank accounts, debit accounts, investments, etc. \n\n7. Tracking data: monitoring physical movement, internet history, phone usage, app usage, etc.\n\n",
+          "defaultValue":"Continue",
+          "correctAnswer":"Continue",
+          "choices":[
+            {
+              "value":"Continue",
+              "text":"Continue"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q4i1",
+          "title":"Select the types of personal information your organization handles.\nTo be thorough, we need to ask you questions about each category. You're making great progress.",
+          "choices":[
+            {
+              "value":"Identifying information",
+              "text":"Identifying information"
+            },
+            {
+              "value":"Opinions, beliefs, or personal preferences data",
+              "text":"Opinions, beliefs, or personal preferences data"
+            },
+            {
+              "value":"Physical characteristics data",
+              "text":"Physical characteristics data"
+            },
+            {
+              "value":"Personal history data",
+              "text":"Personal history data"
+            },
+            {
+              "value":"Social and contact information",
+              "text":"Social and contact information"
+            },
+            {
+              "value":"Financial data",
+              "text":"Financial data"
+            },
+            {
+              "value":"Tracking data",
+              "text":"Tracking data"
+            }
+          ],
+          "type":"checkbox"
+        },
+        {
+          "name":"s11q5i1",
+          "title":"We need to ask you about the \"Identifying information\" your organization handles.",
+          "defaultValue":"I understand",
+          "correctAnswer":"I understand",
+          "choices":[
+            {
+              "value":"I understand",
+              "text":"I understand"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q6i1",
+          "title":"Do any of the following apply to the \"Identifying information\" your organization handles?\n1. Your organization received consent to handle the personal information.\n\n2. Your organization is under contract to handle the personal information.\n\n3. Your organization has a legal obligation to handle the personal information.\n\n4. Your organization is protecting people's vital interest (or a third party's vital interest) by handling the personal information.\n\n5. Your organization is protecting a public interest by handling the personal information.",
+          "defaultValue":"None apply",
+          "correctAnswer":"None apply",
+          "choices":[
+            {
+              "value":"None apply",
+              "text":"None apply"
+            },
+            {
+              "value":"One or more applies",
+              "text":"One or more applies"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q7i1",
+          "title":"What is included in the \"Identifying information\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\"",
+          "defaultValue":[[${s11q7i1}]],
+          "correctAnswer":"s11q7i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q8i1",
+          "title":"Does the \"Identifying information\" include any of the following?\nThese are considered \"Special Categories\" of information under the GDPR. If any of the following are included, please consider discussing this form with an attorney.",
+          "choices":[
+            {
+              "value":"Information from a child below the age of 16",
+              "text":"Information from a child below the age of 16"
+            },
+            {
+              "value":"Information about a criminal offense",
+              "text":"Information about a criminal offense"
+            },
+            {
+              "value":"Information about a person's race",
+              "text":"Information about a person's race"
+            },
+            {
+              "value":"Information about a person's ethnic origin",
+              "text":"Information about a person's ethnic origin"
+            },
+            {
+              "value":"Information about a person's political opinions",
+              "text":"Information about a person's political opinions"
+            },
+            {
+              "value":"Information about a person's religious or philosophical beliefs",
+              "text":"Information about a person's religious or philosophical beliefs"
+            },
+            {
+              "value":"Information about a person's trade union membership",
+              "text":"Information about a person's trade union membership"
+            },
+            {
+              "value":"Information about a person's genetics",
+              "text":"Information about a person's genetics"
+            },
+            {
+              "value":"Information about a person's biometrics",
+              "text":"Information about a person's biometrics"
+            },
+            {
+              "value":"Information about a person's health",
+              "text":"Information about a person's health"
+            },
+            {
+              "value":"Information about a person's sex life or sexual orientation",
+              "text":"Information about a person's sex life or sexual orientation"
+            },
+            {
+              "value":"None of the above",
+              "text":"None of the above"
+            }
+          ],
+          "type":"checkbox"
+        },
+        {
+          "name":"s11q9i1",
+          "title":"How was the \"Identifying information\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\"",
+          "defaultValue":[[${s11q9i1}]],
+          "correctAnswer":"s11q9i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q10i1",
+          "title":"Why is your organization handling people's \"Identifying information\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+          "defaultValue":[[${s11q10i1}]],
+          "correctAnswer":"s11q10i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q11i1",
+          "title":"Why is it important that your organization handle people's \"Identifying information\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\"",
+          "defaultValue":[[${s11q11i1}]],
+          "correctAnswer":"s11q11i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q12i1",
+          "title":"Could your organization realistically accomplish its purposes WITHOUT handling people's \"Identifying information\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q13i1",
+          "title":"Describe how your organization could achieve the same purpose without handling people's \"Identifying information\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\"",
+          "defaultValue":[[${s11q13i1}]],
+          "correctAnswer":"s11q13i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q14i1",
+          "title":"How would your organization be affected if it could not handle people's \"Identifying information\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\"",
+          "defaultValue":[[${s11q14i1}]],
+          "correctAnswer":"s11q14i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q15i1",
+          "title":"Is it important to third parties that your organization handle people's \"Identifying information\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q16i1",
+          "title":"Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"",
+          "defaultValue":[[${s11q16i1}]],
+          "correctAnswer":"s11q16i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q17i1",
+          "title":"Could third parties accomplish their purpose without your organization handling people's \"Identifying information\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q18i1",
+          "title":"How would those third parties be affected if your organization could not handle people's \"Identifying information\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\"",
+          "defaultValue":[[${s11q18i1}]],
+          "correctAnswer":"s11q18i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q19i1",
+          "title":"Do people expect their \"Identifying information\" to be handled by your organization?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q20i1",
+          "title":"Have people been notified that your organization handles their \"Identifying information\" in this way?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q21i1",
+          "title":"Describe how people benefit by your organization handling their \"Identifying information.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\"",
+          "defaultValue":[[${s11q21i1}]],
+          "correctAnswer":"s11q21i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q22i1",
+          "title":"Describe how people could be harmed by your organization handling their \"Identifying information.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\"",
+          "defaultValue":[[${s11q22i1}]],
+          "correctAnswer":"s11q22i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q23i1",
+          "title":"Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\"",
+          "defaultValue":[[${s11q23i1}]],
+          "correctAnswer":"s11q23i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q24i1",
+          "title":"Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\"",
+          "defaultValue":[[${s11q24i1}]],
+          "correctAnswer":"s11q24i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q25i1",
+          "title":"Are people able to do all of the following with regard to their \"Identifying information\"?\n1. Request access to their personal information\n\n2. Request that their personal information be erased\n\n3. Request that their personal information be corrected\n\n4. Request that the organization stop using their data in a certain way\n\n5. Object to how your organization handles their personal information",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q26i1",
+          "title":"Based on your previous answers, do you believe your organization is justified in handling people's \"Identifying information\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\"",
+          "defaultValue":[[${s11q26i1}]],
+          "correctAnswer":"s11q26i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q27i1",
+          "title":"Will your organization continue to handle people's \"Identifying information\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q28i1",
+          "title":"We're done asking about the \"Identifying information.\"\nIf you're organization handles other types of personal information, we'll ask you about those. If not, we're almost done with the document.",
+          "defaultValue":"I understand",
+          "correctAnswer":"I understand",
+          "choices":[
+            {
+              "value":"I understand",
+              "text":"I understand"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q29i1",
+          "title":"We need to ask you about the \"Opinions, beliefs, or personal preferences data\" your organization handles.",
+          "defaultValue":"I understand",
+          "correctAnswer":"I understand",
+          "choices":[
+            {
+              "value":"I understand",
+              "text":"I understand"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q30i1",
+          "title":"Do any of the following apply to the \"Opinions, beliefs, or personal preferences data\" your organization handles?\n1. Your organization received consent to handle the personal information.\n\n2. Your organization is under contract to handle the personal information.\n\n3. Your organization has a legal obligation to handle the personal information.\n\n4. Your organization is protecting people's vital interest (or a third party's vital interest) by handling the personal information.\n\n5. Your organization is protecting a public interest by handling the personal information.",
+          "defaultValue":"None apply",
+          "correctAnswer":"None apply",
+          "choices":[
+            {
+              "value":"None apply",
+              "text":"None apply"
+            },
+            {
+              "value":"One or more applies",
+              "text":"One or more applies"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q31i1",
+          "title":"What is included in the \"Opinions, beliefs, or personal preferences data\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\"",
+          "defaultValue":[[${s11q31i1}]],
+          "correctAnswer":"s11q31i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q32i1",
+          "title":"Does the \"Opinions, beliefs, or personal preferences data\" include any of the following?\nThese are considered \"Special Categories\" of information under the GDPR. If any of the following are included, please consider discussing this form with an attorney.",
+          "choices":[
+            {
+              "value":"Information from a child below the age of 16",
+              "text":"Information from a child below the age of 16"
+            },
+            {
+              "value":"Information about a criminal offense",
+              "text":"Information about a criminal offense"
+            },
+            {
+              "value":"Information about a person's race",
+              "text":"Information about a person's race"
+            },
+            {
+              "value":"Information about a person's ethnic origin",
+              "text":"Information about a person's ethnic origin"
+            },
+            {
+              "value":"Information about a person's political opinions",
+              "text":"Information about a person's political opinions"
+            },
+            {
+              "value":"Information about a person's religious or philosophical beliefs",
+              "text":"Information about a person's religious or philosophical beliefs"
+            },
+            {
+              "value":"Information about a person's trade union membership",
+              "text":"Information about a person's trade union membership"
+            },
+            {
+              "value":"Information about a person's genetics",
+              "text":"Information about a person's genetics"
+            },
+            {
+              "value":"Information about a person's biometrics",
+              "text":"Information about a person's biometrics"
+            },
+            {
+              "value":"Information about a person's health",
+              "text":"Information about a person's health"
+            },
+            {
+              "value":"Information about a person's sex life or sexual orientation",
+              "text":"Information about a person's sex life or sexual orientation"
+            },
+            {
+              "value":"None of the above",
+              "text":"None of the above"
+            }
+          ],
+          "type":"checkbox"
+        },
+        {
+          "name":"s11q33i1",
+          "title":"How was the \"Opinions, beliefs, or personal preferences data\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\"",
+          "defaultValue":[[${s11q33i1}]],
+          "correctAnswer":"s11q33i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q34i1",
+          "title":"Why is your organization handling people's \"Opinions, beliefs, or personal preferences data\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+          "defaultValue":[[${s11q34i1}]],
+          "correctAnswer":"s11q34i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q35i1",
+          "title":"Why is it important that your organization handle people's \"Opinions, beliefs, or personal preferences data\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\"",
+          "defaultValue":[[${s11q35i1}]],
+          "correctAnswer":"s11q35i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q36i1",
+          "title":"Could your organization realistically accomplish its purposes WITHOUT handling people's \"Opinions, beliefs, or personal preferences data\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q37i1",
+          "title":"Describe how your organization could achieve the same purpose without handling people's \"Opinions, beliefs, or personal preferences data\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\"",
+          "defaultValue":[[${s11q37i1}]],
+          "correctAnswer":"s11q37i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q38i1",
+          "title":"How would your organization be affected if it could not handle people's \"Opinions, beliefs, or personal preferences data\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\"",
+          "defaultValue":[[${s11q38i1}]],
+          "correctAnswer":"s11q38i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q39i1",
+          "title":"Is it important to third parties that your organization handle people's \"Opinions, beliefs, or personal preferences data\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q40i1",
+          "title":"Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"",
+          "defaultValue":[[${s11q40i1}]],
+          "correctAnswer":"s11q40i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q41i1",
+          "title":"Could third parties accomplish their purpose without your organization handling people's \"Opinions, beliefs, or personal preferences data\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q42i1",
+          "title":"How would those third parties be affected if your organization could not handle people's \"Opinions, beliefs, or personal preferences data\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\"",
+          "defaultValue":[[${s11q42i1}]],
+          "correctAnswer":"s11q42i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q43i1",
+          "title":"Do people expect their \"Opinions, beliefs, or personal preferences data\" to be handled by your organization?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q44i1",
+          "title":"Have people been notified that your organization handles their \"Opinions, beliefs, or personal preferences data\" in this way?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q45i1",
+          "title":"Describe how people benefit by your organization handling their \"Opinions, beliefs, or personal preferences data.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\"",
+          "defaultValue":[[${s11q45i1}]],
+          "correctAnswer":"s11q45i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q46i1",
+          "title":"Describe how people could be harmed by your organization handling their \"Opinions, beliefs, or personal preferences data.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\"",
+          "defaultValue":[[${s11q46i1}]],
+          "correctAnswer":"s11q46i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q47i1",
+          "title":"Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\"",
+          "defaultValue":[[${s11q47i1}]],
+          "correctAnswer":"s11q47i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q48i1",
+          "title":"Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\"",
+          "defaultValue":[[${s11q48i1}]],
+          "correctAnswer":"s11q48i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q49i1",
+          "title":"Are people able to do all of the following with regard to their \"Opinions, beliefs, or personal preferences data\"?\n1. Request access to their personal information\n\n2. Request that their personal information be erased\n\n3. Request that their personal information be corrected\n\n4. Request that the organization stop using their data in a certain way\n\n5. Object to how your organization handles their personal information\n\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q50i1",
+          "title":"Based on your previous answers, do you believe your organization is justified in handling people's \"Opinions, beliefs, or personal preferences data\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\"",
+          "defaultValue":[[${s11q50i1}]],
+          "correctAnswer":"s11q50i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q51i1",
+          "title":"Will your organization continue to handle people's \"Opinions, beliefs, or personal preferences data\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q52i1",
+          "title":"We're done asking about the \"Opinions, beliefs, or personal preferences data.\"\nIf you're organization handles other types of personal information, we'll ask you about those. If not, we're almost done with the document.",
+          "defaultValue":"I understand",
+          "correctAnswer":"I understand",
+          "choices":[
+            {
+              "value":"I understand",
+              "text":"I understand"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q53i1",
+          "title":"We need to ask you about the \"Physical characteristics data\" your organization handles.",
+          "defaultValue":"I understand",
+          "correctAnswer":"I understand",
+          "choices":[
+            {
+              "value":"I understand",
+              "text":"I understand"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q54i1",
+          "title":"Do any of the following apply to the \"Physical characteristics data\" your organization handles?\n1. Your organization received consent to handle the personal information.\n\n2. Your organization is under contract to handle the personal information.\n\n3. Your organization has a legal obligation to handle the personal information.\n\n4. Your organization is protecting people's vital interest (or a third party's vital interest) by handling the personal information.\n\n5. Your organization is protecting a public interest by handling the personal information.",
+          "defaultValue":"None apply",
+          "correctAnswer":"None apply",
+          "choices":[
+            {
+              "value":"None apply",
+              "text":"None apply"
+            },
+            {
+              "value":"One or more applies",
+              "text":"One or more applies"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q55i1",
+          "title":"What is included in the \"Physical characteristics data\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\"",
+          "defaultValue":[[${s11q55i1}]],
+          "correctAnswer":"s11q55i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q56i1",
+          "title":"Does the \"Physical characteristics data\" include any of the following?\nThese are considered \"Special Categories\" of information under the GDPR. If any of the following are included, please consider discussing this form with an attorney.",
+          "choices":[
+            {
+              "value":"Information from a child below the age of 16",
+              "text":"Information from a child below the age of 16"
+            },
+            {
+              "value":"Information about a criminal offense",
+              "text":"Information about a criminal offense"
+            },
+            {
+              "value":"Information about a person's race",
+              "text":"Information about a person's race"
+            },
+            {
+              "value":"Information about a person's ethnic origin",
+              "text":"Information about a person's ethnic origin"
+            },
+            {
+              "value":"Information about a person's political opinions",
+              "text":"Information about a person's political opinions"
+            },
+            {
+              "value":"Information about a person's religious or philosophical beliefs",
+              "text":"Information about a person's religious or philosophical beliefs"
+            },
+            {
+              "value":"Information about a person's trade union membership",
+              "text":"Information about a person's trade union membership"
+            },
+            {
+              "value":"Information about a person's genetics",
+              "text":"Information about a person's genetics"
+            },
+            {
+              "value":"Information about a person's biometrics",
+              "text":"Information about a person's biometrics"
+            },
+            {
+              "value":"Information about a person's health",
+              "text":"Information about a person's health"
+            },
+            {
+              "value":"Information about a person's sex life or sexual orientation",
+              "text":"Information about a person's sex life or sexual orientation"
+            },
+            {
+              "value":"None of the above",
+              "text":"None of the above"
+            }
+          ],
+          "type":"checkbox"
+        },
+        {
+          "name":"s11q57i1",
+          "title":"How was the \"Physical characteristics data\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\"",
+          "defaultValue":[[${s11q57i1}]],
+          "correctAnswer":"s11q57i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q58i1",
+          "title":"Why is your organization handling people's \"Physical characteristics data\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.\n\n",
+          "defaultValue":[[${s11q58i1}]],
+          "correctAnswer":"s11q58i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q59i1",
+          "title":"Why is it important that your organization handle people's \"Physical characteristics data\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\"",
+          "defaultValue":[[${s11q59i1}]],
+          "correctAnswer":"s11q59i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q60i1",
+          "title":"Could your organization realistically accomplish its purposes WITHOUT handling people's \"Physical characteristics data\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q61i1",
+          "title":"Describe how your organization could achieve the same purpose without handling people's \"Physical characteristics data\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\"",
+          "defaultValue":[[${s11q61i1}]],
+          "correctAnswer":"s11q61i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q62i1",
+          "title":"How would your organization be affected if it could not handle people's \"Physical characteristics data\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\"",
+          "defaultValue":[[${s11q62i1}]],
+          "correctAnswer":"s11q62i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q63i1",
+          "title":"Is it important to third parties that your organization handle people's \"Physical characteristics data\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q64i1",
+          "title":"Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"\n\n",
+          "defaultValue":[[${s11q64i1}]],
+          "correctAnswer":"s11q64i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q65i1",
+          "title":"Could third parties accomplish their purpose without your organization handling people's \"Physical characteristics data\"?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q66i1",
+          "title":"How would those third parties be affected if your organization could not handle people's \"Physical characteristics data\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\"",
+          "defaultValue":[[${s11q66i1}]],
+          "correctAnswer":"s11q66i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q67i1",
+          "title":"Do people expect their \"Physical characteristics data\" to be handled by your organization?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q68i1",
+          "title":"Have people been notified that your organization handles their \"Physical characteristics data\" in this way?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q69i1",
+          "title":"Describe how people benefit by your organization handling their \"Physical characteristics data.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\"",
+          "defaultValue":[[${s11q69i1}]],
+          "correctAnswer":"s11q69i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q70i1",
+          "title":"Describe how people could be harmed by your organization handling their \"Physical characteristics data.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\"",
+          "defaultValue":[[${s11q70i1}]],
+          "correctAnswer":"s11q70i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q71i1",
+          "title":"Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\"\n\n",
+          "defaultValue":[[${s11q71i1}]],
+          "correctAnswer":"s11q71i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q72i1",
+          "title":"Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\"",
+          "defaultValue":[[${s11q72i1}]],
+          "correctAnswer":"s11q72i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q73i1",
+          "title":"Are people able to do all of the following with regard to their \"Physical characteristics data\"?\n1. Request access to their personal information\n\n2. Request that their personal information be erased\n\n3. Request that their personal information be corrected\n\n4. Request that the organization stop using their data in a certain way\n\n5. Object to how your organization handles their personal information\n\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q74i1",
+          "title":"Based on your previous answers, do you believe your organization is justified in handling people's \"Physical characteristics data\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\" \n\n",
+          "defaultValue":[[${s11q74i1}]],
+          "correctAnswer":"s11q74i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q75i1",
+          "title":"Will your organization continue to handle people's \"Physical characteristics data\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q76i1",
+          "title":"We're done asking about the \"Physical characteristics data.\"\nIf you're organization handles other types of personal information, we'll ask you about those. If not, we're almost done with the document. \n\n",
+          "defaultValue":"I understand",
+          "correctAnswer":"I understand",
+          "choices":[
+            {
+              "value":"I understand",
+              "text":"I understand"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q77i1",
+          "title":"We need to ask you about the \"Personal history data\" your organization handles.",
+          "defaultValue":"I understand",
+          "correctAnswer":"I understand",
+          "choices":[
+            {
+              "value":"I understand",
+              "text":"I understand"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q78i1",
+          "title":"Do any of the following apply to the \"Personal history data\" your organization handles?\n1. Your organization received consent to handle the personal information.\n\n2. Your organization is under contract to handle the personal information.\n\n3. Your organization has a legal obligation to handle the personal information.\n\n4. Your organization is protecting people's vital interest (or a third party's vital interest) by handling the personal information.\n\n5. Your organization is protecting a public interest by handling the personal information.",
+          "defaultValue":"None apply",
+          "correctAnswer":"None apply",
+          "choices":[
+            {
+              "value":"None apply",
+              "text":"None apply"
+            },
+            {
+              "value":"One or more applies",
+              "text":"One or more applies"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q79i1",
+          "title":"What is included in the \"Personal history data\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\"",
+          "defaultValue":[[${s11q79i1}]],
+          "correctAnswer":"s11q79i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q80i1",
+          "title":"Does the \"Personal history data\" include any of the following?\nThese are considered \"Special Categories\" of information under the GDPR. If any of the following are included, please consider discussing this form with an attorney.",
+          "choices":[
+            {
+              "value":"Information from a child below the age of 16",
+              "text":"Information from a child below the age of 16"
+            },
+            {
+              "value":"Information about a criminal offense",
+              "text":"Information about a criminal offense"
+            },
+            {
+              "value":"Information about a person's race",
+              "text":"Information about a person's race"
+            },
+            {
+              "value":"Information about a person's ethnic origin",
+              "text":"Information about a person's ethnic origin"
+            },
+            {
+              "value":"Information about a person's political opinions",
+              "text":"Information about a person's political opinions"
+            },
+            {
+              "value":"Information about a person's religious or philosophical beliefs",
+              "text":"Information about a person's religious or philosophical beliefs"
+            },
+            {
+              "value":"Information about a person's trade union membership",
+              "text":"Information about a person's trade union membership"
+            },
+            {
+              "value":"Information about a person's genetics",
+              "text":"Information about a person's genetics"
+            },
+            {
+              "value":"Information about a person's biometrics",
+              "text":"Information about a person's biometrics"
+            },
+            {
+              "value":"Information about a person's health",
+              "text":"Information about a person's health"
+            },
+            {
+              "value":"Information about a person's sex life or sexual orientation",
+              "text":"Information about a person's sex life or sexual orientation"
+            },
+            {
+              "value":"None of the above",
+              "text":"None of the above"
+            }
+          ],
+          "type":"checkbox"
+        },
+        {
+          "name":"s11q81i1",
+          "title":"How was the \"Personal history data\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\"\n\n",
+          "defaultValue":[[${s11q81i1}]],
+          "correctAnswer":"s11q81i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q82i1",
+          "title":"Why is your organization handling people's \"Personal history data\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.\n\n",
+          "defaultValue":[[${s11q82i1}]],
+          "correctAnswer":"s11q82i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q83i1",
+          "title":"Why is it important that your organization handle people's \"Personal history data\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\"",
+          "defaultValue":[[${s11q83i1}]],
+          "correctAnswer":"s11q83i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q84i1",
+          "title":"Could your organization realistically accomplish its purposes WITHOUT handling people's \"Personal history data\"?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q85i1",
+          "title":"Describe how your organization could achieve the same purpose without handling people's \"Personal history data\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\"",
+          "defaultValue":[[${s11q85i1}]],
+          "correctAnswer":"s11q85i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q86i1",
+          "title":"How would your organization be affected if it could not handle people's \"Personal history data\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\"",
+          "defaultValue":[[${s11q86i1}]],
+          "correctAnswer":"s11q86i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q87i1",
+          "title":"Is it important to third parties that your organization handle people's \"Personal history data\"?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q88i1",
+          "title":"Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"\n\n",
+          "defaultValue":[[${s11q88i1}]],
+          "correctAnswer":"s11q88i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q89i1",
+          "title":"Could third parties accomplish their purpose without your organization handling people's \"Personal history data\"?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q90i1",
+          "title":"How would those third parties be affected if your organization could not handle people's \"Personal history data\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\"",
+          "defaultValue":[[${s11q90i1}]],
+          "correctAnswer":"s11q90i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q91i1",
+          "title":"Do people expect their \"Personal history data\" to be handled by your organization?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q92i1",
+          "title":"Have people been notified that your organization handles their \"Personal history data\" in this way?\n",
+          "defaultValue":"no",
+          "correctAnswer":"no",
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q93i1",
+          "title":"Does your organization (or the party who you got the data from) plan to notify people of how their \"Personal history data\" is being used?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q94i1",
+          "title":"Describe how people benefit by your organization handling their \"Personal history data.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\"",
+          "defaultValue":[[${s11q94i1}]],
+          "correctAnswer":"s11q94i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q95i1",
+          "title":"Describe how people could be harmed by your organization handling their \"Personal history data.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\"",
+          "defaultValue":[[${s11q95i1}]],
+          "correctAnswer":"s11q95i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q96i1",
+          "title":"Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\"\n\n",
+          "defaultValue":[[${s11q96i1}]],
+          "correctAnswer":"s11q96i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q97i1",
+          "title":"Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\"",
+          "defaultValue":[[${s11q97i1}]],
+          "correctAnswer":"s11q97i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q98i1",
+          "title":"Are people able to do all of the following with regard to their \"Personal history data\"?\n1. Request access to their personal information\n\n2. Request that their personal information be erased\n\n3. Request that their personal information be corrected\n\n4. Request that the organization stop using their data in a certain way\n\n5. Object to how your organization handles their personal information",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q99i1",
+          "title":"Based on your previous answers, do you believe your organization is justified in handling people's \"Personal history data\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\"",
+          "defaultValue":[[${s11q99i1}]],
+          "correctAnswer":"s11q99i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q100i1",
+          "title":"Will your organization continue to handle people's \"Personal history data\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q101i1",
+          "title":"We're done asking about the \"Personal history data.\"\nIf you're organization handles other types of personal information, we'll ask you about those. If not, we're almost done with the document. \n\n",
+          "defaultValue":"I understand",
+          "correctAnswer":"I understand",
+          "choices":[
+            {
+              "value":"I understand",
+              "text":"I understand"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q102i1",
+          "title":"We need to ask you about the \"Social and contact information\" your organization handles.",
+          "defaultValue":"I understand",
+          "correctAnswer":"I understand",
+          "choices":[
+            {
+              "value":"I understand",
+              "text":"I understand"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q103i1",
+          "title":"Do any of the following apply to the \"Social and contact information\" your organization handles?\n1. Your organization received consent to handle the personal information.\n\n2. Your organization is under contract to handle the personal information.\n\n3. Your organization has a legal obligation to handle the personal information.\n\n4. Your organization is protecting people's vital interest (or a third party's vital interest) by handling the personal information.\n\n5. Your organization is protecting a public interest by handling the personal information.",
+          "defaultValue":"None apply",
+          "correctAnswer":"None apply",
+          "choices":[
+            {
+              "value":"None apply",
+              "text":"None apply"
+            },
+            {
+              "value":"One or more applies",
+              "text":"One or more applies"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q104i1",
+          "title":"What is included in the \"Social and contact information\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\"",
+          "defaultValue":[[${s11q104i1}]],
+          "correctAnswer":"s11q104i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q105i1",
+          "title":"Does the \"Social and contact information\" include any of the following?\nThese are considered \"Special Categories\" of information under the GDPR. If any of the following are included, please consider discussing this form with an attorney.",
+          "choices":[
+            {
+              "value":"Information from a child below the age of 16",
+              "text":"Information from a child below the age of 16"
+            },
+            {
+              "value":"Information about a criminal offense",
+              "text":"Information about a criminal offense"
+            },
+            {
+              "value":"Information about a person's race",
+              "text":"Information about a person's race"
+            },
+            {
+              "value":"Information about a person's ethnic origin",
+              "text":"Information about a person's ethnic origin"
+            },
+            {
+              "value":"Information about a person's political opinions",
+              "text":"Information about a person's political opinions"
+            },
+            {
+              "value":"Information about a person's religious or philosophical beliefs",
+              "text":"Information about a person's religious or philosophical beliefs"
+            },
+            {
+              "value":"Information about a person's trade union membership",
+              "text":"Information about a person's trade union membership"
+            },
+            {
+              "value":"Information about a person's genetics",
+              "text":"Information about a person's genetics"
+            },
+            {
+              "value":"Information about a person's biometrics",
+              "text":"Information about a person's biometrics"
+            },
+            {
+              "value":"Information about a person's health",
+              "text":"Information about a person's health"
+            },
+            {
+              "value":"Information about a person's sex life or sexual orientation",
+              "text":"Information about a person's sex life or sexual orientation"
+            },
+            {
+              "value":"None of the above",
+              "text":"None of the above"
+            }
+          ],
+          "type":"checkbox"
+        },
+        {
+          "name":"s11q106i1",
+          "title":"How was the \"Social and contact information\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\"",
+          "defaultValue":[[${s11q106i1}]],
+          "correctAnswer":"s11q106i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q107i1",
+          "title":"Why is your organization handling people's \"Social and contact information\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+          "defaultValue":[[${s11q107i1}]],
+          "correctAnswer":"s11q107i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q108i1",
+          "title":"Why is it important that your organization handle people's \"Social and contact information\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\"",
+          "defaultValue":[[${s11q108i1}]],
+          "correctAnswer":"s11q108i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q109i1",
+          "title":"Could your organization realistically accomplish its purposes WITHOUT handling people's \"Social and contact information\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q110i1",
+          "title":"Describe how your organization could achieve the same purpose without handling people's \"Social and contact information\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\"",
+          "defaultValue":[[${s11q110i1}]],
+          "correctAnswer":"s11q110i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q111i1",
+          "title":"How would your organization be affected if it could not handle people's \"Social and contact information\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\"",
+          "defaultValue":[[${s11q111i1}]],
+          "correctAnswer":"s11q111i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q112i1",
+          "title":"Is it important to third parties that your organization handle people's \"Social and contact information\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q113i1",
+          "title":"Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"\n\n",
+          "defaultValue":[[${s11q113i1}]],
+          "correctAnswer":"s11q113i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q114i1",
+          "title":"Could third parties accomplish their purpose without your organization handling people's \"Social and contact information\"?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q115i1",
+          "title":"How would those third parties be affected if your organization could not handle people's \"Social and contact information\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\"",
+          "defaultValue":[[${s11q115i1}]],
+          "correctAnswer":"s11q115i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q116i1",
+          "title":"Do people expect their \"Social and contact information\" to be handled by your organization?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q117i1",
+          "title":"Have people been notified that your organization handles their \"Social and contact information\" in this way?\n",
+          "defaultValue":"no",
+          "correctAnswer":"no",
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q118i1",
+          "title":"Does your organization (or the party who you got the data from) plan to notify people of how their \"Social and contact information\" is being used?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q119i1",
+          "title":"Describe how people benefit by your organization handling their \"Social and contact information.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\"",
+          "defaultValue":[[${s11q119i1}]],
+          "correctAnswer":"s11q119i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q120i1",
+          "title":"Describe how people could be harmed by your organization handling their \"Social and contact information.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\"\n\n",
+          "defaultValue":[[${s11q120i1}]],
+          "correctAnswer":"s11q120i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q121i1",
+          "title":"Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\"",
+          "defaultValue":[[${s11q121i1}]],
+          "correctAnswer":"s11q121i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q122i1",
+          "title":"Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\"",
+          "defaultValue":[[${s11q122i1}]],
+          "correctAnswer":"s11q122i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q123i1",
+          "title":"Are people able to do all of the following with regard to their \"Social and contact information\"?\n1. Request access to their personal information\n\n2. Request that their personal information be erased\n\n3. Request that their personal information be corrected\n\n4. Request that the organization stop using their data in a certain way\n\n5. Object to how your organization handles their personal information",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q124i1",
+          "title":"Based on your previous answers, do you believe your organization is justified in handling people's \"Social and contact information\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\"",
+          "defaultValue":[[${s11q124i1}]],
+          "correctAnswer":"s11q124i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q125i1",
+          "title":"Will your organization continue to handle people's \"Social and contact information\"?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q126i1",
+          "title":"We're done asking about the \"Social and contact information.\"\nIf you're organization handles other types of personal information, we'll ask you about those. If not, we're almost done with the document.",
+          "defaultValue":"I understand",
+          "correctAnswer":"I understand",
+          "choices":[
+            {
+              "value":"I understand",
+              "text":"I understand"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q127i1",
+          "title":"We need to ask you about the \"Financial data\" your organization handles.\n",
+          "defaultValue":"I understand",
+          "correctAnswer":"I understand",
+          "choices":[
+            {
+              "value":"I understand",
+              "text":"I understand"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q128i1",
+          "title":"Do any of the following apply to the \"Financial data\" your organization handles?\n1. Your organization received consent to handle the personal information.\n\n2. Your organization is under contract to handle the personal information.\n\n3. Your organization has a legal obligation to handle the personal information.\n\n4. Your organization is protecting people's vital interest (or a third party's vital interest) by handling the personal information.\n\n5. Your organization is protecting a public interest by handling the personal information.",
+          "defaultValue":"None apply",
+          "correctAnswer":"None apply",
+          "choices":[
+            {
+              "value":"None apply",
+              "text":"None apply"
+            },
+            {
+              "value":"One or more applies",
+              "text":"One or more applies"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q129i1",
+          "title":"What is included in the \"Financial data\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\"",
+          "defaultValue":[[${s11q129i1}]],
+          "correctAnswer":"s11q129i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q130i1",
+          "title":"Does the \"Financial data\" include any of the following?\nThese are considered \"Special Categories\" of information under the GDPR. If any of the following are included, please consider discussing this form with an attorney.",
+          "choices":[
+            {
+              "value":"Information from a child below the age of 16",
+              "text":"Information from a child below the age of 16"
+            },
+            {
+              "value":"Information about a criminal offense",
+              "text":"Information about a criminal offense"
+            },
+            {
+              "value":"Information about a person's race",
+              "text":"Information about a person's race"
+            },
+            {
+              "value":"Information about a person's ethnic origin",
+              "text":"Information about a person's ethnic origin"
+            },
+            {
+              "value":"Information about a person's political opinions",
+              "text":"Information about a person's political opinions"
+            },
+            {
+              "value":"Information about a person's religious or philosophical beliefs",
+              "text":"Information about a person's religious or philosophical beliefs"
+            },
+            {
+              "value":"Information about a person's trade union membership",
+              "text":"Information about a person's trade union membership"
+            },
+            {
+              "value":"Information about a person's genetics",
+              "text":"Information about a person's genetics"
+            },
+            {
+              "value":"Information about a person's biometrics",
+              "text":"Information about a person's biometrics"
+            },
+            {
+              "value":"Information about a person's health",
+              "text":"Information about a person's health"
+            },
+            {
+              "value":"Information about a person's sex life or sexual orientation",
+              "text":"Information about a person's sex life or sexual orientation"
+            },
+            {
+              "value":"None of the above",
+              "text":"None of the above"
+            }
+          ],
+          "type":"checkbox"
+        },
+        {
+          "name":"s11q131i1",
+          "title":"How was the \"Financial data\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\"",
+          "defaultValue":[[${s11q131i1}]],
+          "correctAnswer":"s11q131i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q132i1",
+          "title":"Why is your organization handling people's \"Financial data\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+          "defaultValue":[[${s11q132i1}]],
+          "correctAnswer":"s11q132i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q133i1",
+          "title":"Why is it important that your organization handle people's \"Financial data\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\"",
+          "defaultValue":[[${s11q133i1}]],
+          "correctAnswer":"s11q133i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q134i1",
+          "title":"Could your organization realistically accomplish its purposes WITHOUT handling people's \"Financial data\"?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q135i1",
+          "title":"Describe how your organization could achieve the same purpose without handling people's \"Financial data\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\"",
+          "defaultValue":[[${s11q135i1}]],
+          "correctAnswer":"s11q135i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q136i1",
+          "title":"How would your organization be affected if it could not handle people's \"Financial data\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\"",
+          "defaultValue":[[${s11q136i1}]],
+          "correctAnswer":"s11q136i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q137i1",
+          "title":"Is it important to third parties that your organization handle people's \"Financial data\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q138i1",
+          "title":"Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"",
+          "defaultValue":[[${s11q138i1}]],
+          "correctAnswer":"s11q138i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q139i1",
+          "title":"Could third parties accomplish their purpose without your organization handling people's \"Financial data\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q140i1",
+          "title":"How would those third parties be affected if your organization could not handle people's \"Financial data\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\"",
+          "defaultValue":[[${s11q140i1}]],
+          "correctAnswer":"s11q140i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q141i1",
+          "title":"Do people expect their \"Financial data\" to be handled by your organization?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q142i1",
+          "title":"Have people been notified that your organization handles their \"Financial data\" in this way?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q143i1",
+          "title":"Describe how people benefit by your organization handling their \"Financial data.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\"",
+          "defaultValue":[[${s11q143i1}]],
+          "correctAnswer":"s11q143i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q144i1",
+          "title":"Describe how people could be harmed by your organization handling their \"Financial data.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\"",
+          "defaultValue":[[${s11q144i1}]],
+          "correctAnswer":"s11q144i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q145i1",
+          "title":"Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\"",
+          "defaultValue":[[${s11q145i1}]],
+          "correctAnswer":"s11q145i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q146i1",
+          "title":"Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\"",
+          "defaultValue":[[${s11q146i1}]],
+          "correctAnswer":"s11q146i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q147i1",
+          "title":"Are people able to do all of the following with regard to their \"Financial data\"?\n1. Request access to their personal information\n\n2. Request that their personal information be erased\n\n3. Request that their personal information be corrected\n\n4. Request that the organization stop using their data in a certain way\n\n5. Object to how your organization handles their personal information",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q148i1",
+          "title":"Based on your previous answers, do you believe your organization is justified in handling people's \"Financial data\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\"",
+          "defaultValue":[[${s11q148i1}]],
+          "correctAnswer":"s11q148i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q149i1",
+          "title":"Will your organization continue to handle people's \"Financial data\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q150i1",
+          "title":"We're done asking about the \"Financial data.\"\nIf you're organization handles other types of personal information, we'll ask you about those. If not, we're almost done with the document. \n\n",
+          "defaultValue":"-",
+          "correctAnswer":"-",
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q151i1",
+          "title":"We need to ask you about the \"Tracking data\" your organization handles.",
+          "defaultValue":"-",
+          "correctAnswer":"-",
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q152i1",
+          "title":"Do any of the following apply to the \"Tracking data\" your organization handles?\n1. Your organization received consent to handle the personal information.\n\n2. Your organization is under contract to handle the personal information.\n\n3. Your organization has a legal obligation to handle the personal information.\n\n4. Your organization is protecting people's vital interest (or a third party's vital interest) by handling the personal information.\n\n5. Your organization is protecting a public interest by handling the personal information.",
+          "defaultValue":"None apply",
+          "correctAnswer":"None apply",
+          "choices":[
+            {
+              "value":"None apply",
+              "text":"None apply"
+            },
+            {
+              "value":"One or more applies",
+              "text":"One or more applies"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q153i1",
+          "title":"What is included in the \"Tracking data\" that your organization handles?\nSample answer: \"The personal information includes phone numbers, emails, addresses, and date of birth.\"\n\n",
+          "defaultValue":[[${s11q153i1}]],
+          "correctAnswer":"s11q153i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q154i1",
+          "title":"Does the \"Tracking data\" include any of the following?\nThese are considered \"Special Categories\" of information under the GDPR. If any of the following are included, please consider discussing this form with an attorney.",
+          "choices":[
+            {
+              "value":"Information from a child below the age of 16",
+              "text":"Information from a child below the age of 16"
+            },
+            {
+              "value":"Information about a criminal offense",
+              "text":"Information about a criminal offense"
+            },
+            {
+              "value":"Information about a person's race",
+              "text":"Information about a person's race"
+            },
+            {
+              "value":"Information about a person's ethnic origin",
+              "text":"Information about a person's ethnic origin"
+            },
+            {
+              "value":"Information about a person's political opinions",
+              "text":"Information about a person's political opinions"
+            },
+            {
+              "value":"Information about a person's religious or philosophical beliefs",
+              "text":"Information about a person's religious or philosophical beliefs"
+            },
+            {
+              "value":"Information about a person's trade union membership",
+              "text":"Information about a person's trade union membership"
+            },
+            {
+              "value":"Information about a person's genetics",
+              "text":"Information about a person's genetics"
+            },
+            {
+              "value":"Information about a person's biometrics",
+              "text":"Information about a person's biometrics"
+            },
+            {
+              "value":"Information about a person's health",
+              "text":"Information about a person's health"
+            },
+            {
+              "value":"Information about a person's sex life or sexual orientation",
+              "text":"Information about a person's sex life or sexual orientation"
+            },
+            {
+              "value":"None of the above",
+              "text":"None of the above"
+            }
+          ],
+          "type":"checkbox"
+        },
+        {
+          "name":"s11q155i1",
+          "title":"How was the \"Tracking data\" collected?\nSample Answer: \"The personal information was collected by the organization's mobile app.\"",
+          "defaultValue":[[${s11q155i1}]],
+          "correctAnswer":"s11q155i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q156i1",
+          "title":"Why is your organization handling people's \"Tracking data\"?\nDescribe the purpose behind your organization's actions with regard to the personal information. \n\nSample answer: \"The organization is using the personal information to improve its marketing.\"\n\nOther uses include: selling the information, improving user experiences, providing services, authenticating accounts, etc.",
+          "defaultValue":[[${s11q156i1}]],
+          "correctAnswer":"s11q156i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q157i1",
+          "title":"Why is it important that your organization handle people's \"Tracking data\"?\nSample answer: \"The organization needs the personal information in order to advertise its products more efficiently.\"\n\n",
+          "defaultValue":[[${s11q157i1}]],
+          "correctAnswer":"s11q157i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q158i1",
+          "title":"Could your organization realistically accomplish its purposes WITHOUT handling people's \"Tracking data\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q159i1",
+          "title":"Describe how your organization could achieve the same purpose without handling people's \"Tracking data\".\nSample answer: \"Instead of using the personal data, the organization could track overall sales data by region to try and isolate the important factors in advertising.\"\n\n",
+          "defaultValue":[[${s11q159i1}]],
+          "correctAnswer":"s11q159i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q160i1",
+          "title":"How would your organization be affected if it could not handle people's \"Tracking data\"?\nSample answer: \"The organization would not be able to advertise as effectively and people would receive advertisements they don't want or need.\"",
+          "defaultValue":[[${s11q160i1}]],
+          "correctAnswer":"s11q160i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q161i1",
+          "title":"Is it important to third parties that your organization handle people's \"Tracking data\"?",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q162i1",
+          "title":"Why is it important to third parties?\nSample answer: \"Third parties rely on the organization's advertising data to determine what products would be of interest to the organization's customers.\"",
+          "defaultValue":[[${s11q162i1}]],
+          "correctAnswer":"s11q162i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q163i1",
+          "title":"Could third parties accomplish their purpose without your organization handling people's \"Tracking data\"?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q164i1",
+          "title":"How would those third parties be affected if your organization could not handle people's \"Tracking data\"?\nSample answer: \"The third parties would not receive the advertising data they need to market their products.\"",
+          "defaultValue":[[${s11q164i1}]],
+          "correctAnswer":"s11q164i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q165i1",
+          "title":"Do people expect their \"Tracking data\" to be handled by your organization?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q166i1",
+          "title":"Have people been notified that your organization handles their \"Tracking data\" in this way?",
+          "defaultValue":"no",
+          "correctAnswer":"no",
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q167i1",
+          "title":"Does your organization (or the party who you got the data from) plan to notify people of how their \"Tracking data\" is being used?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q168i1",
+          "title":"Describe how people benefit by your organization handling their \"Tracking data.\"\nSample answer: \"People only receive advertisements that are likely to interest them.\"",
+          "defaultValue":[[${s11q168i1}]],
+          "correctAnswer":"s11q168i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q169i1",
+          "title":"Describe how people could be harmed by your organization handling their \"Tracking data.\"\nSample answer: \"People are not harmed by the organization's use of their personal information.\"",
+          "defaultValue":[[${s11q169i1}]],
+          "correctAnswer":"s11q169i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q170i1",
+          "title":"Overall, is it in people's best interest to have your organization handle their personal information? Explain why or why not.\nSample answer: \"The organization's use of the personal information is in people's best interest because it increases their user experience. Nothing harmful occurs to them as a result.\"",
+          "defaultValue":[[${s11q170i1}]],
+          "correctAnswer":"s11q170i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q171i1",
+          "title":"Are the interests of the organization aligned with the interests of the people who the data was collected from? Explain why or why not.\nSample answer: \"The interests are aligned. Customers only want to see advertisements they are interested in. The organization only wants to spend money on advertising to people who want to see relevant advertisements.\"\n\n",
+          "defaultValue":[[${s11q1171i1}]],
+          "correctAnswer":"s11q1171i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q172i1",
+          "title":"Are people able to do all of the following with regard to their \"Tracking data\"?\n1. Request access to their personal information\n\n2. Request that their personal information be erased\n\n3. Request that their personal information be corrected\n\n4. Request that the organization stop using their data in a certain way\n\n5. Object to how your organization handles their personal information",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q173i1",
+          "title":"Based on your previous answers, do you believe your organization is justified in handling people's \"Tracking data\"?\nWeigh the benefits against the harms (or potential harms) of using the data.\n\nSample answer: \"The organization is justified in using the personal information because the benefit to both customers and the organization is significant. There is minimal risk to the customers' privacy. The personal information is also important to third parties.\" \n\n",
+          "defaultValue":[[${s11q173i1}]],
+          "correctAnswer":"s11q173i1",
+          "type":"text"
+        },
+        {
+          "name":"s11q174i1",
+          "title":"Will your organization continue to handle people's \"Tracking data\"?\n",
+          "defaultValue":"YES",
+          "correctAnswer": "YES",
+          "choices":[
+            {
+              "value":"YES",
+              "text":"YES"
+            },
+            {
+              "value":"NO",
+              "text":"NO"
+            }
+          ],
+          "type":"radiogroup"
+        },
+        {
+          "name":"s11q175i1",
+          "title":"We're done asking about the \"Tracking data.\"\nIf you're organization handles other types of personal information, we'll ask you about those. If not, we're almost done with the document.",
+          "defaultValue":"I understand",
+          "correctAnswer":"I understand",
+          "choices":[
+            {
+              "value":"I understand",
+              "text":"I understand"
+            }
+          ],
+          "type":"radiogroup"
+        }
+      ]
+    }
+  ]
+}

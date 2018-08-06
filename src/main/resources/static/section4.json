@@ -5,10 +5,11 @@
       "elements": [
         {
           "type": "text",
-          "name": "question1",
+          "name": "s5q1i1",
           "title": "How many locations within your organization handle personal information from Europe?\nA location is defined as any place where an employee principally works. \n\nPersonal information is any information that alone or with other information can identify a living person. Personal information includes: name, home address, business address, email, cell phone number, work number, employee ID number, usernames and passwords, etc.\n\nPersonal information can come from employees, customers, users, partners, etc.",
           "isRequired": true,
-          "inputType": "number"
+          "inputType": "number",
+          "defaultValue": [[${s5q1i1}]]
         },
         {
           "type": "paneldynamic",
