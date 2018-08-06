@@ -1,55 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <base href="/">
-    <link href="/webjars/bootstrap/3.3.6/css/bootstrap.min.css"
-          rel="stylesheet">
-    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <title>Welcome to Admin Page</title>
+    <meta charset="utf-8">
+    <meta name="generator" content="Google Web Designer 4.1.0.0711">
+    <style type="text/css" id="gwd-text-style">
+        p {
+            margin: 0px;
+        }
+        h1 {
+            margin: 0px;
+        }
+        h2 {
+            margin: 0px;
+        }
+        h3 {
+            margin: 0px;
+        }
+    </style>
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+        body {
+            background-color: transparent;
+            transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform-style: preserve-3d;
+        }
+        .gwd-span-1xgk {
+            background-color: rgb(0, 0, 0);
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            display: block;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            height: 7.44%;
+            left: 0px;
+            position: absolute;
+            text-size-adjust: 100%;
+            top: 0px;
+            width: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transform-origin: 481.5px 24.9922px 0px;
+        }
+        .gwd-br-1qea {
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        .gwd-span-1aiw {
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            display: block;
+            font-family: Roboto;
+            font-size: 14px;
+            height: 2.98%;
+            left: 85.5%;
+            position: absolute;
+            text-align: center;
+            text-size-adjust: 100%;
+            top: 2.24%;
+            width: 13.4%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transform-origin: 131px -149px 0px;
+        }
+        .gwd-a-4021 {
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            font-family: Roboto;
+            font-size: 14px;
+            text-align: center;
+            text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            text-decoration: none;
+        }
+        .gwd-spritesheet-3gyy {
+            background-color: rgb(0, 0, 0);
+            border-color: rgb(255, 255, 255);
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            display: block;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            height: 7.29%;
+            left: 46.7%;
+            overflow: hidden;
+            position: absolute;
+            text-size-adjust: 100%;
+            top: 0.15%;
+            width: 7.37%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transform-origin: 34.4992px 28.5781px 0px;
+        }
+        .gwd-span-1n7s {
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            display: block;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            height: 74.85%;
+            left: 0px;
+            position: absolute;
+            text-size-adjust: 100%;
+            top: 7.29%;
+            width: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            background-image: none;
+            background-color: rgb(68, 89, 238);
+        }
+        .gwd-br-7teq {
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        .gwd-span-1uve {
+            background-color: rgb(255, 255, 255);
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            display: block;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            height: 17.71%;
+            left: 0px;
+            position: absolute;
+            text-size-adjust: 100%;
+            top: 82.29%;
+            width: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transform-origin: 481.5px -95.5156px 0px;
+        }
+        .gwd-br-2nfi {
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        .gwd-spritesheet-1u15 {
+            height: 8.93%;
+            left: 46.58%;
+            top: 91.07%;
+            transform-origin: 34.484px 35.016px 0px;
+        }
+        .gwd-span-8wyk {
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            display: block;
+            font-family: "Open Sans";
+            font-size: 20px;
+            height: 4.46%;
+            left: 33.64%;
+            position: absolute;
+            text-align: center;
+            text-size-adjust: 100%;
+            top: 86.61%;
+            width: 32.71%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transform-origin: 134.5px 150px 0px;
+        }
+        .gwd-span-130m {
+            box-sizing: border-box;
+            color: rgb(51, 51, 51);
+            display: block;
+            font-family: "Open Sans";
+            font-size: 13px;
+            height: 2.68%;
+            left: 88.7%;
+            position: absolute;
+            text-size-adjust: 100%;
+            top: 90%;
+            width: 9.87%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transform-origin: 2.5px -130.532px 0px;
+        }
+        .gwd-span-snn1 {
+            left: 88.79%;
+            top: 93.75%;
+        }
+        .gwd-div-1rlo {
+            position: absolute;
+            transform-origin: 430.016px 250.969px 0px;
+            width: 100%;
+            height: 100%;
+            left: 0%;
+            top: 7.44%;
+            overflow: hidden;
+        }
+        .gwd-div-s6cp {}
+        .gwd-div-m29s {
+            transform-origin: 293px 126.5px 0px;
+            height: 37.65%;
+            top: 3.42%;
+            width: 585.99px;
+            left: 4.84%;
+        }
+    </style>
+    <script data-source="/js/googbase_min.js" data-version="4" data-exports-type="googbase" src="/js/googbase_min.js"></script>
+    <script data-source="/js/gwd_webcomponents_min.js" data-version="5" data-exports-type="gwd_webcomponents" src="/js/gwd_webcomponents_min.js"></script>
+    <script data-source="/js/gwdspritesheet_min.js" data-version="10" data-exports-type="gwd-spritesheet" src="/js/gwdspritesheet_min.js"></script>
 </head>
-<body>
-<div class="container">
-    <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+
+<body class="htmlNoPages">
+<span class="gwd-span-1xgk"><br class="gwd-br-1qea"></span><span class="gwd-span-1aiw gwd-span-1ck3"><a href="/user/logout" class="gwd-a-4021">G</a>DPR TOOL</span>
+<gwd-spritesheet id="owlicon1_1" imagesource="/assets/logo-02.png" offsetx="1550" offsety="1025" clipwidth="1100" clipheight="1300" scaling="cover" class="gwd-spritesheet-3gyy gwd-spritesheet-n6g6" src="assets/logo-02.png" alignment="center"></gwd-spritesheet><span class="gwd-span-1n7s"><br class="gwd-br-7teq"></span><span class="gwd-span-1uve"><br class="gwd-br-2nfi"></span>
+<gwd-spritesheet id="owlicon1" imagesource="/assets/logo-02.png" offsetx="140" offsety="25" clipwidth="1100" clipheight="1300" scaling="cover" class="gwd-spritesheet-3gyy gwd-spritesheet-1u15" src="assets/logo-02.png" alignment="center"></gwd-spritesheet><span class="gwd-span-8wyk">GET&nbsp; READY FOR GDPR</span><span class="gwd-span-130m gwd-span-p3iy">CONTACT US</span><span class="gwd-span-130m gwd-span-snn1">ABOUT US</span>
+<div class="gwd-div-1rlo" id="container">
+    <div id="loginbox" style="margin-top: 50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 gwd-div-m29s">
         <div class="panel panel-info">
             <div class="panel-heading">
                 <div class="panel-title">Sign In</div>
             </div>
         </div>
-
         <div style="padding-top:30px" class="panel-body">
-
             <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
-
             <form action="/admin/login" method="post" id="loginform" class="form-horizontal" role="form">
-
                 <div style="margin-bottom: 25px" class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input id="login-username" type="text" class="form-control" name="username" value=""
-                           placeholder="email">
+                    <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="email">
                 </div>
-
                 <div style="margin-bottom: 25px" class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                    <input id="login-password" type="password" class="form-control" name="password"
-                           placeholder="password">
+                    <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
                 </div>
-
-
                 <div style="margin-top:10px" class="form-group">
                     <!-- Button -->
-
                     <div class="col-sm-12 controls">
-                        <input type="submit" id="btn-login" class="btn btn-success"/>
-
+                        <input type="submit" id="btn-login" class="btn btn-success">
                     </div>
                 </div>
-
             </form>
-
-
         </div>
     </div>
 </div>
-</div>
 </body>
+
 </html>
