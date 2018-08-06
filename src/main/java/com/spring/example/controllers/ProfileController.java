@@ -1,8 +1,10 @@
 package com.spring.example.controllers;
 
 import com.spring.example.entity.*;
+import com.spring.example.models.DocumentLink;
 import com.spring.example.models.FormLink;
 import com.spring.example.repository.*;
+import jnr.ffi.annotations.In;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +35,13 @@ public class ProfileController {
     @Autowired
     private FormRepository formRepository;
 
+    @Autowired
+    private UserRecordsRepository userRecordsRepository;
+
+    @Autowired
+    private DocumentRepository documentRepository;
+
+
     @GetMapping("user/home")
     public String getLogin(Model model, Principal principal) {
         String emailAddress = principal.getName();
@@ -41,6 +50,14 @@ public class ProfileController {
         model.addAttribute("name",user.getName());
         model.addAttribute("phone",user.getPhone());
 
+        List<FormLink> formLinkList = getFormLinks(user);
+
+        model.addAttribute("form_links",formLinkList);
+
+        return "index";
+    }
+
+    private List<FormLink> getFormLinks(User user) {
         List<UserForms> userForms = userFormRepository.findByUserFormIdUserId(user.getId().intValue());
 
         List<FormLink> formLinkList = new ArrayList<>();
@@ -60,10 +77,7 @@ public class ProfileController {
                 formLinkList.add(new FormLink(form.getId(), null, "Not Submitted", "danger"));
             }
         }
-
-        model.addAttribute("form_links",formLinkList);
-
-        return "index";
+        return formLinkList;
     }
 
     @GetMapping("user/profile")
@@ -120,7 +134,40 @@ public class ProfileController {
         model.addAttribute("email",emailAddress);
         AdminUser user = adminUserRepository.findByEmail(emailAddress);
         model.addAttribute("user",foundUser);
-        model.addAttribute("count",7);
+        List<UserForms> userForms = userFormRepository.findByUserFormIdUserId(user.getId().intValue());
+        int filledForms = userForms.size();
+        long totalForms = formRepository.count();
+
+        double percentFilled = filledForms*100.0;
+        percentFilled /= totalForms;
+
+
+        List<DocumentLink> documentLinks = new ArrayList<>();
+        Iterable<Documents> documents = documentRepository.findAll();
+
+        List<UserRecords> distinctFormIdByUserId = userRecordsRepository.findDistinctFormIdByUserId(foundUser.getId());
+
+        ArrayList<Integer> formList = new ArrayList<>();
+
+        for (UserRecords userRecords : distinctFormIdByUserId) {
+            formList.add(userRecords.getFormId().intValue());
+        }
+
+        int count = 0;
+        for (Documents document : documents) {
+            Integer id = document.getId();
+            if(formList.contains(id)) {
+                documentLinks.add(new DocumentLink(document.getId(),document.getName()));
+            }
+            count++;
+        }
+
+        double percent_docs = documentLinks.size()*100.0;
+        percent_docs /= count;
+
+        model.addAttribute("percent_fill",percentFilled);
+        model.addAttribute("document_links",documentLinks);
+        model.addAttribute("percent_docs",percent_docs);
         return "admin_user_profile";
     }
 

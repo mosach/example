@@ -9,4 +9,5 @@ public interface UserRecordsRepository extends CrudRepository<UserRecords,Long> 
 
     List<UserRecords> findAllByUserIdAndFormId(Long userId, Long formId);
     UserRecords findFirstByUserIdAndFormIdOrderByIdDesc(Long userId, Long formId);
+    List<UserRecords> findDistinctFormIdByUserId(Long userId);
 }
