@@ -132,9 +132,8 @@ public class ProfileController {
             throw new AccessDeniedException("User doesn't belong to your company");
         }
         model.addAttribute("email",emailAddress);
-        AdminUser user = adminUserRepository.findByEmail(emailAddress);
         model.addAttribute("user",foundUser);
-        List<UserForms> userForms = userFormRepository.findByUserFormIdUserId(user.getId().intValue());
+        List<UserForms> userForms = userFormRepository.findByUserFormIdUserId(foundUser.getId().intValue());
         int filledForms = userForms.size();
         long totalForms = formRepository.count();
 
